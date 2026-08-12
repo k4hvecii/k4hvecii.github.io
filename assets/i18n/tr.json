@@ -8,7 +8,10 @@
   },
   "controls": {
     "theme": "Tema değiştir",
-    "menu": "Menüyü aç"
+    "menu": "Menüyü aç",
+    "languageSearch": "Dil ara...",
+    "noLanguage": "Dil bulunamadı.",
+    "close": "Kapat"
   },
   "nav": {
     "about": "Hakkımda",
@@ -45,20 +48,42 @@
   "projects": {
     "kicker": "02 / Projeler",
     "title": "Üzerinde çalıştığım şeyler.",
-    "lead": "Ana projelerimi kısa ve net biçimde burada topluyorum."
+    "lead": "Ana projelerimi kısa ve net biçimde burada topluyorum. Detay için bir projeyi açabilirsin.",
+    "openDetails": "proje detaylarını aç",
+    "detailsAction": "Detaylar ↗",
+    "detailsLabel": "Öne çıkanlar",
+    "sourceCode": "Kaynak kodu"
   },
   "projectItems": {
     "vanguardn": {
       "status": "Geliştirme aşamasında",
-      "description": "Moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini production odaklı tek bir Discord ekosisteminde birleştiriyorum."
+      "description": "Moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini production odaklı tek bir Discord ekosisteminde birleştiriyorum.",
+      "features": [
+        "Modüler Discord.js v14 altyapısı",
+        "Moderasyon, güvenlik, ekonomi ve seviye sistemleri",
+        "Logger, giveaway ve production gözlemlenebilirliği",
+        "Linux VPS ve PM2 çalışma ortamına uygun yapı"
+      ]
     },
     "dashboard": {
       "status": "Web uygulaması",
-      "description": "Discord OAuth2 ve Express.js tabanlı, bot yönetimini daha sade ve kontrollü hale getirmeyi amaçlayan yönetim deneyimi."
+      "description": "Discord OAuth2 ve Express.js tabanlı, bot yönetimini daha sade ve kontrollü hale getirmeyi amaçlayan yönetim deneyimi.",
+      "features": [
+        "Discord OAuth2 giriş akışı",
+        "Express.js tabanlı modüler backend",
+        "Bot yönetimi için sade ve kontrollü kullanıcı deneyimi",
+        "Dashboard ve bot projelerinin bağımsız mimarisi"
+      ]
     },
     "template": {
       "status": "Açık kaynak",
-      "description": "Production kalitesinde Discord.js projeleri için temiz, yeniden kullanılabilir ve güvenilir başlangıç yapısı."
+      "description": "Production kalitesinde Discord.js projeleri için temiz, yeniden kullanılabilir ve güvenilir başlangıç yapısı.",
+      "features": [
+        "Production odaklı başlangıç mimarisi",
+        "Temiz ve yeniden kullanılabilir Discord.js v14 yapılandırması",
+        "Yeni bot projelerinde hızlı başlangıç için uygun",
+        "Açık kaynak ve GitHub üzerinden erişilebilir"
+      ]
     }
   },
   "github": {
@@ -68,7 +93,12 @@
     "followers": "Takipçi",
     "following": "Takip",
     "fallbackBio": "JavaScript, Discord.js ve production odaklı sistemler üzerinde çalışıyorum.",
-    "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin."
+    "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin.",
+    "recentKicker": "Son güncellenenler",
+    "recentTitle": "Güncel public repolar",
+    "noDescription": "Açıklama eklenmemiş.",
+    "openSource": "Public GitHub verisi",
+    "unavailableShort": "GitHub verisi alınamadı"
   },
   "contact": {
     "kicker": "04 / İletişim",

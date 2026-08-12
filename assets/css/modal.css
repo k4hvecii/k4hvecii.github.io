@@ -1,0 +1,28 @@
+.project-modal {
+  width: min(680px, calc(100% - 30px));
+  max-height: min(82vh, 760px);
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 24px;
+  background: var(--surface-solid);
+  color: var(--text);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.project-modal::backdrop { background: rgba(0,0,0,.62); backdrop-filter: blur(8px); }
+.project-modal-shell { position: relative; max-height: min(82vh, 760px); padding: 32px; overflow-y: auto; }
+.project-modal-close { position: absolute; top: 20px; right: 20px; width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 11px; background: var(--surface-soft); color: var(--muted); cursor: pointer; }
+.project-modal-close:hover { color: var(--text); border-color: var(--line-strong); }
+.project-modal-close svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; }
+.project-modal-meta { padding-right: 52px; display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: .65rem; }
+.project-modal h2 { margin: 24px 0 14px; font-size: clamp(2.3rem, 7vw, 4.5rem); line-height: .98; letter-spacing: -.065em; }
+.project-modal-description { margin: 0; color: var(--text-soft); font-size: .9rem; line-height: 1.7; }
+.project-modal-tags { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; }
+.project-modal-tags span { padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .64rem; }
+.project-modal-features-wrap { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
+.project-modal-label { margin: 0 0 13px; color: var(--muted); font-size: .66rem; text-transform: uppercase; letter-spacing: .05em; }
+.project-modal-features { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.project-modal-features li { padding-left: 17px; position: relative; color: var(--text-soft); font-size: .78rem; }
+.project-modal-features li::before { content: ""; position: absolute; left: 0; top: .65em; width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+.project-modal-actions { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
+body.modal-open { overflow: hidden; }

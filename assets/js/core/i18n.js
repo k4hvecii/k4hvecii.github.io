@@ -16,40 +16,25 @@ export class I18n {
 
   async init() {
     this.languages = await this.#loadLanguages();
-
     const saved = localStorage.getItem(SITE_CONFIG.localeStorageKey);
     const browserLocale = navigator.language?.split("-")[0]?.toLowerCase();
-
-    const preferred =
-      saved ||
-      (this.#isSupported(browserLocale) ? browserLocale : SITE_CONFIG.defaultLocale);
-
+    const preferred = saved || (this.#isSupported(browserLocale) ? browserLocale : SITE_CONFIG.defaultLocale);
     await this.setLocale(preferred, { persist: false });
     return this;
   }
 
   async setLocale(locale, { persist = true } = {}) {
-    const normalized = this.#isSupported(locale)
-      ? locale
-      : SITE_CONFIG.fallbackLocale;
-
+    const normalized = this.#isSupported(locale) ? locale : SITE_CONFIG.fallbackLocale;
     const localeUrl = new URL(`../../i18n/${normalized}.json`, import.meta.url);
     const response = await fetch(localeUrl);
-
-    if (!response.ok) {
-      throw new Error(`Locale could not be loaded: ${normalized}`);
-    }
+    if (!response.ok) throw new Error(`Locale could not be loaded: ${normalized}`);
 
     this.messages = await response.json();
     this.locale = normalized;
-
     const language = this.languages.find((item) => item.code === normalized);
     document.documentElement.lang = normalized;
     document.documentElement.dir = language?.dir || "ltr";
-
-    if (persist) {
-      localStorage.setItem(SITE_CONFIG.localeStorageKey, normalized);
-    }
+    if (persist) localStorage.setItem(SITE_CONFIG.localeStorageKey, normalized);
 
     this.apply(document);
     this.#updateMetadata();
@@ -67,56 +52,40 @@ export class I18n {
     });
 
     scope.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
-      element.setAttribute(
-        "aria-label",
-        this.t(element.dataset.i18nAriaLabel, element.getAttribute("aria-label") || "")
-      );
+      element.setAttribute("aria-label", this.t(element.dataset.i18nAriaLabel, element.getAttribute("aria-label") || ""));
+    });
+
+    scope.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+      element.setAttribute("placeholder", this.t(element.dataset.i18nPlaceholder, element.getAttribute("placeholder") || ""));
     });
   }
 
-  onChange(listener) {
-    this.listeners.add(listener);
-    return () => this.listeners.delete(listener);
-  }
-
-  getCurrentLanguage() {
-    return this.languages.find((language) => language.code === this.locale);
-  }
+  onChange(listener) { this.listeners.add(listener); return () => this.listeners.delete(listener); }
+  getCurrentLanguage() { return this.languages.find((language) => language.code === this.locale); }
 
   async #loadLanguages() {
     const response = await fetch(languageManifestUrl);
-
-    if (!response.ok) {
-      throw new Error("Language manifest could not be loaded");
-    }
-
+    if (!response.ok) throw new Error("Language manifest could not be loaded");
     const data = await response.json();
     return data.filter((language) => language.enabled !== false);
   }
 
-  #isSupported(locale) {
-    return Boolean(locale && this.languages.some((language) => language.code === locale));
-  }
+  #isSupported(locale) { return Boolean(locale && this.languages.some((language) => language.code === locale)); }
 
   #updateMetadata() {
-    document.title = this.t("meta.title", document.title);
+    const title = this.t("meta.title", document.title);
+    const descriptionText = this.t("meta.description", "");
+    document.title = title;
 
-    const description = document.querySelector('meta[name="description"]');
-    if (description) {
-      description.setAttribute("content", this.t("meta.description", description.content));
-    }
+    const setMeta = (selector, attr, value) => {
+      const element = document.querySelector(selector);
+      if (element && value) element.setAttribute(attr, value);
+    };
 
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute("content", this.t("meta.title", ogTitle.content));
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute(
-        "content",
-        this.t("meta.description", ogDescription.content)
-      );
-    }
+    setMeta('meta[name="description"]', "content", descriptionText);
+    setMeta('meta[property="og:title"]', "content", title);
+    setMeta('meta[property="og:description"]', "content", descriptionText);
+    setMeta('meta[name="twitter:title"]', "content", title);
+    setMeta('meta[name="twitter:description"]', "content", descriptionText);
   }
 }

@@ -5,30 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0a0b0e" />
   <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="Kıvanç Aydoğdu — Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiren developer." />
+  <meta name="author" content="Kıvanç Aydoğdu" />
+  <meta name="robots" content="index,follow" />
 
-  <meta
-    name="description"
-    content="Kıvanç Aydoğdu — Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiren developer."
-  />
+  <link rel="canonical" href="https://k4hvecii.github.io/" />
 
   <meta property="og:title" content="Kıvanç Aydoğdu — Developer" />
-  <meta
-    property="og:description"
-    content="Reliable systems, clean architecture and thoughtful digital experiences."
-  />
+  <meta property="og:description" content="Reliable systems, clean architecture and thoughtful digital experiences." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://k4hvecii.github.io/" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/71169328?v=4" />
+  <meta property="og:site_name" content="Kıvanç Aydoğdu" />
 
   <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kıvanç Aydoğdu — Developer" />
+  <meta name="twitter:description" content="Reliable systems, clean architecture and thoughtful digital experiences." />
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71169328?v=4" />
 
+  <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="./site.webmanifest" />
   <link rel="stylesheet" href="./assets/css/main.css" />
 
   <title>Kıvanç Aydoğdu — Developer</title>
 
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="person-schema">
   {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -43,14 +45,9 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main" data-i18n="accessibility.skip">
-    İçeriğe geç
-  </a>
+  <a class="skip-link" href="#main" data-i18n="accessibility.skip">İçeriğe geç</a>
 
-  <div class="page-progress" aria-hidden="true">
-    <span id="page-progress-bar"></span>
-  </div>
-
+  <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
   <div class="ambient ambient--top" aria-hidden="true"></div>
   <div class="ambient ambient--side" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
@@ -63,66 +60,41 @@
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#about" data-i18n="nav.about">Hakkımda</a>
-        <a href="#projects" data-i18n="nav.projects">Projeler</a>
-        <a href="#github" data-i18n="nav.github">GitHub</a>
-        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+        <a href="#about" data-section-link="about" data-i18n="nav.about">Hakkımda</a>
+        <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projeler</a>
+        <a href="#github" data-section-link="github" data-i18n="nav.github">GitHub</a>
+        <a href="#contact" data-section-link="contact" data-i18n="nav.contact">İletişim</a>
       </nav>
 
       <div class="header-actions">
         <div class="language-picker" id="language-picker">
-          <button
-            class="control-button language-trigger"
-            id="language-trigger"
-            type="button"
-            aria-haspopup="listbox"
-            aria-expanded="false"
-            aria-controls="language-menu"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.15a15.7 15.7 0 0 0-1.31-3.02A8.05 8.05 0 0 1 18.93 8ZM12 4c.85 1.03 1.62 2.38 2.07 4H9.93C10.38 6.38 11.15 5.03 12 4ZM4.26 14a8.1 8.1 0 0 1 0-4h3.31a16.88 16.88 0 0 0 0 4H4.26Zm.81 2h3.15c.3 1.1.74 2.12 1.31 3.02A8.05 8.05 0 0 1 5.07 16ZM8.22 8H5.07a8.05 8.05 0 0 1 4.46-3.02A15.7 15.7 0 0 0 8.22 8ZM12 20c-.85-1.03-1.62-2.38-2.07-4h4.14c-.45 1.62-1.22 2.97-2.07 4Zm2.48-6H9.52a14.8 14.8 0 0 1 0-4h4.96a14.8 14.8 0 0 1 0 4Zm-.01 5.02c.57-.9 1.01-1.92 1.31-3.02h3.15a8.05 8.05 0 0 1-4.46 3.02ZM16.43 14a16.88 16.88 0 0 0 0-4h3.31a8.1 8.1 0 0 1 0 4h-3.31Z"/>
-            </svg>
+          <button class="control-button language-trigger" id="language-trigger" type="button"
+            aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.15a15.7 15.7 0 0 0-1.31-3.02A8.05 8.05 0 0 1 18.93 8ZM12 4c.85 1.03 1.62 2.38 2.07 4H9.93C10.38 6.38 11.15 5.03 12 4ZM4.26 14a8.1 8.1 0 0 1 0-4h3.31a16.88 16.88 0 0 0 0 4H4.26Zm.81 2h3.15c.3 1.1.74 2.12 1.31 3.02A8.05 8.05 0 0 1 5.07 16ZM8.22 8H5.07a8.05 8.05 0 0 1 4.46-3.02A15.7 15.7 0 0 0 8.22 8ZM12 20c-.85-1.03-1.62-2.38-2.07-4h4.14c-.45 1.62-1.22 2.97-2.07 4Zm2.48-6H9.52a14.8 14.8 0 0 1 0-4h4.96a14.8 14.8 0 0 1 0 4Zm-.01 5.02c.57-.9 1.01-1.92 1.31-3.02h3.15a8.05 8.05 0 0 1-4.46 3.02ZM16.43 14a16.88 16.88 0 0 0 0-4h3.31a8.1 8.1 0 0 1 0 4h-3.31Z"/></svg>
             <span id="current-language-label">TR</span>
-            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m7 10 5 5 5-5"/>
-            </svg>
+            <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
           </button>
 
-          <div
-            class="language-menu"
-            id="language-menu"
-            role="listbox"
-            aria-label="Language"
-            hidden
-          ></div>
+          <div class="language-menu" id="language-menu" role="listbox" aria-label="Language" hidden>
+            <label class="language-search-wrap" for="language-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+              <input id="language-search" type="search" autocomplete="off" spellcheck="false"
+                data-i18n-placeholder="controls.languageSearch" placeholder="Dil ara..." />
+            </label>
+            <div class="language-options" id="language-options"></div>
+            <p class="language-empty" id="language-empty" data-i18n="controls.noLanguage" hidden>Dil bulunamadı.</p>
+          </div>
         </div>
 
-        <button
-          class="control-button theme-toggle"
-          id="theme-toggle"
-          type="button"
-          aria-label="Tema değiştir"
-          data-i18n-aria-label="controls.theme"
-        >
-          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/>
-          </svg>
-          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M20.4 15.2A8.4 8.4 0 0 1 8.8 3.6 8.7 8.7 0 1 0 20.4 15.2Z"/>
-          </svg>
+        <button class="control-button theme-toggle" id="theme-toggle" type="button"
+          aria-label="Tema değiştir" data-i18n-aria-label="controls.theme">
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64 4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M4.22 19.78l1.42-1.42M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg>
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.2A8.4 8.4 0 0 1 8.8 3.6 8.7 8.7 0 1 0 20.4 15.2Z"/></svg>
         </button>
 
-        <button
-          class="control-button mobile-menu-button"
-          id="mobile-menu-button"
-          type="button"
-          aria-label="Menüyü aç"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          data-i18n-aria-label="controls.menu"
-        >
-          <span></span>
-          <span></span>
+        <button class="control-button mobile-menu-button" id="mobile-menu-button" type="button"
+          aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria-label="controls.menu">
+          <span></span><span></span>
         </button>
       </div>
     </div>
@@ -138,276 +110,121 @@
   </header>
 
   <main id="main">
-    <section class="hero shell" id="home">
+    <section class="hero shell" id="home" data-section="home">
       <div class="hero-copy">
         <div class="profile-chip intro-item intro-delay-1">
           <div class="avatar-frame">
-            <img
-              src="https://avatars.githubusercontent.com/u/71169328?v=4"
-              width="42"
-              height="42"
-              alt="Kıvanç Aydoğdu"
-            />
+            <img src="https://avatars.githubusercontent.com/u/71169328?v=4" width="42" height="42" alt="Kıvanç Aydoğdu" fetchpriority="high" />
             <span class="presence" aria-hidden="true"></span>
           </div>
-
-          <div>
-            <strong>Kıvanç Aydoğdu</strong>
-            <span>@k4hvecii</span>
-          </div>
+          <div><strong>Kıvanç Aydoğdu</strong><span>@k4hvecii</span></div>
         </div>
 
-        <p class="hero-kicker intro-item intro-delay-2" data-i18n="hero.kicker">
-          Developer from Türkiye
-        </p>
-
+        <p class="hero-kicker intro-item intro-delay-2" data-i18n="hero.kicker">Developer · Türkiye</p>
         <h1 class="intro-item intro-delay-3">
           <span data-i18n="hero.titlePrimary">Sade fikirler.</span>
           <span class="muted-text" data-i18n="hero.titleSecondary">Sağlam sistemler.</span>
         </h1>
-
         <p class="hero-description intro-item intro-delay-4" data-i18n="hero.description">
-          Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiriyorum.
-          Temiz mimari, performans ve güvenilirlik benim için öncelik.
+          Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiriyorum. Temiz mimari, performans ve güvenilirlik benim için öncelik.
         </p>
 
         <div class="hero-actions intro-item intro-delay-5">
-          <a class="button button--primary" href="#projects">
-            <span data-i18n="hero.primaryAction">Projeleri Gör</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="m9 18 6-6-6-6"/>
-            </svg>
-          </a>
-
-          <a
-            class="button button--secondary"
-            href="https://github.com/k4hvecii"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 17 17 7M8 7h9v9"/>
-            </svg>
-          </a>
+          <a class="button button--primary" href="#projects"><span data-i18n="hero.primaryAction">Projeleri Gör</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          <a class="button button--secondary" href="https://github.com/k4hvecii" target="_blank" rel="noreferrer">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
+
+        <div class="social-links intro-item intro-delay-5" id="hero-social-links" aria-label="Social links"></div>
       </div>
 
-      <aside class="hero-panel intro-item intro-delay-5" aria-label="Profile summary">
-        <div class="hero-panel-header">
-          <span data-i18n="hero.panelTitle">Şu anda</span>
-          <span class="live-dot">
-            <i></i>
-            <span data-i18n="common.active">aktif</span>
-          </span>
-        </div>
-
-        <div class="current-work">
-          <span class="current-work-index">01</span>
-          <div>
-            <strong>Vanguardn</strong>
-            <p data-i18n="hero.currentProject">
-              Production odaklı Discord ekosistemi üzerinde çalışıyorum.
-            </p>
-          </div>
-        </div>
-
+      <aside class="hero-panel intro-item intro-delay-5" id="hero-panel" aria-label="Profile summary">
+        <div class="hero-panel-header"><span data-i18n="hero.panelTitle">Şu anda</span><span class="live-dot"><i></i><span data-i18n="common.active">aktif</span></span></div>
+        <div class="current-work"><span class="current-work-index">01</span><div><strong>Vanguardn</strong><p data-i18n="hero.currentProject">Production odaklı Discord ekosistemi üzerinde çalışıyorum.</p></div></div>
         <div class="hero-panel-grid">
-          <div>
-            <span data-i18n="hero.locationLabel">Konum</span>
-            <strong data-i18n="hero.location">Türkiye</strong>
-          </div>
-          <div>
-            <span data-i18n="hero.focusLabel">Odak</span>
-            <strong>Backend · Discord</strong>
-          </div>
-          <div>
-            <span data-i18n="hero.stackLabel">Stack</span>
-            <strong>Node.js · JavaScript</strong>
-          </div>
-          <div>
-            <span data-i18n="hero.platformLabel">Platform</span>
-            <strong>Linux · PM2</strong>
-          </div>
+          <div><span data-i18n="hero.locationLabel">Konum</span><strong data-i18n="hero.location">Türkiye</strong></div>
+          <div><span data-i18n="hero.focusLabel">Odak</span><strong>Backend · Discord</strong></div>
+          <div><span data-i18n="hero.stackLabel">Stack</span><strong>Node.js · JavaScript</strong></div>
+          <div><span data-i18n="hero.platformLabel">Platform</span><strong>Linux · PM2</strong></div>
         </div>
       </aside>
 
-      <a class="scroll-indicator intro-item intro-delay-5" href="#about">
-        <span data-i18n="hero.scroll">Keşfet</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m7 10 5 5 5-5"/>
-        </svg>
-      </a>
+      <a class="scroll-indicator intro-item intro-delay-5" href="#about"><span data-i18n="hero.scroll">Keşfet</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg></a>
     </section>
 
-    <section class="section shell" id="about">
+    <section class="section shell" id="about" data-section="about">
       <header class="section-header reveal">
-        <div>
-          <p class="section-kicker" data-i18n="about.kicker">01 / Hakkımda</p>
-          <h2 data-i18n="about.title">Üretirken detaylara önem veriyorum.</h2>
-        </div>
-
-        <p class="section-lead" data-i18n="about.lead">
-          Karmaşıklığı kullanıcıya yansıtmayan, bakımı kolay ve production ortamında güvenilir çalışan sistemler hedefliyorum.
-        </p>
+        <div><p class="section-kicker" data-i18n="about.kicker">01 / Hakkımda</p><h2 data-i18n="about.title">Üretirken detaylara önem veriyorum.</h2></div>
+        <p class="section-lead" data-i18n="about.lead">Karmaşıklığı kullanıcıya yansıtmayan, bakımı kolay ve production ortamında güvenilir çalışan sistemler hedefliyorum.</p>
       </header>
-
       <div class="about-grid">
-        <article class="about-card reveal">
-          <p data-i18n="about.body">
-            JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum.
-            Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.
-          </p>
-
-          <div class="about-card-footer">
-            <span class="live-dot">
-              <i></i>
-              <span data-i18n="about.status">Vanguardn aktif geliştirmede</span>
-            </span>
-            <span>@k4hvecii</span>
-          </div>
-        </article>
-
+        <article class="about-card reveal"><p data-i18n="about.body">JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.</p><div class="about-card-footer"><span class="live-dot"><i></i><span data-i18n="about.status">Vanguardn aktif geliştirmede</span></span><span>@k4hvecii</span></div></article>
         <div class="stack-list reveal">
-          <div class="stack-row">
-            <span>Core</span>
-            <strong>JavaScript · Node.js · Discord.js v14 · Express.js</strong>
-          </div>
-          <div class="stack-row">
-            <span>Infrastructure</span>
-            <strong>Linux · PM2 · Git · GitHub</strong>
-          </div>
-          <div class="stack-row">
-            <span>Web</span>
-            <strong>HTML · CSS · EJS · REST APIs · OAuth2</strong>
-          </div>
-          <div class="stack-row">
-            <span>Focus</span>
-            <strong data-i18n="about.focus">
-              Performance · Security · Stability · Clean Architecture
-            </strong>
-          </div>
+          <div class="stack-row"><span>Core</span><strong>JavaScript · Node.js · Discord.js v14 · Express.js</strong></div>
+          <div class="stack-row"><span>Infrastructure</span><strong>Linux · PM2 · Git · GitHub</strong></div>
+          <div class="stack-row"><span>Web</span><strong>HTML · CSS · EJS · REST APIs · OAuth2</strong></div>
+          <div class="stack-row"><span>Focus</span><strong data-i18n="about.focus">Performance · Security · Stability · Clean Architecture</strong></div>
         </div>
       </div>
     </section>
 
-    <section class="section shell" id="projects">
+    <section class="section shell" id="projects" data-section="projects">
       <header class="section-header reveal">
-        <div>
-          <p class="section-kicker" data-i18n="projects.kicker">02 / Projeler</p>
-          <h2 data-i18n="projects.title">Üzerinde çalıştığım şeyler.</h2>
-        </div>
-
-        <p class="section-lead" data-i18n="projects.lead">
-          Ana projelerimi kısa ve net biçimde burada topluyorum.
-        </p>
+        <div><p class="section-kicker" data-i18n="projects.kicker">02 / Projeler</p><h2 data-i18n="projects.title">Üzerinde çalıştığım şeyler.</h2></div>
+        <p class="section-lead" data-i18n="projects.lead">Ana projelerimi kısa ve net biçimde burada topluyorum. Detay için bir projeyi açabilirsin.</p>
       </header>
-
       <div class="project-grid" id="project-grid" aria-live="polite"></div>
     </section>
 
-    <section class="section shell" id="github">
+    <section class="section shell" id="github" data-section="github">
       <div class="github-card reveal">
         <div class="github-copy">
           <p class="section-kicker">03 / GitHub</p>
           <h2 data-i18n="github.title">Kod tarafındaki güncel çalışmalar.</h2>
-          <p data-i18n="github.description">
-            Public repository ve açık kaynak çalışmalarımı GitHub profilimde yayınlıyorum.
-          </p>
-
-          <a
-            class="text-link"
-            href="https://github.com/k4hvecii"
-            target="_blank"
-            rel="noreferrer"
-          >
-            github.com/k4hvecii
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M7 17 17 7M8 7h9v9"/>
-            </svg>
-          </a>
+          <p data-i18n="github.description">Public repository ve açık kaynak çalışmalarımı GitHub profilimde yayınlıyorum.</p>
+          <a class="text-link" href="https://github.com/k4hvecii" target="_blank" rel="noreferrer">github.com/k4hvecii <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
 
         <div class="github-data">
-          <div class="github-profile-row">
-            <img
-              src="https://avatars.githubusercontent.com/u/71169328?v=4"
-              width="54"
-              height="54"
-              alt=""
-              loading="lazy"
-            />
-            <div>
-              <strong id="github-name">K4hveci</strong>
-              <span>@k4hvecii</span>
-            </div>
-          </div>
-
+          <div class="github-profile-row"><img src="https://avatars.githubusercontent.com/u/71169328?v=4" width="54" height="54" alt="" loading="lazy" /><div><strong id="github-name">K4hveci</strong><span>@k4hvecii</span></div></div>
           <div class="github-stats">
-            <div>
-              <span data-i18n="github.repositories">Repo</span>
-              <strong id="github-repositories">—</strong>
-            </div>
-            <div>
-              <span data-i18n="github.followers">Takipçi</span>
-              <strong id="github-followers">—</strong>
-            </div>
-            <div>
-              <span data-i18n="github.following">Takip</span>
-              <strong id="github-following">—</strong>
-            </div>
+            <div><span data-i18n="github.repositories">Repo</span><strong id="github-repositories">—</strong></div>
+            <div><span data-i18n="github.followers">Takipçi</span><strong id="github-followers">—</strong></div>
+            <div><span data-i18n="github.following">Takip</span><strong id="github-following">—</strong></div>
           </div>
-
-          <div class="github-status" id="github-status">
-            <span class="skeleton-line"></span>
-            <span class="skeleton-line skeleton-line--short"></span>
-          </div>
+          <div class="github-status" id="github-status"><span class="skeleton-line"></span><span class="skeleton-line skeleton-line--short"></span></div>
         </div>
+      </div>
+
+      <div class="github-repos-block reveal">
+        <div class="github-repos-heading"><div><p class="section-kicker" data-i18n="github.recentKicker">Son güncellenenler</p><h3 data-i18n="github.recentTitle">Güncel public repolar</h3></div><span id="github-repos-state" class="github-repos-state"></span></div>
+        <div class="github-repo-list" id="github-repo-list" aria-live="polite"></div>
       </div>
     </section>
 
-    <section class="contact-section shell reveal" id="contact">
-      <div>
-        <p class="section-kicker" data-i18n="contact.kicker">04 / İletişim</p>
-        <h2>
-          <span data-i18n="contact.titlePrimary">Yeni fikirler için</span>
-          <span class="muted-text" data-i18n="contact.titleSecondary">bağlantıda kalalım.</span>
-        </h2>
-      </div>
-
-      <div class="contact-actions">
-        <a
-          class="button button--primary"
-          href="mailto:k4hveci2022@gmail.com"
-        >
-          <span data-i18n="contact.email">E-posta gönder</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="m9 18 6-6-6-6"/>
-          </svg>
-        </a>
-
-        <a
-          class="button button--secondary"
-          href="https://github.com/k4hvecii"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7 17 17 7M8 7h9v9"/>
-          </svg>
-        </a>
-      </div>
+    <section class="contact-section shell reveal" id="contact" data-section="contact">
+      <div><p class="section-kicker" data-i18n="contact.kicker">04 / İletişim</p><h2><span data-i18n="contact.titlePrimary">Yeni fikirler için</span><span class="muted-text" data-i18n="contact.titleSecondary">bağlantıda kalalım.</span></h2></div>
+      <div><div class="contact-actions" id="contact-social-links"></div></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="shell footer-inner">
-      <span>© <span id="current-year"></span> Kıvanç Aydoğdu</span>
-      <span data-i18n="footer.built">Designed & built with care.</span>
-      <a href="#home" data-i18n="footer.backToTop">Yukarı dön ↑</a>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="current-year"></span> Kıvanç Aydoğdu</span><span data-i18n="footer.built">Özenle tasarlandı ve geliştirildi.</span><a href="#home" data-i18n="footer.backToTop">Yukarı dön ↑</a></div></footer>
+
+  <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+    <div class="project-modal-shell">
+      <button class="project-modal-close" id="project-modal-close" type="button" data-i18n-aria-label="controls.close" aria-label="Kapat">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="project-modal-meta"><span id="project-modal-number"></span><span class="project-status" id="project-modal-status"></span></div>
+      <h2 id="project-modal-title"></h2>
+      <p class="project-modal-description" id="project-modal-description"></p>
+      <div class="project-modal-tags" id="project-modal-tags"></div>
+      <div class="project-modal-features-wrap">
+        <p class="project-modal-label" data-i18n="projects.detailsLabel">Öne çıkanlar</p>
+        <ul class="project-modal-features" id="project-modal-features"></ul>
+      </div>
+      <div class="project-modal-actions" id="project-modal-actions"></div>
     </div>
-  </footer>
+  </dialog>
 
   <script type="module" src="./assets/js/main.js"></script>
 </body>

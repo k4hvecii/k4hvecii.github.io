@@ -1,0 +1,17 @@
+[
+  {
+    "id": "github",
+    "label": "GitHub",
+    "href": "https://github.com/k4hvecii",
+    "external": true,
+    "icon": "github"
+  },
+  {
+    "id": "email",
+    "labelKey": "contact.email",
+    "label": "E-posta",
+    "href": "mailto:k4hveci2022@gmail.com",
+    "external": false,
+    "icon": "mail"
+  }
+]

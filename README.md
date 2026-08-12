@@ -1,119 +1,59 @@
-# k4hvecii.github.io — Professional Portfolio
+# k4hvecii.github.io — Portfolio V2
 
-Kıvanç Aydoğdu'nun modüler, çok dilli ve GitHub Pages uyumlu kişisel web sitesi.
+Kıvanç Aydoğdu'nun modüler, çok dilli ve GitHub Pages uyumlu kişisel developer sitesi.
 
-## Mimari
+## V2 özellikleri
 
-```text
-.
-├── index.html
-├── 404.html
-├── robots.txt
-├── sitemap.xml
-├── site.webmanifest
-├── .nojekyll
-├── .gitignore
-├── README.md
-└── assets
-    ├── css
-    │   ├── main.css
-    │   ├── tokens.css
-    │   ├── base.css
-    │   ├── layout.css
-    │   ├── components.css
-    │   ├── animations.css
-    │   ├── responsive.css
-    │   └── 404.css
-    ├── data
-    │   └── projects.json
-    ├── i18n
-    │   ├── languages.json
-    │   ├── tr.json
-    │   └── en.json
-    ├── icons
-    │   └── favicon.svg
-    └── js
-        ├── config.js
-        ├── main.js
-        ├── core
-        │   ├── github.js
-        │   └── i18n.js
-        └── modules
-            ├── github-card.js
-            ├── language-picker.js
-            ├── navigation.js
-            ├── projects.js
-            ├── scroll-effects.js
-            └── theme.js
-```
+- Modüler CSS ve ES Modules mimarisi
+- Ölçeklenebilir JSON tabanlı i18n sistemi
+- Aramalı dil seçici
+- TR / EN ve kolay yeni dil ekleme
+- Dark / light tema ve tercih kalıcılığı
+- Animasyonlu landing + scroll reveal + scroll progress
+- Reduced-motion desteği
+- Data-driven proje sistemi
+- Erişilebilir proje detay modalı
+- Data-driven sosyal bağlantılar
+- GitHub profil + son güncellenen public repo entegrasyonu
+- GitHub API timeout, cache ve graceful fallback
+- PWA/service worker ve offline fallback
+- robots.txt, sitemap.xml, manifest, canonical, OpenGraph, Twitter Card ve JSON-LD
+- Responsive mobil menü ve aktif bölüm vurgusu
+- Harici frontend framework veya build zorunluluğu yok
 
-## Dil sistemi
+## Dil eklemek
 
-Dil seçici `assets/i18n/languages.json` dosyasından otomatik üretilir.
+1. `assets/i18n/tr.json` ile aynı key yapısında yeni locale oluştur (`de.json` gibi).
+2. `assets/i18n/languages.json` içine dili ekle.
+3. `dir` alanını `ltr` veya RTL diller için `rtl` olarak ayarla.
 
-Yeni bir dil eklemek için:
+Dil menüsü otomatik oluşur; HTML'e yeni buton eklenmez.
 
-1. Örneğin `assets/i18n/de.json` dosyasını oluştur.
-2. `tr.json` / `en.json` ile aynı key yapısını kullan.
-3. `languages.json` içine dili ekle:
+## Proje eklemek
 
-```json
-{
-  "code": "de",
-  "nativeName": "Deutsch",
-  "short": "DE",
-  "dir": "ltr",
-  "enabled": true
-}
-```
+Projeler `assets/data/projects.json` üzerinden render edilir. Çevrilecek metinler locale dosyalarındaki `projectItems` bölümünde tutulur.
 
-HTML veya JavaScript tarafında yeni buton yazmaya gerek yoktur.
+## Sosyal bağlantı eklemek
 
-RTL diller için `dir: "rtl"` kullanılabilir.
-
-## Proje yönetimi
-
-Projeler `assets/data/projects.json` dosyasından render edilir.
-
-Yeni proje için JSON listesine kayıt eklenir. Çevrilecek açıklamalar locale dosyalarındaki `projectItems` alanından alınır.
-
-## GitHub entegrasyonu
-
-GitHub profil verisi tarayıcıdan GitHub public API ile alınır.
-
-- 6 saniye timeout
-- 10 dakika localStorage cache
-- API erişilemezse graceful fallback
+`assets/data/socials.json` dosyasına yeni kayıt eklenir. Gerekirse `assets/js/modules/social-links.js` içindeki icon haritasına ikon eklenir.
 
 ## Yerel test
 
-`file://` üzerinden açmak yerine yerel HTTP sunucusu kullan:
+`file://` ile açma. ES Modules ve JSON fetch kullandığı için HTTP sunucusu gerekir:
 
 ```bash
 python -m http.server 8080
 ```
 
-Sonra:
-
-`http://localhost:8080`
+Sonra `http://localhost:8080`.
 
 ## GitHub Pages
 
-Repository kullanıcı sitesi olduğu için mevcut yapı doğrudan `main` branch root üzerinden yayınlanabilir:
-
 - Settings → Pages
 - Source: Deploy from a branch
-- Branch: main
-- Folder: /(root)
+- Branch: `main`
+- Folder: `/(root)`
 
-## Custom domain
+## Not
 
-Daha sonra `kivanc.vanguardn.xyz` kullanılacaksa DNS tarafında:
-
-- Type: `CNAME`
-- Name: `kivanc`
-- Target: `k4hvecii.github.io`
-
-Ardından GitHub Pages → Custom domain bölümüne `kivanc.vanguardn.xyz` girilir.
-
-Custom domain aktif edildiğinde `robots.txt`, `sitemap.xml`, OpenGraph URL ve JSON-LD içindeki `k4hvecii.github.io` adresleri de yeni domain ile güncellenmelidir.
+Özel alan adı alındığında `assets/js/config.js`, canonical, OpenGraph URL, JSON-LD, `robots.txt` ve `sitemap.xml` tek seferde yeni domain ile güncellenmelidir.

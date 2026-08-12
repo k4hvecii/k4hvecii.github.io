@@ -187,3 +187,13 @@
     min-height: 84px;
   }
 }
+
+
+@media (max-width: 620px) {
+  .language-menu { width: min(260px, calc(100vw - 30px)); }
+  .github-repos-block { padding: 21px; border-radius: 20px; }
+  .github-repos-heading { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .github-repo-row { grid-template-columns: 1fr; gap: 9px; }
+  .project-modal-shell { padding: 25px 21px; }
+  .project-modal-close { top: 16px; right: 16px; }
+}

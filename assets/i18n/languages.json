@@ -4,13 +4,15 @@
     "nativeName": "Türkçe",
     "short": "TR",
     "dir": "ltr",
-    "enabled": true
+    "enabled": true,
+    "name": "Turkish"
   },
   {
     "code": "en",
     "nativeName": "English",
     "short": "EN",
     "dir": "ltr",
-    "enabled": true
+    "enabled": true,
+    "name": "English"
   }
 ]

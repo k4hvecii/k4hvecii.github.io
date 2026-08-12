@@ -7,13 +7,14 @@
     "wide": false,
     "statusKey": "projectItems.vanguardn.status",
     "descriptionKey": "projectItems.vanguardn.description",
+    "featuresKey": "projectItems.vanguardn.features",
     "tags": [
       "Node.js",
       "Discord.js v14",
       "Linux",
       "PM2"
     ],
-    "url": null
+    "links": []
   },
   {
     "id": "dashboard",
@@ -23,13 +24,14 @@
     "wide": false,
     "statusKey": "projectItems.dashboard.status",
     "descriptionKey": "projectItems.dashboard.description",
+    "featuresKey": "projectItems.dashboard.features",
     "tags": [
       "Express.js",
       "OAuth2",
       "EJS",
       "JavaScript"
     ],
-    "url": null
+    "links": []
   },
   {
     "id": "template",
@@ -39,11 +41,18 @@
     "wide": true,
     "statusKey": "projectItems.template.status",
     "descriptionKey": "projectItems.template.description",
+    "featuresKey": "projectItems.template.features",
     "tags": [
       "JavaScript",
       "Discord.js",
       "Open Source"
     ],
-    "url": "https://github.com/k4hvecii/discordjs-v14-production-template"
+    "links": [
+      {
+        "labelKey": "projects.sourceCode",
+        "url": "https://github.com/k4hvecii/discordjs-v14-production-template",
+        "type": "primary"
+      }
+    ]
   }
 ]

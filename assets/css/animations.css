@@ -56,3 +56,10 @@
     transform: none;
   }
 }
+
+
+.ambient--top { animation: ambient-float 14s ease-in-out infinite alternate; }
+.ambient--side { animation: ambient-float-side 17s ease-in-out infinite alternate; }
+.hero-panel { transition: transform 180ms ease, border-color 180ms ease; transform-style: preserve-3d; will-change: transform; }
+@keyframes ambient-float { from { transform: translateX(-50%) translateY(0) scale(1); } to { transform: translateX(-48%) translateY(28px) scale(1.08); } }
+@keyframes ambient-float-side { from { transform: translate(0,0) scale(1); } to { transform: translate(-36px,24px) scale(1.08); } }

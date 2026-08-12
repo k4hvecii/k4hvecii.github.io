@@ -11,5 +11,13 @@
       "sizes": "any",
       "type": "image/svg+xml"
     }
+  ],
+  "description": "Kıvanç Aydoğdu personal developer portfolio",
+  "scope": "./",
+  "lang": "tr",
+  "categories": [
+    "developer",
+    "portfolio",
+    "technology"
   ]
 }
