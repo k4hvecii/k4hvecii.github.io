@@ -1,37 +1,39 @@
-# k4hvecii.github.io
+# k4hvecii.github.io — Compact Bilingual Edition
 
-Kıvanç Aydoğdu'nun kişisel developer sitesi.
+Kıvanç Aydoğdu'nun kısa, animasyonlu ve iki dilli kişisel developer sitesi.
 
-## Final sürüm
+## Akış
 
-Bu sürüm tek dosyalık ana sayfa kullanır.
+1. Full-screen karşılama
+2. Hakkımda + teknoloji özeti
+3. Projeler + GitHub
+4. Kısa iletişim/kapanış
 
-- CSS doğrudan `index.html` içinde
-- JavaScript doğrudan `index.html` içinde
-- Harici build sistemi yok
-- Harici frontend framework yok
-- GitHub Pages ile doğrudan uyumlu
-- GitHub profil istatistikleri ve public repolar otomatik yüklenir
-- Responsive
+## Özellikler
+
+- Türkçe / İngilizce dil desteği
+- Tarayıcı dilini otomatik algılama
+- Seçilen dili localStorage ile hatırlama
+- Full-screen animated landing
+- Scroll reveal animasyonları
+- Kompakt sayfa uzunluğu
+- GitHub profil istatistikleri
+- Responsive tasarım
 - Reduced-motion desteği
-- Minimal dark profile / portfolio tasarımı
+- CSS ve JS doğrudan `index.html` içinde
+- Build sistemi veya framework gerektirmez
 
-## GitHub'a yükleme
+## GitHub Pages
 
-Repo kökünde şu dosyalar yeterli:
+Repo köküne şu dosyalar yüklenmelidir:
 
 - `index.html`
 - `404.html`
 - `.nojekyll`
 - `README.md`
 
-GitHub Pages ayarı:
+GitHub Pages:
 
-- Settings → Pages
 - Source: Deploy from a branch
 - Branch: main
 - Folder: /(root)
-
-Yayın adresi:
-
-https://k4hvecii.github.io/
