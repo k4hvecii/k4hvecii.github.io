@@ -1,22 +1,23 @@
-# k4hvecii.github.io
+# k4hvecii.github.io — V3
 
-Kıvanç Aydoğdu'nun kişisel developer portfolio sitesi.
+Minimal personal developer site for Kıvanç Aydoğdu.
 
-## Tasarım yaklaşımı
+## Direction
 
-Bu sürüm; daha minimal, soft ve profesyonel bir kişisel marka dili kullanır.
+V3 is a complete visual reset focused on a personal identity / profile experience rather than a traditional portfolio layout.
 
-- Güçlü tipografi
-- Daha fazla boşluk ve net hiyerarşi
-- Minimal dark/light tema
-- İnce border yapısı
-- Sade mikro animasyonlar
-- Selected Work odaklı proje vitrini
-- GitHub public profil ve repo verilerinin otomatik yüklenmesi
-- Responsive mobil tasarım
-- Harici frontend framework veya build bağımlılığı yok
+- Centered profile card
+- Soft dark ambient background
+- Minimal social actions
+- Small pointer-based card tilt
+- Clean About section
+- Selected Projects
+- Live public GitHub data
+- Responsive design
+- Reduced-motion support
+- No framework or build step
 
-## Dosyalar
+## Files
 
 - `index.html`
 - `styles.css`
@@ -24,26 +25,28 @@ Bu sürüm; daha minimal, soft ve profesyonel bir kişisel marka dili kullanır.
 - `favicon.svg`
 - `404.html`
 
-## Yerel çalıştırma
+## Local preview
 
 ```bash
 python -m http.server 8080
 ```
 
-Ardından `http://localhost:8080` adresini aç.
+Open:
+
+`http://localhost:8080`
 
 ## GitHub Pages
 
-GitHub üzerinde:
+Repository:
 
-1. `Settings`
-2. `Pages`
-3. `Build and deployment`
-4. `Source`: `Deploy from a branch`
-5. `Branch`: `main`
-6. `Folder`: `/(root)`
-7. `Save`
+`k4hvecii/k4hvecii.github.io`
 
-Yayın adresi:
+Pages settings:
+
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/(root)`
+
+Public URL:
 
 `https://k4hvecii.github.io/`
