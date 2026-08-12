@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Kıvanç Aydoğdu — Developer",
+    "description": "Kıvanç Aydoğdu — Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiren developer."
+  },
+  "accessibility": {
+    "skip": "İçeriğe geç"
+  },
+  "controls": {
+    "theme": "Tema değiştir",
+    "menu": "Menüyü aç"
+  },
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "github": "GitHub",
+    "contact": "İletişim"
+  },
+  "common": {
+    "active": "aktif"
+  },
+  "hero": {
+    "kicker": "Developer · Türkiye",
+    "titlePrimary": "Sade fikirler.",
+    "titleSecondary": "Sağlam sistemler.",
+    "description": "Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiriyorum. Temiz mimari, performans ve güvenilirlik benim için öncelik.",
+    "primaryAction": "Projeleri Gör",
+    "panelTitle": "Şu anda",
+    "currentProject": "Production odaklı Discord ekosistemi üzerinde çalışıyorum.",
+    "locationLabel": "Konum",
+    "location": "Türkiye",
+    "focusLabel": "Odak",
+    "stackLabel": "Stack",
+    "platformLabel": "Platform",
+    "scroll": "Keşfet"
+  },
+  "about": {
+    "kicker": "01 / Hakkımda",
+    "title": "Üretirken detaylara önem veriyorum.",
+    "lead": "Karmaşıklığı kullanıcıya yansıtmayan, bakımı kolay ve production ortamında güvenilir çalışan sistemler hedefliyorum.",
+    "body": "JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.",
+    "status": "Vanguardn aktif geliştirmede",
+    "focus": "Performance · Security · Stability · Clean Architecture"
+  },
+  "projects": {
+    "kicker": "02 / Projeler",
+    "title": "Üzerinde çalıştığım şeyler.",
+    "lead": "Ana projelerimi kısa ve net biçimde burada topluyorum."
+  },
+  "projectItems": {
+    "vanguardn": {
+      "status": "Geliştirme aşamasında",
+      "description": "Moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini production odaklı tek bir Discord ekosisteminde birleştiriyorum."
+    },
+    "dashboard": {
+      "status": "Web uygulaması",
+      "description": "Discord OAuth2 ve Express.js tabanlı, bot yönetimini daha sade ve kontrollü hale getirmeyi amaçlayan yönetim deneyimi."
+    },
+    "template": {
+      "status": "Açık kaynak",
+      "description": "Production kalitesinde Discord.js projeleri için temiz, yeniden kullanılabilir ve güvenilir başlangıç yapısı."
+    }
+  },
+  "github": {
+    "title": "Kod tarafındaki güncel çalışmalar.",
+    "description": "Public repository ve açık kaynak çalışmalarımı GitHub profilimde yayınlıyorum.",
+    "repositories": "Repo",
+    "followers": "Takipçi",
+    "following": "Takip",
+    "fallbackBio": "JavaScript, Discord.js ve production odaklı sistemler üzerinde çalışıyorum.",
+    "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin."
+  },
+  "contact": {
+    "kicker": "04 / İletişim",
+    "titlePrimary": "Yeni fikirler için",
+    "titleSecondary": "bağlantıda kalalım.",
+    "email": "E-posta gönder"
+  },
+  "footer": {
+    "built": "Özenle tasarlandı ve geliştirildi.",
+    "backToTop": "Yukarı dön ↑"
+  }
+}

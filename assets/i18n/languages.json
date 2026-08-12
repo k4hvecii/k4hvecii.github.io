@@ -1,0 +1,16 @@
+[
+  {
+    "code": "tr",
+    "nativeName": "Türkçe",
+    "short": "TR",
+    "dir": "ltr",
+    "enabled": true
+  },
+  {
+    "code": "en",
+    "nativeName": "English",
+    "short": "EN",
+    "dir": "ltr",
+    "enabled": true
+  }
+]

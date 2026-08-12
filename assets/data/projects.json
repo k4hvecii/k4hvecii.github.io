@@ -1,0 +1,49 @@
+[
+  {
+    "id": "vanguardn",
+    "number": "01",
+    "title": "Vanguardn",
+    "featured": true,
+    "wide": false,
+    "statusKey": "projectItems.vanguardn.status",
+    "descriptionKey": "projectItems.vanguardn.description",
+    "tags": [
+      "Node.js",
+      "Discord.js v14",
+      "Linux",
+      "PM2"
+    ],
+    "url": null
+  },
+  {
+    "id": "dashboard",
+    "number": "02",
+    "title": "Vanguardn Dashboard",
+    "featured": false,
+    "wide": false,
+    "statusKey": "projectItems.dashboard.status",
+    "descriptionKey": "projectItems.dashboard.description",
+    "tags": [
+      "Express.js",
+      "OAuth2",
+      "EJS",
+      "JavaScript"
+    ],
+    "url": null
+  },
+  {
+    "id": "template",
+    "number": "03",
+    "title": "Discord.js v14 Production Template",
+    "featured": false,
+    "wide": true,
+    "statusKey": "projectItems.template.status",
+    "descriptionKey": "projectItems.template.description",
+    "tags": [
+      "JavaScript",
+      "Discord.js",
+      "Open Source"
+    ],
+    "url": "https://github.com/k4hvecii/discordjs-v14-production-template"
+  }
+]

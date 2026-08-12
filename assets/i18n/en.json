@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "Kıvanç Aydoğdu — Developer",
+    "description": "Kıvanç Aydoğdu — Developer building Discord systems, backend projects and modern web experiences."
+  },
+  "accessibility": {
+    "skip": "Skip to content"
+  },
+  "controls": {
+    "theme": "Change theme",
+    "menu": "Open menu"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "github": "GitHub",
+    "contact": "Contact"
+  },
+  "common": {
+    "active": "active"
+  },
+  "hero": {
+    "kicker": "Developer · Türkiye",
+    "titlePrimary": "Simple ideas.",
+    "titleSecondary": "Reliable systems.",
+    "description": "I build Discord systems, backend projects and modern web experiences with a focus on clean architecture, performance and reliability.",
+    "primaryAction": "View Projects",
+    "panelTitle": "Currently",
+    "currentProject": "Building a production-focused Discord ecosystem.",
+    "locationLabel": "Location",
+    "location": "Türkiye",
+    "focusLabel": "Focus",
+    "stackLabel": "Stack",
+    "platformLabel": "Platform",
+    "scroll": "Explore"
+  },
+  "about": {
+    "kicker": "01 / About",
+    "title": "I care about the details behind what I ship.",
+    "lead": "I aim for systems that hide complexity from users, stay maintainable and behave reliably in production.",
+    "body": "I work in the JavaScript and Node.js ecosystem, building Discord bots, backend services and web projects. Code quality, stability, security and maintainability are parts of the same product for me.",
+    "status": "Vanguardn is actively in development",
+    "focus": "Performance · Security · Stability · Clean Architecture"
+  },
+  "projects": {
+    "kicker": "02 / Projects",
+    "title": "Things I am building.",
+    "lead": "A compact overview of my primary projects."
+  },
+  "projectItems": {
+    "vanguardn": {
+      "status": "In development",
+      "description": "A production-focused Discord ecosystem combining moderation, security, economy, leveling, giveaways and logging systems."
+    },
+    "dashboard": {
+      "status": "Web application",
+      "description": "A Discord OAuth2 and Express.js based management experience designed to make bot administration simpler and more controlled."
+    },
+    "template": {
+      "status": "Open source",
+      "description": "A clean, reusable and reliable starting point for production-quality Discord.js projects."
+    }
+  },
+  "github": {
+    "title": "Recent work on the code side.",
+    "description": "I publish my public repositories and open-source work on GitHub.",
+    "repositories": "Repos",
+    "followers": "Followers",
+    "following": "Following",
+    "fallbackBio": "Working on JavaScript, Discord.js and production-focused systems.",
+    "unavailable": "GitHub data is currently unavailable. You can still view the latest work from the profile link."
+  },
+  "contact": {
+    "kicker": "04 / Contact",
+    "titlePrimary": "For new ideas,",
+    "titleSecondary": "let's stay connected.",
+    "email": "Send email"
+  },
+  "footer": {
+    "built": "Designed and built with care.",
+    "backToTop": "Back to top ↑"
+  }
+}
