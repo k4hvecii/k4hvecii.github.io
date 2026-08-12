@@ -2,20 +2,29 @@
 
 Kıvanç Aydoğdu'nun kişisel developer portfolio sitesi.
 
-## Özellikler
+## Tasarım yaklaşımı
 
-- Responsive dark/light tema
-- Vanguardn ve Vanguardn Dashboard proje vitrini
+Bu sürüm; daha minimal, soft ve profesyonel bir kişisel marka dili kullanır.
+
+- Güçlü tipografi
+- Daha fazla boşluk ve net hiyerarşi
+- Minimal dark/light tema
+- İnce border yapısı
+- Sade mikro animasyonlar
+- Selected Work odaklı proje vitrini
 - GitHub public profil ve repo verilerinin otomatik yüklenmesi
-- Scroll reveal animasyonları
-- Mobil navigasyon
-- SEO ve OpenGraph meta etiketleri
-- Özel 404 sayfası
+- Responsive mobil tasarım
 - Harici frontend framework veya build bağımlılığı yok
 
-## Yerel çalıştırma
+## Dosyalar
 
-Projeyi klonladıktan sonra klasörde basit bir statik sunucu çalıştır:
+- `index.html`
+- `styles.css`
+- `script.js`
+- `favicon.svg`
+- `404.html`
+
+## Yerel çalıştırma
 
 ```bash
 python -m http.server 8080
@@ -25,15 +34,16 @@ Ardından `http://localhost:8080` adresini aç.
 
 ## GitHub Pages
 
-Repository adı kullanıcı sitesi formatındadır: `k4hvecii.github.io`.
+GitHub üzerinde:
 
-GitHub içinde:
+1. `Settings`
+2. `Pages`
+3. `Build and deployment`
+4. `Source`: `Deploy from a branch`
+5. `Branch`: `main`
+6. `Folder`: `/(root)`
+7. `Save`
 
-1. **Settings**
-2. **Pages**
-3. **Build and deployment → Source:** `Deploy from a branch`
-4. **Branch:** `main`
-5. **Folder:** `/(root)`
-6. **Save**
+Yayın adresi:
 
-Yayın adresi: `https://k4hvecii.github.io/`
+`https://k4hvecii.github.io/`

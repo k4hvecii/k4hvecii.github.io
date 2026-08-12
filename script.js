@@ -4,69 +4,70 @@ const API_BASE = "https://api.github.com";
 const qs = (selector, scope = document) => scope.querySelector(selector);
 const qsa = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
-const header = qs(".site-header");
-const menuButton = qs(".menu-button");
-const navLinks = qs(".nav-links");
-const themeToggle = qs(".theme-toggle");
 const root = document.documentElement;
+const header = qs(".site-header");
+const navLinks = qs("#nav-links");
+const menuToggle = qs(".menu-toggle");
+const themeToggle = qs(".theme-toggle");
 
 function setTheme(theme) {
   root.dataset.theme = theme;
   localStorage.setItem("portfolio-theme", theme);
-  const metaTheme = qs('meta[name="theme-color"]');
-  if (metaTheme) {
-    metaTheme.setAttribute("content", theme === "light" ? "#f6f8fa" : "#0d1117");
+
+  const themeColor = qs('meta[name="theme-color"]');
+  if (themeColor) {
+    themeColor.setAttribute("content", theme === "light" ? "#f4f3ef" : "#111317");
   }
 }
 
 function initTheme() {
-  const stored = localStorage.getItem("portfolio-theme");
-  const preferredLight = window.matchMedia?.("(prefers-color-scheme: light)").matches;
-  setTheme(stored || (preferredLight ? "light" : "dark"));
+  const saved = localStorage.getItem("portfolio-theme");
+  const prefersLight = window.matchMedia?.("(prefers-color-scheme: light)").matches;
+  setTheme(saved || (prefersLight ? "light" : "dark"));
 }
 
 themeToggle?.addEventListener("click", () => {
   setTheme(root.dataset.theme === "dark" ? "light" : "dark");
 });
 
-menuButton?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(isOpen));
+menuToggle?.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
 });
 
 qsa(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("open");
-    menuButton?.setAttribute("aria-expanded", "false");
+    menuToggle?.setAttribute("aria-expanded", "false");
   });
 });
 
 window.addEventListener(
   "scroll",
-  () => header?.classList.toggle("scrolled", window.scrollY > 12),
+  () => header?.classList.toggle("scrolled", window.scrollY > 10),
   { passive: true }
 );
 
 function initReveal() {
-  const elements = qsa(".reveal");
+  const items = qsa(".reveal");
 
   if (!("IntersectionObserver" in window)) {
-    elements.forEach((el) => el.classList.add("visible"));
+    items.forEach((item) => item.classList.add("visible"));
     return;
   }
 
   const observer = new IntersectionObserver(
-    (entries, obs) => {
+    (entries, instance) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("visible");
-        obs.unobserve(entry.target);
+        instance.unobserve(entry.target);
       });
     },
     { threshold: 0.12 }
   );
 
-  elements.forEach((el) => observer.observe(el));
+  items.forEach((item) => observer.observe(item));
 }
 
 function formatNumber(value) {
@@ -75,43 +76,6 @@ function formatNumber(value) {
 
 function safeText(value, fallback = "") {
   return typeof value === "string" && value.trim() ? value.trim() : fallback;
-}
-
-function createRepoCard(repo) {
-  const card = document.createElement("a");
-  card.className = "repo-card";
-  card.href = repo.html_url;
-  card.target = "_blank";
-  card.rel = "noreferrer";
-
-  const description = safeText(repo.description, "Açıklama eklenmemiş.");
-  const language = safeText(repo.language, "Code");
-  const stars = Number(repo.stargazers_count || 0);
-  const forks = Number(repo.forks_count || 0);
-
-  const title = document.createElement("h3");
-  title.textContent = repo.name;
-
-  const desc = document.createElement("p");
-  desc.textContent = description;
-
-  const meta = document.createElement("div");
-  meta.className = "repo-meta";
-
-  const lang = document.createElement("span");
-  lang.className = "language";
-  lang.textContent = language;
-
-  const star = document.createElement("span");
-  star.textContent = `★ ${stars}`;
-
-  const fork = document.createElement("span");
-  fork.textContent = `⑂ ${forks}`;
-
-  meta.append(lang, star, fork);
-  card.append(title, desc, meta);
-
-  return card;
 }
 
 async function fetchJson(url) {
@@ -126,7 +90,47 @@ async function fetchJson(url) {
   return response.json();
 }
 
-async function loadGitHubProfile() {
+function createRepoRow(repo) {
+  const row = document.createElement("a");
+  row.className = "repo-row";
+  row.href = repo.html_url;
+  row.target = "_blank";
+  row.rel = "noreferrer";
+
+  const main = document.createElement("div");
+  main.className = "repo-main";
+
+  const title = document.createElement("h3");
+  title.textContent = repo.name;
+
+  const description = document.createElement("p");
+  description.textContent = safeText(repo.description, "Açıklama eklenmemiş.");
+
+  main.append(title, description);
+
+  const meta = document.createElement("div");
+  meta.className = "repo-meta";
+
+  const language = document.createElement("span");
+  language.className = "language";
+  language.textContent = safeText(repo.language, "Code");
+
+  const stars = document.createElement("span");
+  stars.textContent = `★ ${Number(repo.stargazers_count || 0)}`;
+
+  const updated = document.createElement("span");
+  const date = new Date(repo.updated_at);
+  updated.textContent = Number.isNaN(date.valueOf())
+    ? "Güncel"
+    : new Intl.DateTimeFormat("tr-TR", { month: "short", year: "numeric" }).format(date);
+
+  meta.append(language, stars, updated);
+  row.append(main, meta);
+
+  return row;
+}
+
+async function loadGitHubData() {
   try {
     const [profile, repos] = await Promise.all([
       fetchJson(`${API_BASE}/users/${USERNAME}`),
@@ -142,8 +146,8 @@ async function loadGitHubProfile() {
       "JavaScript, Discord.js ve production odaklı sistemler üzerinde çalışıyorum."
     );
 
-    const grid = qs("#repo-grid");
-    grid.replaceChildren();
+    const container = qs("#repo-grid");
+    container.replaceChildren();
 
     const selected = repos
       .filter((repo) => !repo.fork)
@@ -151,32 +155,32 @@ async function loadGitHubProfile() {
       .slice(0, 6);
 
     if (!selected.length) {
-      const empty = document.createElement("article");
-      empty.className = "repo-card";
-      empty.innerHTML = "<h3>Public repo bulunamadı.</h3><p>Yeni projeler burada otomatik olarak görünecek.</p>";
-      grid.append(empty);
+      const empty = document.createElement("div");
+      empty.className = "repo-row";
+      empty.innerHTML = "<div class='repo-main'><h3>Henüz public repo yok.</h3><p>Yeni projeler burada otomatik olarak görünecek.</p></div>";
+      container.append(empty);
       return;
     }
 
-    selected.forEach((repo) => grid.append(createRepoCard(repo)));
+    selected.forEach((repo) => container.append(createRepoRow(repo)));
   } catch (error) {
     console.warn("GitHub verileri alınamadı:", error);
 
     qs("#github-bio").textContent =
-      "GitHub verileri şu anda alınamadı. Profilimi doğrudan GitHub üzerinden görüntüleyebilirsin.";
+      "GitHub verileri şu anda alınamadı. Güncel çalışmalarımı doğrudan GitHub profilimde görüntüleyebilirsin.";
 
-    const grid = qs("#repo-grid");
-    grid.replaceChildren();
+    const container = qs("#repo-grid");
+    container.replaceChildren();
 
     const fallback = document.createElement("a");
-    fallback.className = "repo-card";
+    fallback.className = "repo-row";
     fallback.href = "https://github.com/k4hvecii";
     fallback.target = "_blank";
     fallback.rel = "noreferrer";
     fallback.innerHTML =
-      "<h3>@k4hvecii</h3><p>Güncel repository ve çalışmalarımı GitHub profilimde görüntüle.</p><div class='repo-meta'><span>GitHub ↗</span></div>";
+      "<div class='repo-main'><h3>@k4hvecii</h3><p>Repository ve açık kaynak çalışmalarımı GitHub profilimde görüntüle.</p></div><div class='repo-meta'><span>GitHub ↗</span></div>";
 
-    grid.append(fallback);
+    container.append(fallback);
   }
 }
 
@@ -184,4 +188,4 @@ qs("#year").textContent = new Date().getFullYear();
 
 initTheme();
 initReveal();
-loadGitHubProfile();
+loadGitHubData();
