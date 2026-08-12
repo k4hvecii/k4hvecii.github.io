@@ -1,52 +1,37 @@
-# k4hvecii.github.io — V3
+# k4hvecii.github.io
 
-Minimal personal developer site for Kıvanç Aydoğdu.
+Kıvanç Aydoğdu'nun kişisel developer sitesi.
 
-## Direction
+## Final sürüm
 
-V3 is a complete visual reset focused on a personal identity / profile experience rather than a traditional portfolio layout.
+Bu sürüm tek dosyalık ana sayfa kullanır.
 
-- Centered profile card
-- Soft dark ambient background
-- Minimal social actions
-- Small pointer-based card tilt
-- Clean About section
-- Selected Projects
-- Live public GitHub data
-- Responsive design
-- Reduced-motion support
-- No framework or build step
+- CSS doğrudan `index.html` içinde
+- JavaScript doğrudan `index.html` içinde
+- Harici build sistemi yok
+- Harici frontend framework yok
+- GitHub Pages ile doğrudan uyumlu
+- GitHub profil istatistikleri ve public repolar otomatik yüklenir
+- Responsive
+- Reduced-motion desteği
+- Minimal dark profile / portfolio tasarımı
 
-## Files
+## GitHub'a yükleme
+
+Repo kökünde şu dosyalar yeterli:
 
 - `index.html`
-- `styles.css`
-- `script.js`
-- `favicon.svg`
 - `404.html`
+- `.nojekyll`
+- `README.md`
 
-## Local preview
+GitHub Pages ayarı:
 
-```bash
-python -m http.server 8080
-```
+- Settings → Pages
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)
 
-Open:
+Yayın adresi:
 
-`http://localhost:8080`
-
-## GitHub Pages
-
-Repository:
-
-`k4hvecii/k4hvecii.github.io`
-
-Pages settings:
-
-- Source: `Deploy from a branch`
-- Branch: `main`
-- Folder: `/(root)`
-
-Public URL:
-
-`https://k4hvecii.github.io/`
+https://k4hvecii.github.io/
