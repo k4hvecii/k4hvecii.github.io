@@ -25,6 +25,7 @@
 
   <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="./site.webmanifest" />
   <link rel="stylesheet" href="./assets/css/main.css" />
 
@@ -59,7 +60,7 @@
         <span class="brand-text">k4hvecii</span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
+      <nav class="desktop-nav" aria-label="Ana navigasyon" data-i18n-aria-label="accessibility.mainNavigation">
         <a href="#about" data-section-link="about" data-i18n="nav.about">Hakkımda</a>
         <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projeler</a>
         <a href="#github" data-section-link="github" data-i18n="nav.github">GitHub</a>
@@ -69,19 +70,19 @@
       <div class="header-actions">
         <div class="language-picker" id="language-picker">
           <button class="control-button language-trigger" id="language-trigger" type="button"
-            aria-haspopup="listbox" aria-expanded="false" aria-controls="language-menu">
+            aria-haspopup="dialog" aria-expanded="false" aria-controls="language-menu">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-3.15a15.7 15.7 0 0 0-1.31-3.02A8.05 8.05 0 0 1 18.93 8ZM12 4c.85 1.03 1.62 2.38 2.07 4H9.93C10.38 6.38 11.15 5.03 12 4ZM4.26 14a8.1 8.1 0 0 1 0-4h3.31a16.88 16.88 0 0 0 0 4H4.26Zm.81 2h3.15c.3 1.1.74 2.12 1.31 3.02A8.05 8.05 0 0 1 5.07 16ZM8.22 8H5.07a8.05 8.05 0 0 1 4.46-3.02A15.7 15.7 0 0 0 8.22 8ZM12 20c-.85-1.03-1.62-2.38-2.07-4h4.14c-.45 1.62-1.22 2.97-2.07 4Zm2.48-6H9.52a14.8 14.8 0 0 1 0-4h4.96a14.8 14.8 0 0 1 0 4Zm-.01 5.02c.57-.9 1.01-1.92 1.31-3.02h3.15a8.05 8.05 0 0 1-4.46 3.02ZM16.43 14a16.88 16.88 0 0 0 0-4h3.31a8.1 8.1 0 0 1 0 4h-3.31Z"/></svg>
             <span id="current-language-label">TR</span>
             <svg class="chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
           </button>
 
-          <div class="language-menu" id="language-menu" role="listbox" aria-label="Language" hidden>
+          <div class="language-menu" id="language-menu" role="dialog" aria-label="Dil seçimi" data-i18n-aria-label="accessibility.languageDialog" hidden>
             <label class="language-search-wrap" for="language-search">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.3-4.3m2.3-5.2a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
               <input id="language-search" type="search" autocomplete="off" spellcheck="false"
                 data-i18n-placeholder="controls.languageSearch" placeholder="Dil ara..." />
             </label>
-            <div class="language-options" id="language-options"></div>
+            <div class="language-options" id="language-options" role="listbox" aria-label="Diller" data-i18n-aria-label="accessibility.languageList"></div>
             <p class="language-empty" id="language-empty" data-i18n="controls.noLanguage" hidden>Dil bulunamadı.</p>
           </div>
         </div>
@@ -99,12 +100,12 @@
       </div>
     </div>
 
-    <nav class="mobile-menu" id="mobile-menu" hidden aria-label="Mobile navigation">
+    <nav class="mobile-menu" id="mobile-menu" hidden aria-label="Mobil navigasyon" data-i18n-aria-label="accessibility.mobileNavigation">
       <div class="shell mobile-menu-inner">
-        <a href="#about" data-i18n="nav.about">Hakkımda</a>
-        <a href="#projects" data-i18n="nav.projects">Projeler</a>
-        <a href="#github" data-i18n="nav.github">GitHub</a>
-        <a href="#contact" data-i18n="nav.contact">İletişim</a>
+        <a href="#about" data-section-link="about" data-i18n="nav.about">Hakkımda</a>
+        <a href="#projects" data-section-link="projects" data-i18n="nav.projects">Projeler</a>
+        <a href="#github" data-section-link="github" data-i18n="nav.github">GitHub</a>
+        <a href="#contact" data-section-link="contact" data-i18n="nav.contact">İletişim</a>
       </div>
     </nav>
   </header>
@@ -134,10 +135,10 @@
           <a class="button button--secondary" href="https://github.com/k4hvecii" target="_blank" rel="noreferrer">GitHub <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
 
-        <div class="social-links intro-item intro-delay-5" id="hero-social-links" aria-label="Social links"></div>
+        <div class="social-links intro-item intro-delay-5" id="hero-social-links" aria-label="Sosyal bağlantılar" data-i18n-aria-label="accessibility.socialLinks"></div>
       </div>
 
-      <aside class="hero-panel intro-item intro-delay-5" id="hero-panel" aria-label="Profile summary">
+      <aside class="hero-panel intro-item intro-delay-5" id="hero-panel" aria-label="Profil özeti" data-i18n-aria-label="accessibility.profileSummary">
         <div class="hero-panel-header"><span data-i18n="hero.panelTitle">Şu anda</span><span class="live-dot"><i></i><span data-i18n="common.active">aktif</span></span></div>
         <div class="current-work"><span class="current-work-index">01</span><div><strong>Vanguardn</strong><p data-i18n="hero.currentProject">Production odaklı Discord ekosistemi üzerinde çalışıyorum.</p></div></div>
         <div class="hero-panel-grid">
@@ -209,7 +210,7 @@
 
   <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="current-year"></span> Kıvanç Aydoğdu</span><span data-i18n="footer.built">Özenle tasarlandı ve geliştirildi.</span><a href="#home" data-i18n="footer.backToTop">Yukarı dön ↑</a></div></footer>
 
-  <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title">
+  <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title" aria-describedby="project-modal-description">
     <div class="project-modal-shell">
       <button class="project-modal-close" id="project-modal-close" type="button" data-i18n-aria-label="controls.close" aria-label="Kapat">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>

@@ -1,3 +1,17 @@
+## 2.1.0 — Checkup Patch
+
+- Fixed project card status/details overlap
+- Moved project details action into a dedicated card footer
+- Improved language picker ARIA semantics and keyboard navigation
+- Added translated accessibility labels
+- Added active navigation `aria-current` state
+- Improved mobile menu Escape/outside-click behavior
+- Hardened theme and locale persistence against storage errors
+- Expanded PWA app-shell caching to all JavaScript modules
+- Switched same-origin service-worker requests to network-first updates
+- Added bilingual offline fallback copy
+- Added 192px/512px PWA icons and Apple touch icon
+
 # Changelog
 
 ## 2.0.0 — 2026-08-12

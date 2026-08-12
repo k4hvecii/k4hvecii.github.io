@@ -6,6 +6,22 @@ function deepGet(object, path) {
   return path.split(".").reduce((value, key) => value?.[key], object);
 }
 
+function readStoredLocale() {
+  try {
+    return localStorage.getItem(SITE_CONFIG.localeStorageKey);
+  } catch {
+    return null;
+  }
+}
+
+function saveLocale(locale) {
+  try {
+    localStorage.setItem(SITE_CONFIG.localeStorageKey, locale);
+  } catch {
+    // Locale persistence is optional.
+  }
+}
+
 export class I18n {
   constructor() {
     this.locale = SITE_CONFIG.defaultLocale;
@@ -16,7 +32,7 @@ export class I18n {
 
   async init() {
     this.languages = await this.#loadLanguages();
-    const saved = localStorage.getItem(SITE_CONFIG.localeStorageKey);
+    const saved = readStoredLocale();
     const browserLocale = navigator.language?.split("-")[0]?.toLowerCase();
     const preferred = saved || (this.#isSupported(browserLocale) ? browserLocale : SITE_CONFIG.defaultLocale);
     await this.setLocale(preferred, { persist: false });
@@ -34,7 +50,7 @@ export class I18n {
     const language = this.languages.find((item) => item.code === normalized);
     document.documentElement.lang = normalized;
     document.documentElement.dir = language?.dir || "ltr";
-    if (persist) localStorage.setItem(SITE_CONFIG.localeStorageKey, normalized);
+    if (persist) saveLocale(normalized);
 
     this.apply(document);
     this.#updateMetadata();

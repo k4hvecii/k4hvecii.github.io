@@ -7,17 +7,30 @@
   "theme_color": "#0a0b0e",
   "icons": [
     {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "./assets/icons/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "description": "Kıvanç Aydoğdu personal developer portfolio",
   "scope": "./",
-  "lang": "tr",
   "categories": [
     "developer",
     "portfolio",
     "technology"
-  ]
+  ],
+  "id": "./"
 }

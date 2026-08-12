@@ -4,7 +4,13 @@
     "description": "Kıvanç Aydoğdu — Developer building Discord systems, backend projects and modern web experiences."
   },
   "accessibility": {
-    "skip": "Skip to content"
+    "skip": "Skip to content",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "languageDialog": "Language selection",
+    "languageList": "Available languages",
+    "socialLinks": "Social links",
+    "profileSummary": "Profile summary"
   },
   "controls": {
     "theme": "Change theme",
@@ -50,7 +56,7 @@
     "title": "Things I am building.",
     "lead": "A compact overview of my main projects. Open a project for more details.",
     "openDetails": "open project details",
-    "detailsAction": "Details ↗",
+    "detailsAction": "Details →",
     "detailsLabel": "Highlights",
     "sourceCode": "Source code"
   },

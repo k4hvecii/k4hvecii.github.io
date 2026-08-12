@@ -4,7 +4,13 @@
     "description": "Kıvanç Aydoğdu — Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiren developer."
   },
   "accessibility": {
-    "skip": "İçeriğe geç"
+    "skip": "İçeriğe geç",
+    "mainNavigation": "Ana navigasyon",
+    "mobileNavigation": "Mobil navigasyon",
+    "languageDialog": "Dil seçimi",
+    "languageList": "Kullanılabilir diller",
+    "socialLinks": "Sosyal bağlantılar",
+    "profileSummary": "Profil özeti"
   },
   "controls": {
     "theme": "Tema değiştir",
@@ -50,7 +56,7 @@
     "title": "Üzerinde çalıştığım şeyler.",
     "lead": "Ana projelerimi kısa ve net biçimde burada topluyorum. Detay için bir projeyi açabilirsin.",
     "openDetails": "proje detaylarını aç",
-    "detailsAction": "Detaylar ↗",
+    "detailsAction": "Detaylar →",
     "detailsLabel": "Öne çıkanlar",
     "sourceCode": "Kaynak kodu"
   },
