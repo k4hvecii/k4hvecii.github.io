@@ -1,4 +1,4 @@
-const CACHE_NAME = "k4hvecii-portfolio-v2.1-checkup";
+const CACHE_NAME = "k4hvecii-portfolio-v2.2-quality";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -27,16 +27,19 @@ const APP_SHELL = [
   "./assets/js/modules/pwa.js",
   "./assets/js/modules/scroll-effects.js",
   "./assets/js/modules/social-links.js",
+  "./assets/js/modules/status.js",
   "./assets/js/modules/theme.js",
   "./assets/data/projects.json",
   "./assets/data/socials.json",
+  "./assets/data/status.json",
   "./assets/i18n/languages.json",
   "./assets/i18n/tr.json",
   "./assets/i18n/en.json",
   "./assets/icons/favicon.svg",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/icon-192.png",
-  "./assets/icons/icon-512.png"
+  "./assets/icons/icon-512.png",
+  "./assets/images/og-card.png"
 ];
 
 self.addEventListener("install", (event) => {

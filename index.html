@@ -15,13 +15,15 @@
   <meta property="og:description" content="Reliable systems, clean architecture and thoughtful digital experiences." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://k4hvecii.github.io/" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/71169328?v=4" />
+  <meta property="og:image" content="https://k4hvecii.github.io/assets/images/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Kıvanç Aydoğdu" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Kıvanç Aydoğdu — Developer" />
   <meta name="twitter:description" content="Reliable systems, clean architecture and thoughtful digital experiences." />
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71169328?v=4" />
+  <meta name="twitter:image" content="https://k4hvecii.github.io/assets/images/og-card.png" />
 
   <link rel="preconnect" href="https://avatars.githubusercontent.com" crossorigin />
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
@@ -139,8 +141,8 @@
       </div>
 
       <aside class="hero-panel intro-item intro-delay-5" id="hero-panel" aria-label="Profil özeti" data-i18n-aria-label="accessibility.profileSummary">
-        <div class="hero-panel-header"><span data-i18n="hero.panelTitle">Şu anda</span><span class="live-dot"><i></i><span data-i18n="common.active">aktif</span></span></div>
-        <div class="current-work"><span class="current-work-index">01</span><div><strong>Vanguardn</strong><p data-i18n="hero.currentProject">Production odaklı Discord ekosistemi üzerinde çalışıyorum.</p></div></div>
+        <div class="hero-panel-header"><span data-i18n="hero.panelTitle">Şu anda</span><span class="live-dot"><i></i><span id="current-status-state">aktif</span></span></div>
+        <div class="current-work"><span class="current-work-index">01</span><div><strong id="current-status-title">Vanguardn</strong><p id="current-status-description">Production odaklı Discord ekosistemi üzerinde çalışıyorum.</p><span class="current-status-date" id="current-status-date"></span></div></div>
         <div class="hero-panel-grid">
           <div><span data-i18n="hero.locationLabel">Konum</span><strong data-i18n="hero.location">Türkiye</strong></div>
           <div><span data-i18n="hero.focusLabel">Odak</span><strong>Backend · Discord</strong></div>
@@ -158,7 +160,7 @@
         <p class="section-lead" data-i18n="about.lead">Karmaşıklığı kullanıcıya yansıtmayan, bakımı kolay ve production ortamında güvenilir çalışan sistemler hedefliyorum.</p>
       </header>
       <div class="about-grid">
-        <article class="about-card reveal"><p data-i18n="about.body">JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.</p><div class="about-card-footer"><span class="live-dot"><i></i><span data-i18n="about.status">Vanguardn aktif geliştirmede</span></span><span>@k4hvecii</span></div></article>
+        <article class="about-card reveal"><p data-i18n="about.body">JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.</p><div class="about-card-footer"><span class="live-dot"><i></i><span id="about-status-text">Vanguardn aktif geliştirmede</span></span><span>@k4hvecii</span></div></article>
         <div class="stack-list reveal">
           <div class="stack-row"><span>Core</span><strong>JavaScript · Node.js · Discord.js v14 · Express.js</strong></div>
           <div class="stack-row"><span>Infrastructure</span><strong>Linux · PM2 · Git · GitHub</strong></div>
@@ -208,7 +210,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="current-year"></span> Kıvanç Aydoğdu</span><span data-i18n="footer.built">Özenle tasarlandı ve geliştirildi.</span><a href="#home" data-i18n="footer.backToTop">Yukarı dön ↑</a></div></footer>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="current-year"></span> Kıvanç Aydoğdu</span><span><span data-i18n="footer.built">Özenle tasarlandı ve geliştirildi.</span> · v2.2</span><a href="#home" data-i18n="footer.backToTop">Yukarı dön ↑</a></div></footer>
 
   <dialog class="project-modal" id="project-modal" aria-labelledby="project-modal-title" aria-describedby="project-modal-description">
     <div class="project-modal-shell">
@@ -219,8 +221,12 @@
       <h2 id="project-modal-title"></h2>
       <p class="project-modal-description" id="project-modal-description"></p>
       <div class="project-modal-tags" id="project-modal-tags"></div>
+      <div class="project-modal-section">
+        <p class="project-modal-label" data-i18n="projects.factsLabel">Proje bilgileri</p>
+        <div class="project-modal-facts" id="project-modal-facts"></div>
+      </div>
       <div class="project-modal-features-wrap">
-        <p class="project-modal-label" data-i18n="projects.detailsLabel">Öne çıkanlar</p>
+        <p class="project-modal-label" data-i18n="projects.highlightsLabel">Öne çıkanlar</p>
         <ul class="project-modal-features" id="project-modal-features"></ul>
       </div>
       <div class="project-modal-actions" id="project-modal-actions"></div>

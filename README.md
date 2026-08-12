@@ -57,3 +57,70 @@ Sonra `http://localhost:8080`.
 ## Not
 
 Özel alan adı alındığında `assets/js/config.js`, canonical, OpenGraph URL, JSON-LD, `robots.txt` ve `sitemap.xml` tek seferde yeni domain ile güncellenmelidir.
+
+
+## V2.2 quality layer
+
+### Automated quality checks
+
+`.github/workflows/quality.yml` runs on pushes and pull requests targeting `main`.
+
+It validates:
+
+- JSON syntax
+- TR/EN translation parity
+- Enabled language files
+- Project translation references
+- Status translation references
+- Duplicate project IDs/numbers
+- Duplicate HTML IDs
+- Internal anchor targets
+- `aria-controls` targets
+- Static HTML asset paths
+- JavaScript module imports
+- CSS imports
+- Service worker application-shell paths
+
+The workflow intentionally has no npm dependencies.
+
+### Current status
+
+`assets/data/status.json` is the single source of truth for the current-work panel.
+
+Example:
+
+```json
+{
+  "state": "building",
+  "title": "Vanguardn",
+  "labelKey": "status.building.label",
+  "descriptionKey": "status.building.description",
+  "updatedAt": "2026-08-12",
+  "accent": "success"
+}
+```
+
+Updating this file changes the hero status and about-status presentation without editing HTML.
+
+### Project details
+
+Project cards remain data-driven through `assets/data/projects.json`.
+
+Each project can now define:
+
+- card description
+- long detail description
+- status
+- visibility
+- technology tags
+- project facts
+- highlights
+- external actions
+
+### OpenGraph image
+
+The social share image is:
+
+`assets/images/og-card.png`
+
+Recommended size: `1200x630`.

@@ -26,3 +26,45 @@
 .project-modal-features li::before { content: ""; position: absolute; left: 0; top: .65em; width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
 .project-modal-actions { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
 body.modal-open { overflow: hidden; }
+
+.project-modal-section {
+  margin-top: 30px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.project-modal-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.project-modal-fact {
+  min-height: 72px;
+  padding: 13px 14px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  background: var(--surface-solid);
+}
+
+.project-modal-fact span {
+  color: var(--muted);
+  font-size: .62rem;
+}
+
+.project-modal-fact strong {
+  color: var(--text-soft);
+  font-size: .74rem;
+  font-weight: 620;
+}
+
+@media (max-width: 520px) {
+  .project-modal-facts {
+    grid-template-columns: 1fr;
+  }
+}

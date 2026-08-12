@@ -58,7 +58,15 @@
     "openDetails": "open project details",
     "detailsAction": "Details →",
     "detailsLabel": "Highlights",
-    "sourceCode": "Source code"
+    "sourceCode": "Source code",
+    "overviewLabel": "Project overview",
+    "factsLabel": "Project facts",
+    "highlightsLabel": "Highlights",
+    "factType": "Type",
+    "factStage": "Stage",
+    "factRole": "Role",
+    "factEnvironment": "Environment",
+    "visibility": "Visibility"
   },
   "projectItems": {
     "vanguardn": {
@@ -69,7 +77,13 @@
         "Moderation, security, economy and leveling systems",
         "Logging, giveaways and production observability",
         "Designed for Linux VPS and PM2 environments"
-      ]
+      ],
+      "longDescription": "Vanguardn is my primary production-focused Discord ecosystem, combining moderation, security, economy, leveling, giveaways and logging systems. Its architecture is being developed with Linux VPS operation, PM2, safe restarts, observability and long-term maintainability in mind.",
+      "type": "Discord platform",
+      "stage": "Active development",
+      "role": "Architecture & development",
+      "environment": "Linux VPS · PM2",
+      "visibility": "Private project"
     },
     "dashboard": {
       "status": "Web application",
@@ -79,7 +93,13 @@
         "Modular Express.js backend",
         "Clear and controlled bot management experience",
         "Independent architecture between dashboard and bot projects"
-      ]
+      ],
+      "longDescription": "Vanguardn Dashboard is an independent web application designed to make bot administration clearer and more controlled through Discord OAuth2. It stays separate from the bot project and uses a modular Express.js backend with a focus on user experience, security and maintainability.",
+      "type": "Management dashboard",
+      "stage": "Active development",
+      "role": "Full-stack development",
+      "environment": "Express.js · EJS",
+      "visibility": "Private project"
     },
     "template": {
       "status": "Open source",
@@ -89,7 +109,13 @@
         "Clean and reusable Discord.js v14 setup",
         "Designed for fast starts on new bot projects",
         "Open-source and available on GitHub"
-      ]
+      ],
+      "longDescription": "Discord.js v14 Production Template is an open-source starter I maintain to help new Discord bot projects reach production quality faster. Clean organization, reusability and Linux/PM2 production readiness are the main goals.",
+      "type": "Open-source template",
+      "stage": "Published",
+      "role": "Developer / Maintainer",
+      "environment": "Node.js · Discord.js",
+      "visibility": "Open source"
     }
   },
   "github": {
@@ -115,5 +141,12 @@
   "footer": {
     "built": "Designed and built with care.",
     "backToTop": "Back to top ↑"
+  },
+  "status": {
+    "updated": "Last updated",
+    "building": {
+      "label": "building",
+      "description": "Actively working on a production-focused Discord ecosystem."
+    }
   }
 }

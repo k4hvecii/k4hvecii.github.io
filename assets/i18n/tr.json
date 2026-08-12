@@ -58,7 +58,15 @@
     "openDetails": "proje detaylarını aç",
     "detailsAction": "Detaylar →",
     "detailsLabel": "Öne çıkanlar",
-    "sourceCode": "Kaynak kodu"
+    "sourceCode": "Kaynak kodu",
+    "overviewLabel": "Proje özeti",
+    "factsLabel": "Proje bilgileri",
+    "highlightsLabel": "Öne çıkanlar",
+    "factType": "Tür",
+    "factStage": "Durum",
+    "factRole": "Rol",
+    "factEnvironment": "Çalışma ortamı",
+    "visibility": "Görünürlük"
   },
   "projectItems": {
     "vanguardn": {
@@ -69,7 +77,13 @@
         "Moderasyon, güvenlik, ekonomi ve seviye sistemleri",
         "Logger, giveaway ve production gözlemlenebilirliği",
         "Linux VPS ve PM2 çalışma ortamına uygun yapı"
-      ]
+      ],
+      "longDescription": "Vanguardn; moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini tek bir production odaklı Discord ekosisteminde birleştiren ana projem. Mimariyi Linux VPS, PM2, güvenli yeniden başlatma, gözlemlenebilirlik ve uzun süreli bakım gereksinimleri düşünülerek geliştiriyorum.",
+      "type": "Discord platformu",
+      "stage": "Aktif geliştirme",
+      "role": "Mimari ve geliştirme",
+      "environment": "Linux VPS · PM2",
+      "visibility": "Özel proje"
     },
     "dashboard": {
       "status": "Web uygulaması",
@@ -79,7 +93,13 @@
         "Express.js tabanlı modüler backend",
         "Bot yönetimi için sade ve kontrollü kullanıcı deneyimi",
         "Dashboard ve bot projelerinin bağımsız mimarisi"
-      ]
+      ],
+      "longDescription": "Vanguardn Dashboard; bot yönetimini Discord OAuth2 üzerinden daha anlaşılır ve kontrollü hale getiren bağımsız web uygulaması. Bot projesinden ayrı tutuluyor ve Express.js tabanlı modüler bir backend ile kullanıcı deneyimi, güvenlik ve bakım kolaylığına odaklanıyor.",
+      "type": "Yönetim paneli",
+      "stage": "Aktif geliştirme",
+      "role": "Full-stack geliştirme",
+      "environment": "Express.js · EJS",
+      "visibility": "Özel proje"
     },
     "template": {
       "status": "Açık kaynak",
@@ -89,7 +109,13 @@
         "Temiz ve yeniden kullanılabilir Discord.js v14 yapılandırması",
         "Yeni bot projelerinde hızlı başlangıç için uygun",
         "Açık kaynak ve GitHub üzerinden erişilebilir"
-      ]
+      ],
+      "longDescription": "Discord.js v14 Production Template; yeni Discord bot projelerinde production kalitesine daha hızlı ulaşmak için hazırladığım açık kaynak başlangıç yapısı. Temiz organizasyon, yeniden kullanılabilirlik ve Linux/PM2 production ortamına uygunluk temel hedefleri.",
+      "type": "Açık kaynak şablon",
+      "stage": "Yayınlandı",
+      "role": "Geliştirici / Maintainer",
+      "environment": "Node.js · Discord.js",
+      "visibility": "Açık kaynak"
     }
   },
   "github": {
@@ -115,5 +141,12 @@
   "footer": {
     "built": "Özenle tasarlandı ve geliştirildi.",
     "backToTop": "Yukarı dön ↑"
+  },
+  "status": {
+    "updated": "Son güncelleme",
+    "building": {
+      "label": "geliştiriliyor",
+      "description": "Production odaklı Discord ekosistemi üzerinde aktif olarak çalışıyorum."
+    }
   }
 }

@@ -786,3 +786,10 @@ html[data-theme="light"] .theme-icon--moon {
 .github-repo-language { display: inline-flex; align-items: center; gap: 6px; }
 .github-repo-language::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--text-soft); }
 .desktop-nav a.is-active { color: var(--text); }
+
+.current-status-date {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--muted-2);
+  font-size: .62rem;
+}

@@ -9,6 +9,7 @@ import { initGitHubCard } from "./modules/github-card.js";
 import { initSocialLinks } from "./modules/social-links.js";
 import { initParallax } from "./modules/parallax.js";
 import { initPwa } from "./modules/pwa.js";
+import { initStatus } from "./modules/status.js";
 
 async function bootstrap() {
   const year = document.querySelector("#current-year");
@@ -29,6 +30,7 @@ async function bootstrap() {
     initProjects(i18n, modal),
     initGitHubCard(i18n),
     initSocialLinks(i18n),
+    initStatus(i18n),
   ]);
 }
 

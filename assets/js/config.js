@@ -1,4 +1,5 @@
 export const SITE_CONFIG = Object.freeze({
+  version: "2.2.0",
   username: "k4hvecii",
   name: "Kıvanç Aydoğdu",
   email: "k4hveci2022@gmail.com",

@@ -14,7 +14,27 @@
       "Linux",
       "PM2"
     ],
-    "links": []
+    "links": [],
+    "longDescriptionKey": "projectItems.vanguardn.longDescription",
+    "facts": [
+      {
+        "labelKey": "projects.factType",
+        "valueKey": "projectItems.vanguardn.type"
+      },
+      {
+        "labelKey": "projects.factStage",
+        "valueKey": "projectItems.vanguardn.stage"
+      },
+      {
+        "labelKey": "projects.factRole",
+        "valueKey": "projectItems.vanguardn.role"
+      },
+      {
+        "labelKey": "projects.factEnvironment",
+        "valueKey": "projectItems.vanguardn.environment"
+      }
+    ],
+    "visibilityKey": "projectItems.vanguardn.visibility"
   },
   {
     "id": "dashboard",
@@ -31,7 +51,27 @@
       "EJS",
       "JavaScript"
     ],
-    "links": []
+    "links": [],
+    "longDescriptionKey": "projectItems.dashboard.longDescription",
+    "facts": [
+      {
+        "labelKey": "projects.factType",
+        "valueKey": "projectItems.dashboard.type"
+      },
+      {
+        "labelKey": "projects.factStage",
+        "valueKey": "projectItems.dashboard.stage"
+      },
+      {
+        "labelKey": "projects.factRole",
+        "valueKey": "projectItems.dashboard.role"
+      },
+      {
+        "labelKey": "projects.factEnvironment",
+        "valueKey": "projectItems.dashboard.environment"
+      }
+    ],
+    "visibilityKey": "projectItems.dashboard.visibility"
   },
   {
     "id": "template",
@@ -53,6 +93,26 @@
         "url": "https://github.com/k4hvecii/discordjs-v14-production-template",
         "type": "primary"
       }
-    ]
+    ],
+    "longDescriptionKey": "projectItems.template.longDescription",
+    "facts": [
+      {
+        "labelKey": "projects.factType",
+        "valueKey": "projectItems.template.type"
+      },
+      {
+        "labelKey": "projects.factStage",
+        "valueKey": "projectItems.template.stage"
+      },
+      {
+        "labelKey": "projects.factRole",
+        "valueKey": "projectItems.template.role"
+      },
+      {
+        "labelKey": "projects.factEnvironment",
+        "valueKey": "projectItems.template.environment"
+      }
+    ],
+    "visibilityKey": "projectItems.template.visibility"
   }
 ]

@@ -1,0 +1,8 @@
+{
+  "state": "building",
+  "title": "Vanguardn",
+  "labelKey": "status.building.label",
+  "descriptionKey": "status.building.description",
+  "updatedAt": "2026-08-12",
+  "accent": "success"
+}

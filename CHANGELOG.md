@@ -1,3 +1,16 @@
+# Changelog
+
+## 2.2.0 — Quality & Content
+
+- Added GitHub Actions quality validation for push and pull requests
+- Added zero-dependency static validation script
+- Added data-driven current status system
+- Added richer project facts and long-form project details
+- Added dedicated 1200x630 OpenGraph share image
+- Updated OpenGraph and Twitter image metadata
+- Added status data and OG image to the offline application shell
+- Added version marker to the footer
+
 ## 2.1.0 — Checkup Patch
 
 - Fixed project card status/details overlap
