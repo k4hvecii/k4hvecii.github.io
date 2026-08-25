@@ -30,9 +30,9 @@
   },
   "hero": {
     "kicker": "Software Developer · Türkiye",
-    "titlePrimary": "Discord bots and",
-    "titleSecondary": "backend systems.",
-    "description": "I build Discord bots, backend services and web projects with Node.js, PostgreSQL and Linux. I care about code that stays readable, organized and maintainable over time.",
+    "titlePrimary": "Hi, I'm",
+    "titleSecondary": "K4hveci.",
+    "description": "I build Discord bots, backend services and web products. I use Node.js, PostgreSQL and Linux to create simple, fast and manageable systems.",
     "primaryAction": "View Projects",
     "panelTitle": "Currently working on",
     "currentProject": "Building Listcord.",
@@ -44,7 +44,7 @@
     "scroll": "More"
   },
   "about": {
-    "kicker": "01 / About",
+    "kicker": "About",
     "title": "I focus on simplicity, performance and maintainability.",
     "lead": "I care about more than making a system work; it should stay organized, secure and easy to improve later.",
     "body": "I mainly work with JavaScript and Node.js. Alongside Discord bots, backend services and web projects, I manage PostgreSQL and Linux infrastructure directly.",
@@ -52,7 +52,7 @@
     "focus": "Backend · Discord · Security · Performance"
   },
   "projects": {
-    "kicker": "02 / Projects",
+    "kicker": "Projects",
     "title": "Projects I am working on.",
     "lead": "A collection of the bots and web projects I actively develop. Open a card to see the project details.",
     "openDetails": "open project details",
@@ -142,14 +142,14 @@
     "following": "Following",
     "fallbackBio": "Working on backend systems, Discord products and product-focused software.",
     "unavailable": "GitHub data is currently unavailable. You can still use the profile link to view the latest work.",
-    "recentKicker": "Recently updated",
+    "recentKicker": "GitHub",
     "recentTitle": "Recent public repositories",
     "noDescription": "No description provided.",
     "openSource": "Public GitHub data",
     "unavailableShort": "GitHub data unavailable"
   },
   "contact": {
-    "kicker": "04 / Contact",
+    "kicker": "Contact",
     "titlePrimary": "If you want to talk about a project,",
     "titleSecondary": "you can reach me.",
     "email": "Send email"

@@ -30,9 +30,9 @@
   },
   "hero": {
     "kicker": "Software Developer · Türkiye",
-    "titlePrimary": "Discord botları ve",
-    "titleSecondary": "backend sistemleri.",
-    "description": "Node.js, PostgreSQL ve Linux ile Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kodun okunabilir, düzenli ve uzun süre bakım yapılabilir olmasına önem veriyorum.",
+    "titlePrimary": "Merhaba, ben",
+    "titleSecondary": "K4hveci.",
+    "description": "Discord botları, backend servisleri ve web ürünleri geliştiriyorum. Node.js, PostgreSQL ve Linux ile sade, hızlı ve yönetilebilir sistemler kuruyorum.",
     "primaryAction": "Projeleri Gör",
     "panelTitle": "Üzerinde çalışıyorum",
     "currentProject": "Listcord üzerinde çalışıyorum.",
@@ -44,7 +44,7 @@
     "scroll": "Devamı"
   },
   "about": {
-    "kicker": "01 / Hakkımda",
+    "kicker": "Hakkımda",
     "title": "Projelerimde sadelik, performans ve sürdürülebilirliğe odaklanıyorum.",
     "lead": "Bir sistemi geliştirirken yalnızca çalışmasına değil; düzenli, güvenli ve sonradan geliştirilebilir olmasına da dikkat ediyorum.",
     "body": "Ağırlıklı olarak JavaScript ve Node.js kullanıyorum. Discord botları, backend servisleri ve web tarafında çalışırken PostgreSQL ve Linux altyapısını da doğrudan yönetiyorum.",
@@ -52,7 +52,7 @@
     "focus": "Backend · Discord · Security · Performance"
   },
   "projects": {
-    "kicker": "02 / Projeler",
+    "kicker": "Projeler",
     "title": "Üzerinde çalıştığım projeler.",
     "lead": "Aktif olarak geliştirdiğim botları ve web projelerini burada topluyorum. Kartlara tıklayarak proje detaylarını görebilirsin.",
     "openDetails": "proje detaylarını aç",
@@ -142,14 +142,14 @@
     "following": "Takip",
     "fallbackBio": "Backend, Discord sistemleri ve ürün odaklı projeler üzerinde çalışıyorum.",
     "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin.",
-    "recentKicker": "Son güncellenenler",
+    "recentKicker": "GitHub",
     "recentTitle": "Güncel public repolar",
     "noDescription": "Açıklama eklenmemiş.",
     "openSource": "Public GitHub verisi",
     "unavailableShort": "GitHub verisi alınamadı"
   },
   "contact": {
-    "kicker": "04 / İletişim",
+    "kicker": "İletişim",
     "titlePrimary": "Bir proje hakkında konuşmak istersen",
     "titleSecondary": "ulaşabilirsin.",
     "email": "E-posta gönder"

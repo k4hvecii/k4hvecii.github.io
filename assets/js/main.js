@@ -7,7 +7,6 @@ import { initProjects } from "./modules/projects.js";
 import { initProjectModal } from "./modules/project-modal.js";
 import { initGitHubCard } from "./modules/github-card.js";
 import { initSocialLinks } from "./modules/social-links.js";
-import { initParallax } from "./modules/parallax.js";
 import { initPwa } from "./modules/pwa.js";
 import { initStatus } from "./modules/status.js";
 
@@ -18,7 +17,6 @@ async function bootstrap() {
   initTheme();
   initNavigation();
   initScrollEffects();
-  initParallax();
   initPwa();
 
   const i18n = await new I18n().init();

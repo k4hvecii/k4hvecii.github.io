@@ -1,3 +1,16 @@
+# Changelog
+
+## v2.5 — Soft product refresh
+
+- Hero yeniden merkezlendi ve daha kişisel bir girişe dönüştürüldü.
+- Sağ-sol portfolyo düzeni yerine tek akışlı, sakin bir ürün sayfası hissi getirildi.
+- Grid/noise ve belirgin glow katmanları kaldırıldı.
+- Kartlar nötr yüzeylere, geniş radiuslara ve daha dengeli boşluklara taşındı.
+- Butonlar ve kontroller pill formuna getirildi.
+- Tipografi Apple sistem font stack'ine yaklaştırıldı; 600 altı yazı ağırlığı kullanılmıyor.
+- Mobil düzen ve açık tema yeni tasarım yönüne uyarlandı.
+- Parallax görünümü CSS seviyesinde devre dışı bırakıldı.
+
 # v2.4 — Typography & Profile Refresh
 
 - Removed thin/light typography across the interface; body text now starts at semibold.

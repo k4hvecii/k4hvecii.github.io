@@ -1,4 +1,4 @@
-const CACHE_NAME = "k4hvecii-portfolio-v2.4-profile";
+const CACHE_NAME = "k4hvecii-portfolio-v2.5-profile";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -14,6 +14,7 @@ const APP_SHELL = [
   "./assets/css/modal.css",
   "./assets/css/responsive.css",
   "./assets/css/tokens.css",
+  "./assets/css/apple-refresh.css",
   "./assets/js/config.js",
   "./assets/js/core/github.js",
   "./assets/js/core/i18n.js",
