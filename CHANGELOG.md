@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.3.0 — Profile Refresh
+
+- Repositioned the portfolio around the K4hveci identity
+- Made Listcord the current featured project
+- Refreshed Vanguardn, Vanguardn AI and Vanguardn ModMail project content
+- Removed outdated PM2-centric profile copy
+- Updated the visible stack toward PostgreSQL/Linux and product architecture
+- Introduced a soft indigo/purple visual system across surfaces, buttons and ambient layers
+- Added cleaner handling for empty GitHub repository results
+- Bumped PWA/service-worker cache version
+
 ## 2.2.0 — Quality & Content
 
 - Added GitHub Actions quality validation for push and pull requests

@@ -1,5 +1,5 @@
 export const SITE_CONFIG = Object.freeze({
-  version: "2.2.0",
+  version: "2.3.0",
   username: "k4hvecii",
   name: "Kıvanç Aydoğdu",
   email: "k4hveci2022@gmail.com",
@@ -11,7 +11,7 @@ export const SITE_CONFIG = Object.freeze({
   fallbackLocale: "en",
   localeStorageKey: "portfolio.locale",
   themeStorageKey: "portfolio.theme",
-  githubCacheKey: "portfolio.github-profile-v2",
-  githubReposCacheKey: "portfolio.github-repos-v2",
+  githubCacheKey: "portfolio.github-profile-v3",
+  githubReposCacheKey: "portfolio.github-repos-v3",
   githubCacheTtlMs: 10 * 60 * 1000,
 });

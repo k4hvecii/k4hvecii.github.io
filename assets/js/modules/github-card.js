@@ -32,6 +32,7 @@ export async function initGitHubCard(i18n) {
   const status = document.querySelector("#github-status");
   const repoList = document.querySelector("#github-repo-list");
   const repoState = document.querySelector("#github-repos-state");
+  const repoBlock = document.querySelector(".github-repos-block");
 
   let profile = null; let repos = [];
 
@@ -46,6 +47,7 @@ export async function initGitHubCard(i18n) {
     if (repoList) {
       repoList.replaceChildren(...repos.map((repo) => repoRow(repo, i18n)));
       if (repoState) repoState.textContent = repos.length ? i18n.t("github.openSource") : "";
+      if (repoBlock) repoBlock.hidden = repos.length === 0;
     }
   }
 
@@ -57,6 +59,7 @@ export async function initGitHubCard(i18n) {
     console.warn("GitHub data could not be loaded:", error);
     if (status) { const p = document.createElement("p"); p.textContent = i18n.t("github.unavailable"); status.replaceChildren(p); }
     if (repoState) repoState.textContent = i18n.t("github.unavailableShort");
+    if (repoBlock) repoBlock.hidden = true;
   }
 
   i18n.onChange(render);

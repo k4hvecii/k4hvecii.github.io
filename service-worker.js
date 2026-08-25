@@ -1,4 +1,4 @@
-const CACHE_NAME = "k4hvecii-portfolio-v2.2-quality";
+const CACHE_NAME = "k4hvecii-portfolio-v2.3-profile";
 const APP_SHELL = [
   "./",
   "./index.html",

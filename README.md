@@ -1,8 +1,8 @@
-# k4hvecii.github.io — Portfolio V2
+# k4hvecii.github.io — Portfolio V2.3
 
-Kıvanç Aydoğdu'nun modüler, çok dilli ve GitHub Pages uyumlu kişisel developer sitesi.
+K4hveci'nin modüler, çok dilli ve GitHub Pages uyumlu kişisel developer portfolyosu.
 
-## V2 özellikleri
+## Temel özellikler
 
 - Modüler CSS ve ES Modules mimarisi
 - Ölçeklenebilir JSON tabanlı i18n sistemi
@@ -124,3 +124,14 @@ The social share image is:
 `assets/images/og-card.png`
 
 Recommended size: `1200x630`.
+
+
+## V2.3 profile refresh
+
+- K4hveci kimliğine göre hero ve metadata yenilendi
+- Listcord ana aktif proje olarak konumlandırıldı
+- Vanguardn, Vanguardn AI ve Vanguardn ModMail proje kartları güncellendi
+- Eski PM2 odaklı içerikler kaldırıldı; güncel PostgreSQL/Linux yaklaşımı yansıtıldı
+- Mor/indigo soft accent ile daha premium kişisel görsel dil oluşturuldu
+- GitHub recent repos alanı boş kaldığında otomatik gizlenecek hale getirildi
+- Service worker ve cache sürümü 2.3'e yükseltildi

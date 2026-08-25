@@ -1,9 +1,46 @@
 [
   {
-    "id": "vanguardn",
+    "id": "listcord",
     "number": "01",
-    "title": "Vanguardn",
+    "title": "Listcord",
     "featured": true,
+    "wide": false,
+    "statusKey": "projectItems.listcord.status",
+    "descriptionKey": "projectItems.listcord.description",
+    "featuresKey": "projectItems.listcord.features",
+    "tags": [
+      "Botlist",
+      "Web Platform",
+      "Discord",
+      "Backend"
+    ],
+    "links": [],
+    "longDescriptionKey": "projectItems.listcord.longDescription",
+    "facts": [
+      {
+        "labelKey": "projects.factType",
+        "valueKey": "projectItems.listcord.type"
+      },
+      {
+        "labelKey": "projects.factStage",
+        "valueKey": "projectItems.listcord.stage"
+      },
+      {
+        "labelKey": "projects.factRole",
+        "valueKey": "projectItems.listcord.role"
+      },
+      {
+        "labelKey": "projects.factEnvironment",
+        "valueKey": "projectItems.listcord.environment"
+      }
+    ],
+    "visibilityKey": "projectItems.listcord.visibility"
+  },
+  {
+    "id": "vanguardn",
+    "number": "02",
+    "title": "Vanguardn",
+    "featured": false,
     "wide": false,
     "statusKey": "projectItems.vanguardn.status",
     "descriptionKey": "projectItems.vanguardn.description",
@@ -11,8 +48,8 @@
     "tags": [
       "Node.js",
       "Discord.js v14",
-      "Linux",
-      "PM2"
+      "PostgreSQL",
+      "Linux"
     ],
     "links": [],
     "longDescriptionKey": "projectItems.vanguardn.longDescription",
@@ -37,82 +74,77 @@
     "visibilityKey": "projectItems.vanguardn.visibility"
   },
   {
-    "id": "dashboard",
-    "number": "02",
-    "title": "Vanguardn Dashboard",
+    "id": "ai",
+    "number": "03",
+    "title": "Vanguardn AI",
     "featured": false,
     "wide": false,
-    "statusKey": "projectItems.dashboard.status",
-    "descriptionKey": "projectItems.dashboard.description",
-    "featuresKey": "projectItems.dashboard.features",
+    "statusKey": "projectItems.ai.status",
+    "descriptionKey": "projectItems.ai.description",
+    "featuresKey": "projectItems.ai.features",
     "tags": [
-      "Express.js",
-      "OAuth2",
-      "EJS",
-      "JavaScript"
+      "Node.js",
+      "Discord.js",
+      "AI APIs",
+      "Conversation"
     ],
     "links": [],
-    "longDescriptionKey": "projectItems.dashboard.longDescription",
+    "longDescriptionKey": "projectItems.ai.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.dashboard.type"
+        "valueKey": "projectItems.ai.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.dashboard.stage"
+        "valueKey": "projectItems.ai.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.dashboard.role"
+        "valueKey": "projectItems.ai.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.dashboard.environment"
+        "valueKey": "projectItems.ai.environment"
       }
     ],
-    "visibilityKey": "projectItems.dashboard.visibility"
+    "visibilityKey": "projectItems.ai.visibility"
   },
   {
-    "id": "template",
-    "number": "03",
-    "title": "Discord.js v14 Production Template",
+    "id": "modmail",
+    "number": "04",
+    "title": "Vanguardn ModMail",
     "featured": false,
-    "wide": true,
-    "statusKey": "projectItems.template.status",
-    "descriptionKey": "projectItems.template.description",
-    "featuresKey": "projectItems.template.features",
+    "wide": false,
+    "statusKey": "projectItems.modmail.status",
+    "descriptionKey": "projectItems.modmail.description",
+    "featuresKey": "projectItems.modmail.features",
     "tags": [
-      "JavaScript",
+      "Node.js",
       "Discord.js",
-      "Open Source"
+      "PostgreSQL",
+      "Support"
     ],
-    "links": [
-      {
-        "labelKey": "projects.sourceCode",
-        "url": "https://github.com/k4hvecii/discordjs-v14-production-template",
-        "type": "primary"
-      }
-    ],
-    "longDescriptionKey": "projectItems.template.longDescription",
+    "links": [],
+    "longDescriptionKey": "projectItems.modmail.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.template.type"
+        "valueKey": "projectItems.modmail.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.template.stage"
+        "valueKey": "projectItems.modmail.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.template.role"
+        "valueKey": "projectItems.modmail.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.template.environment"
+        "valueKey": "projectItems.modmail.environment"
       }
     ],
-    "visibilityKey": "projectItems.template.visibility"
+    "visibilityKey": "projectItems.modmail.visibility"
   }
 ]

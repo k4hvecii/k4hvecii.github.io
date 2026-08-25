@@ -1,10 +1,10 @@
 {
-  "name": "Kıvanç Aydoğdu",
-  "short_name": "k4hvecii",
+  "name": "K4hveci — Software Developer",
+  "short_name": "K4hveci",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0a0b0e",
-  "theme_color": "#0a0b0e",
+  "background_color": "#07080d",
+  "theme_color": "#07080d",
   "icons": [
     {
       "src": "./assets/icons/icon-192.png",
@@ -25,7 +25,7 @@
       "purpose": "any"
     }
   ],
-  "description": "Kıvanç Aydoğdu personal developer portfolio",
+  "description": "K4hveci personal developer portfolio — Discord ecosystems, backend services and web products.",
   "scope": "./",
   "categories": [
     "developer",

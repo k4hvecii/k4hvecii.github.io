@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Kıvanç Aydoğdu — Developer",
-    "description": "Kıvanç Aydoğdu — Developer building Discord systems, backend projects and modern web experiences."
+    "title": "K4hveci — Software Developer",
+    "description": "K4hveci — Software developer building Discord ecosystems, backend services and modern web products."
   },
   "accessibility": {
     "skip": "Skip to content",
@@ -29,32 +29,32 @@
     "active": "active"
   },
   "hero": {
-    "kicker": "Developer · Türkiye",
-    "titlePrimary": "Simple ideas.",
-    "titleSecondary": "Reliable systems.",
-    "description": "I build Discord systems, backend projects and modern web experiences with a focus on clean architecture, performance and reliability.",
+    "kicker": "K4hveci · Software Developer",
+    "titlePrimary": "I shape ideas.",
+    "titleSecondary": "I turn them into systems.",
+    "description": "I build Discord ecosystems, backend services and web products. The goal is not just software that works, but systems that stay simple, scalable and reliable over time.",
     "primaryAction": "View Projects",
     "panelTitle": "Currently",
-    "currentProject": "Building a production-focused Discord ecosystem.",
+    "currentProject": "Building Listcord.",
     "locationLabel": "Location",
     "location": "Türkiye",
     "focusLabel": "Focus",
     "stackLabel": "Stack",
-    "platformLabel": "Platform",
+    "platformLabel": "Infrastructure",
     "scroll": "Explore"
   },
   "about": {
     "kicker": "01 / About",
-    "title": "I care about the details behind what I ship.",
-    "lead": "I aim for systems that hide complexity from users, stay maintainable and behave reliably in production.",
-    "body": "I work in the JavaScript and Node.js ecosystem, building Discord bots, backend services and web projects. Code quality, stability, security and maintainability are parts of the same product for me.",
-    "status": "Vanguardn is actively in development",
-    "focus": "Performance · Security · Stability · Clean Architecture"
+    "title": "Simple on the surface. Strong underneath.",
+    "lead": "I like keeping the product experience simple without compromising architecture, security or long-term maintainability.",
+    "body": "I work in the JavaScript and Node.js ecosystem, building Discord products, backend services and web projects. I treat a project as more than code: data, infrastructure, user experience and long-term maintenance all belong to the same system.",
+    "status": "Listcord is being built",
+    "focus": "Architecture · Security · Performance · Product UX"
   },
   "projects": {
     "kicker": "02 / Projects",
-    "title": "Things I am building.",
-    "lead": "A compact overview of my main projects. Open a project for more details.",
+    "title": "What I am building right now.",
+    "lead": "A focused view of active products and systems. Each project includes a short look at its architecture and development priorities.",
     "openDetails": "open project details",
     "detailsAction": "Details →",
     "detailsLabel": "Highlights",
@@ -69,63 +69,79 @@
     "visibility": "Visibility"
   },
   "projectItems": {
+    "listcord": {
+      "status": "Active development",
+      "description": "A botlist platform designed to make discovering, verifying and listing Discord bots cleaner and more reliable.",
+      "features": [
+        "Product experience centered on bot discovery and listing",
+        "Structured submission flow for developers and the community",
+        "Long-term data and moderation architecture",
+        "Soft, premium and minimal interface direction"
+      ],
+      "longDescription": "Listcord is the botlist platform I am building for discovering, listing and connecting Discord bots with communities. I am designing it as more than a directory, with room for submissions, verification, moderation and a durable data layer as the product grows.",
+      "type": "Botlist platform",
+      "stage": "Active development",
+      "role": "Product, design and development",
+      "environment": "Web · Backend · Discord",
+      "visibility": "Private project"
+    },
     "vanguardn": {
-      "status": "In development",
-      "description": "A production-focused Discord ecosystem combining moderation, security, economy, leveling, giveaways and logging systems.",
+      "status": "Active development",
+      "description": "The main system combining moderation, security and server-management layers in one reliable Discord bot architecture.",
       "features": [
         "Modular Discord.js v14 architecture",
-        "Moderation, security, economy and leveling systems",
-        "Logging, giveaways and production observability",
-        "Designed for Linux VPS and PM2 environments"
+        "Moderation, security and automation layers",
+        "Shared PostgreSQL-oriented data approach",
+        "Long-running Linux deployment and maintainability focus"
       ],
-      "longDescription": "Vanguardn is my primary production-focused Discord ecosystem, combining moderation, security, economy, leveling, giveaways and logging systems. Its architecture is being developed with Linux VPS operation, PM2, safe restarts, observability and long-term maintainability in mind.",
-      "type": "Discord platform",
+      "longDescription": "Vanguardn is the primary Discord bot architecture I am building around moderation, security and server management. The focus is stability, security, a shared data layer and clean integration with the rest of the Vanguardn services.",
+      "type": "Discord moderation bot",
       "stage": "Active development",
-      "role": "Architecture & development",
-      "environment": "Linux VPS · PM2",
+      "role": "Architecture and development",
+      "environment": "Node.js · PostgreSQL · Linux",
       "visibility": "Private project"
     },
-    "dashboard": {
-      "status": "Web application",
-      "description": "A Discord OAuth2 and Express.js based management experience designed to make bot administration simpler and more controlled.",
+    "ai": {
+      "status": "Running",
+      "description": "A Discord AI assistant that joins conversations naturally when mentioned instead of behaving like a command-only bot.",
       "features": [
-        "Discord OAuth2 authentication flow",
-        "Modular Express.js backend",
-        "Clear and controlled bot management experience",
-        "Independent architecture between dashboard and bot projects"
+        "Mention-first conversational flow",
+        "Adaptable to multiple model/API providers",
+        "Lightweight response path focused on lower latency",
+        "User-like helper experience inside Discord"
       ],
-      "longDescription": "Vanguardn Dashboard is an independent web application designed to make bot administration clearer and more controlled through Discord OAuth2. It stays separate from the bot project and uses a modular Express.js backend with a focus on user experience, security and maintainability.",
-      "type": "Management dashboard",
-      "stage": "Active development",
-      "role": "Full-stack development",
-      "environment": "Express.js · EJS",
+      "longDescription": "Vanguardn AI is designed to participate in Discord conversations when needed, without relying on a classic command-first interaction model. I am building it around provider flexibility, lower response latency and a natural helper experience inside the community.",
+      "type": "Discord AI assistant",
+      "stage": "Active / evolving",
+      "role": "Architecture and development",
+      "environment": "Node.js · AI APIs · Discord",
       "visibility": "Private project"
     },
-    "template": {
-      "status": "Open source",
-      "description": "A clean, reusable and reliable starting point for production-quality Discord.js projects.",
+    "modmail": {
+      "status": "Running",
+      "description": "A structured support flow between users and staff, designed to expand into an appeal system later.",
       "features": [
-        "Production-focused starter architecture",
-        "Clean and reusable Discord.js v14 setup",
-        "Designed for fast starts on new bot projects",
-        "Open-source and available on GitHub"
+        "User-to-staff support flow",
+        "Manageable ticket/modmail structure",
+        "Architecture ready for shared-data integration",
+        "Designed to expand into punishment appeals later"
       ],
-      "longDescription": "Discord.js v14 Production Template is an open-source starter I maintain to help new Discord bot projects reach production quality faster. Clean organization, reusability and Linux/PM2 production readiness are the main goals.",
-      "type": "Open-source template",
-      "stage": "Published",
-      "role": "Developer / Maintainer",
-      "environment": "Node.js · Discord.js",
-      "visibility": "Open source"
+      "longDescription": "Vanguardn ModMail is the support system I am building for communication between Discord community members and staff. The architecture is planned to expand into an appeal flow connected to punishment records from the main moderation system.",
+      "type": "Support / ModMail bot",
+      "stage": "Active",
+      "role": "Architecture and development",
+      "environment": "Node.js · PostgreSQL · Linux",
+      "visibility": "Private project"
     }
   },
   "github": {
-    "title": "Recent work on the code side.",
-    "description": "I publish my public repositories and open-source work on GitHub.",
+    "title": "GitHub shows what I build in public.",
+    "description": "Follow my public repositories, open-source experiments and recent code work directly from my profile.",
     "repositories": "Repos",
     "followers": "Followers",
     "following": "Following",
-    "fallbackBio": "Working on JavaScript, Discord.js and production-focused systems.",
-    "unavailable": "GitHub data is currently unavailable. You can still view the latest work from the profile link.",
+    "fallbackBio": "Working on backend systems, Discord products and product-focused software.",
+    "unavailable": "GitHub data is currently unavailable. You can still use the profile link to view the latest work.",
     "recentKicker": "Recently updated",
     "recentTitle": "Recent public repositories",
     "noDescription": "No description provided.",
@@ -134,8 +150,8 @@
   },
   "contact": {
     "kicker": "04 / Contact",
-    "titlePrimary": "For new ideas,",
-    "titleSecondary": "let's stay connected.",
+    "titlePrimary": "If you want to build something,",
+    "titleSecondary": "we can talk.",
     "email": "Send email"
   },
   "footer": {
@@ -146,7 +162,7 @@
     "updated": "Last updated",
     "building": {
       "label": "building",
-      "description": "Actively working on a production-focused Discord ecosystem."
+      "description": "Actively building Listcord, a cleaner way to discover and manage Discord bots."
     }
   }
 }

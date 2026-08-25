@@ -38,7 +38,8 @@
 
   .project-card--featured,
   .project-card:not(.project-card--featured),
-  .project-card--wide {
+  .project-card--wide,
+  .project-card:nth-child(4):not(.project-card--wide) {
     grid-column: span 12 !important;
   }
 

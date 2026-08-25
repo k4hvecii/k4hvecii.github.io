@@ -32,7 +32,7 @@ function applyTheme(theme) {
 
   const metaTheme = document.querySelector('meta[name="theme-color"]');
   if (metaTheme) {
-    metaTheme.content = theme === "light" ? "#f3f2ee" : "#0a0b0e";
+    metaTheme.content = theme === "light" ? "#f5f3fa" : "#07080d";
   }
 }
 

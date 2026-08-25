@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Kıvanç Aydoğdu — Developer",
-    "description": "Kıvanç Aydoğdu — Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiren developer."
+    "title": "K4hveci — Software Developer",
+    "description": "K4hveci — Discord ekosistemleri, backend servisleri ve modern web ürünleri geliştiren software developer."
   },
   "accessibility": {
     "skip": "İçeriğe geç",
@@ -29,32 +29,32 @@
     "active": "aktif"
   },
   "hero": {
-    "kicker": "Developer · Türkiye",
-    "titlePrimary": "Sade fikirler.",
-    "titleSecondary": "Sağlam sistemler.",
-    "description": "Discord sistemleri, backend projeleri ve modern web deneyimleri geliştiriyorum. Temiz mimari, performans ve güvenilirlik benim için öncelik.",
+    "kicker": "K4hveci · Software Developer",
+    "titlePrimary": "Fikirleri kuruyorum.",
+    "titleSecondary": "Sistemlere dönüştürüyorum.",
+    "description": "Discord ekosistemleri, backend servisleri ve web ürünleri geliştiriyorum. Hedefim sadece çalışan değil; uzun süre ayakta kalan, sade ve ölçeklenebilir sistemler kurmak.",
     "primaryAction": "Projeleri Gör",
     "panelTitle": "Şu anda",
-    "currentProject": "Production odaklı Discord ekosistemi üzerinde çalışıyorum.",
+    "currentProject": "Listcord üzerinde çalışıyorum.",
     "locationLabel": "Konum",
     "location": "Türkiye",
     "focusLabel": "Odak",
     "stackLabel": "Stack",
-    "platformLabel": "Platform",
+    "platformLabel": "Altyapı",
     "scroll": "Keşfet"
   },
   "about": {
     "kicker": "01 / Hakkımda",
-    "title": "Üretirken detaylara önem veriyorum.",
-    "lead": "Karmaşıklığı kullanıcıya yansıtmayan, bakımı kolay ve production ortamında güvenilir çalışan sistemler hedefliyorum.",
-    "body": "JavaScript ve Node.js ekosisteminde Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kod kalitesi, stabilite, güvenlik ve sürdürülebilirlik benim için aynı ürünün parçaları.",
-    "status": "Vanguardn aktif geliştirmede",
-    "focus": "Performance · Security · Stability · Clean Architecture"
+    "title": "Sade görünen şeylerin arkasında güçlü bir yapı olmalı.",
+    "lead": "Ürün tarafındaki sadeliği; mimari, güvenlik ve sürdürülebilirlik tarafında taviz vermeden kurmayı seviyorum.",
+    "body": "JavaScript ve Node.js ekosisteminde Discord ürünleri, backend servisleri ve web projeleri geliştiriyorum. Bir projeyi yalnızca kod olarak değil; veri katmanı, altyapı, kullanıcı deneyimi ve uzun vadeli bakım ile birlikte ele alıyorum.",
+    "status": "Listcord geliştiriliyor",
+    "focus": "Architecture · Security · Performance · Product UX"
   },
   "projects": {
     "kicker": "02 / Projeler",
-    "title": "Üzerinde çalıştığım şeyler.",
-    "lead": "Ana projelerimi kısa ve net biçimde burada topluyorum. Detay için bir projeyi açabilirsin.",
+    "title": "Şu sıralar inşa ettiklerim.",
+    "lead": "Aktif ürünleri ve üzerinde çalıştığım sistemleri tek yerde topluyorum. Her kartın içinde mimari ve geliştirme odağına dair kısa detaylar var.",
     "openDetails": "proje detaylarını aç",
     "detailsAction": "Detaylar →",
     "detailsLabel": "Öne çıkanlar",
@@ -69,62 +69,78 @@
     "visibility": "Görünürlük"
   },
   "projectItems": {
-    "vanguardn": {
-      "status": "Geliştirme aşamasında",
-      "description": "Moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini production odaklı tek bir Discord ekosisteminde birleştiriyorum.",
+    "listcord": {
+      "status": "Aktif geliştirme",
+      "description": "Discord botlarını keşfetme, doğrulama ve listeleme deneyimini daha düzenli ve güvenilir hale getiren botlist platformu.",
       "features": [
-        "Modüler Discord.js v14 altyapısı",
-        "Moderasyon, güvenlik, ekonomi ve seviye sistemleri",
-        "Logger, giveaway ve production gözlemlenebilirliği",
-        "Linux VPS ve PM2 çalışma ortamına uygun yapı"
+        "Bot keşfi ve listeleme odaklı ürün deneyimi",
+        "Bot geliştiricileri ve topluluk için düzenli başvuru akışı",
+        "Uzun vadeli veri ve moderasyon mimarisi",
+        "Soft, premium ve sade arayüz yaklaşımı"
       ],
-      "longDescription": "Vanguardn; moderasyon, güvenlik, ekonomi, seviye, giveaway ve logger sistemlerini tek bir production odaklı Discord ekosisteminde birleştiren ana projem. Mimariyi Linux VPS, PM2, güvenli yeniden başlatma, gözlemlenebilirlik ve uzun süreli bakım gereksinimleri düşünülerek geliştiriyorum.",
-      "type": "Discord platformu",
+      "longDescription": "Listcord; Discord botlarının keşfedilmesi, listelenmesi ve toplulukla buluşması için geliştirdiğim botlist platformu. Ürünü yalnızca bir listeleme sitesi olarak değil; başvuru, doğrulama, moderasyon ve ileride genişleyebilecek veri katmanıyla uzun ömürlü bir ekosistem olarak tasarlıyorum.",
+      "type": "Botlist platformu",
+      "stage": "Aktif geliştirme",
+      "role": "Ürün, tasarım ve geliştirme",
+      "environment": "Web · Backend · Discord",
+      "visibility": "Özel proje"
+    },
+    "vanguardn": {
+      "status": "Aktif geliştirme",
+      "description": "Moderasyon, güvenlik ve sunucu yönetimi katmanlarını tek bir sağlam Discord bot mimarisinde birleştiren ana sistem.",
+      "features": [
+        "Modüler Discord.js v14 mimarisi",
+        "Moderasyon, güvenlik ve otomasyon katmanları",
+        "PostgreSQL tabanlı ortak veri yaklaşımı",
+        "Linux üzerinde uzun süreli ve sürdürülebilir çalışma odağı"
+      ],
+      "longDescription": "Vanguardn; moderasyon, güvenlik ve sunucu yönetimi ihtiyaçlarını merkezi ve sürdürülebilir bir Discord bot mimarisinde birleştiren ana bot projem. Geliştirme odağı; stabilite, güvenlik, ortak veri katmanı ve diğer Vanguardn servisleriyle temiz entegrasyon.",
+      "type": "Discord moderasyon botu",
       "stage": "Aktif geliştirme",
       "role": "Mimari ve geliştirme",
-      "environment": "Linux VPS · PM2",
+      "environment": "Node.js · PostgreSQL · Linux",
       "visibility": "Özel proje"
     },
-    "dashboard": {
-      "status": "Web uygulaması",
-      "description": "Discord OAuth2 ve Express.js tabanlı, bot yönetimini daha sade ve kontrollü hale getirmeyi amaçlayan yönetim deneyimi.",
+    "ai": {
+      "status": "Çalışıyor",
+      "description": "Komut botu gibi değil, gerektiğinde etiketlenerek sohbete doğal biçimde katılan Discord AI asistanı.",
       "features": [
-        "Discord OAuth2 giriş akışı",
-        "Express.js tabanlı modüler backend",
-        "Bot yönetimi için sade ve kontrollü kullanıcı deneyimi",
-        "Dashboard ve bot projelerinin bağımsız mimarisi"
+        "Mention odaklı doğal sohbet akışı",
+        "Birden fazla model/API sağlayıcısına uyarlanabilir yapı",
+        "Yanıt gecikmesini azaltmaya odaklanan hafif akış",
+        "Discord içinde kullanıcı benzeri yardımcı deneyim"
       ],
-      "longDescription": "Vanguardn Dashboard; bot yönetimini Discord OAuth2 üzerinden daha anlaşılır ve kontrollü hale getiren bağımsız web uygulaması. Bot projesinden ayrı tutuluyor ve Express.js tabanlı modüler bir backend ile kullanıcı deneyimi, güvenlik ve bakım kolaylığına odaklanıyor.",
-      "type": "Yönetim paneli",
-      "stage": "Aktif geliştirme",
-      "role": "Full-stack geliştirme",
-      "environment": "Express.js · EJS",
+      "longDescription": "Vanguardn AI; Discord içinde klasik komut kullanımından uzak, gerektiğinde etiketlenerek konuşmaya katılan bir AI asistanı. Mimariyi farklı model sağlayıcılarıyla çalışabilecek, gecikmeyi düşük tutacak ve topluluk içinde doğal bir yardımcı gibi davranacak şekilde geliştiriyorum.",
+      "type": "Discord AI asistanı",
+      "stage": "Aktif / geliştiriliyor",
+      "role": "Mimari ve geliştirme",
+      "environment": "Node.js · AI APIs · Discord",
       "visibility": "Özel proje"
     },
-    "template": {
-      "status": "Açık kaynak",
-      "description": "Production kalitesinde Discord.js projeleri için temiz, yeniden kullanılabilir ve güvenilir başlangıç yapısı.",
+    "modmail": {
+      "status": "Çalışıyor",
+      "description": "Kullanıcı ile ekip arasındaki destek akışını düzenleyen, ileride itiraz sistemiyle genişleyebilecek ModMail altyapısı.",
       "features": [
-        "Production odaklı başlangıç mimarisi",
-        "Temiz ve yeniden kullanılabilir Discord.js v14 yapılandırması",
-        "Yeni bot projelerinde hızlı başlangıç için uygun",
-        "Açık kaynak ve GitHub üzerinden erişilebilir"
+        "Kullanıcı–yetkili destek akışı",
+        "Ayrı ve yönetilebilir ticket/modmail yapısı",
+        "Ortak veri katmanıyla entegrasyona uygun mimari",
+        "İleride ceza itiraz akışına genişleyebilecek yapı"
       ],
-      "longDescription": "Discord.js v14 Production Template; yeni Discord bot projelerinde production kalitesine daha hızlı ulaşmak için hazırladığım açık kaynak başlangıç yapısı. Temiz organizasyon, yeniden kullanılabilirlik ve Linux/PM2 production ortamına uygunluk temel hedefleri.",
-      "type": "Açık kaynak şablon",
-      "stage": "Yayınlandı",
-      "role": "Geliştirici / Maintainer",
-      "environment": "Node.js · Discord.js",
-      "visibility": "Açık kaynak"
+      "longDescription": "Vanguardn ModMail; Discord topluluğunda kullanıcılarla yönetim ekibi arasındaki destek iletişimini düzenlemek için geliştirdiğim ModMail sistemi. Yapı, ileride ana moderasyon botundaki ceza kayıtlarıyla ilişkilenecek bir itiraz akışına genişleyebilecek şekilde planlanıyor.",
+      "type": "Destek / ModMail botu",
+      "stage": "Aktif",
+      "role": "Mimari ve geliştirme",
+      "environment": "Node.js · PostgreSQL · Linux",
+      "visibility": "Özel proje"
     }
   },
   "github": {
-    "title": "Kod tarafındaki güncel çalışmalar.",
-    "description": "Public repository ve açık kaynak çalışmalarımı GitHub profilimde yayınlıyorum.",
+    "title": "Public tarafta ne ürettiğimi GitHub anlatıyor.",
+    "description": "Public repoları, açık kaynak denemelerini ve güncel kod çalışmalarını doğrudan profilimden takip edebilirsin.",
     "repositories": "Repo",
     "followers": "Takipçi",
     "following": "Takip",
-    "fallbackBio": "JavaScript, Discord.js ve production odaklı sistemler üzerinde çalışıyorum.",
+    "fallbackBio": "Backend, Discord sistemleri ve ürün odaklı projeler üzerinde çalışıyorum.",
     "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin.",
     "recentKicker": "Son güncellenenler",
     "recentTitle": "Güncel public repolar",
@@ -134,8 +150,8 @@
   },
   "contact": {
     "kicker": "04 / İletişim",
-    "titlePrimary": "Yeni fikirler için",
-    "titleSecondary": "bağlantıda kalalım.",
+    "titlePrimary": "Bir şey üretmek istiyorsan",
+    "titleSecondary": "konuşabiliriz.",
     "email": "E-posta gönder"
   },
   "footer": {
@@ -146,7 +162,7 @@
     "updated": "Son güncelleme",
     "building": {
       "label": "geliştiriliyor",
-      "description": "Production odaklı Discord ekosistemi üzerinde aktif olarak çalışıyorum."
+      "description": "Discord botlarını keşfetmeyi ve yönetmeyi daha düzenli hale getiren Listcord üzerinde aktif olarak çalışıyorum."
     }
   }
 }
