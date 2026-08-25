@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "K4hveci — Software Developer",
-    "description": "K4hveci — Discord ekosistemleri, backend servisleri ve modern web ürünleri geliştiren software developer."
+    "description": "K4hveci — Discord botları, backend sistemleri ve web projeleri geliştiren software developer."
   },
   "accessibility": {
     "skip": "İçeriğe geç",
@@ -29,32 +29,32 @@
     "active": "aktif"
   },
   "hero": {
-    "kicker": "K4hveci · Software Developer",
-    "titlePrimary": "Fikirleri kuruyorum.",
-    "titleSecondary": "Sistemlere dönüştürüyorum.",
-    "description": "Discord ekosistemleri, backend servisleri ve web ürünleri geliştiriyorum. Hedefim sadece çalışan değil; uzun süre ayakta kalan, sade ve ölçeklenebilir sistemler kurmak.",
+    "kicker": "Software Developer · Türkiye",
+    "titlePrimary": "Discord botları ve",
+    "titleSecondary": "backend sistemleri.",
+    "description": "Node.js, PostgreSQL ve Linux ile Discord botları, backend servisleri ve web projeleri geliştiriyorum. Kodun okunabilir, düzenli ve uzun süre bakım yapılabilir olmasına önem veriyorum.",
     "primaryAction": "Projeleri Gör",
-    "panelTitle": "Şu anda",
+    "panelTitle": "Üzerinde çalışıyorum",
     "currentProject": "Listcord üzerinde çalışıyorum.",
     "locationLabel": "Konum",
     "location": "Türkiye",
     "focusLabel": "Odak",
     "stackLabel": "Stack",
     "platformLabel": "Altyapı",
-    "scroll": "Keşfet"
+    "scroll": "Devamı"
   },
   "about": {
     "kicker": "01 / Hakkımda",
-    "title": "Sade görünen şeylerin arkasında güçlü bir yapı olmalı.",
-    "lead": "Ürün tarafındaki sadeliği; mimari, güvenlik ve sürdürülebilirlik tarafında taviz vermeden kurmayı seviyorum.",
-    "body": "JavaScript ve Node.js ekosisteminde Discord ürünleri, backend servisleri ve web projeleri geliştiriyorum. Bir projeyi yalnızca kod olarak değil; veri katmanı, altyapı, kullanıcı deneyimi ve uzun vadeli bakım ile birlikte ele alıyorum.",
+    "title": "Projelerimde sadelik, performans ve sürdürülebilirliğe odaklanıyorum.",
+    "lead": "Bir sistemi geliştirirken yalnızca çalışmasına değil; düzenli, güvenli ve sonradan geliştirilebilir olmasına da dikkat ediyorum.",
+    "body": "Ağırlıklı olarak JavaScript ve Node.js kullanıyorum. Discord botları, backend servisleri ve web tarafında çalışırken PostgreSQL ve Linux altyapısını da doğrudan yönetiyorum.",
     "status": "Listcord geliştiriliyor",
-    "focus": "Architecture · Security · Performance · Product UX"
+    "focus": "Backend · Discord · Security · Performance"
   },
   "projects": {
     "kicker": "02 / Projeler",
-    "title": "Şu sıralar inşa ettiklerim.",
-    "lead": "Aktif ürünleri ve üzerinde çalıştığım sistemleri tek yerde topluyorum. Her kartın içinde mimari ve geliştirme odağına dair kısa detaylar var.",
+    "title": "Üzerinde çalıştığım projeler.",
+    "lead": "Aktif olarak geliştirdiğim botları ve web projelerini burada topluyorum. Kartlara tıklayarak proje detaylarını görebilirsin.",
     "openDetails": "proje detaylarını aç",
     "detailsAction": "Detaylar →",
     "detailsLabel": "Öne çıkanlar",
@@ -135,8 +135,8 @@
     }
   },
   "github": {
-    "title": "Public tarafta ne ürettiğimi GitHub anlatıyor.",
-    "description": "Public repoları, açık kaynak denemelerini ve güncel kod çalışmalarını doğrudan profilimden takip edebilirsin.",
+    "title": "Kodlarım ve açık projelerim GitHub'da.",
+    "description": "Public repolarımı ve güncel çalışmalarımı GitHub profilimden takip edebilirsin.",
     "repositories": "Repo",
     "followers": "Takipçi",
     "following": "Takip",
@@ -150,8 +150,8 @@
   },
   "contact": {
     "kicker": "04 / İletişim",
-    "titlePrimary": "Bir şey üretmek istiyorsan",
-    "titleSecondary": "konuşabiliriz.",
+    "titlePrimary": "Bir proje hakkında konuşmak istersen",
+    "titleSecondary": "ulaşabilirsin.",
     "email": "E-posta gönder"
   },
   "footer": {

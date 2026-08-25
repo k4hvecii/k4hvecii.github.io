@@ -23,6 +23,7 @@ body {
     "Segoe UI", sans-serif;
   line-height: 1.55;
   letter-spacing: -0.012em;
+  font-weight: 600;
   overflow-x: hidden;
   transition: background-color 180ms ease, color 180ms ease;
 }
@@ -88,7 +89,8 @@ a:focus-visible {
 }
 
 .muted-text {
-  color: var(--muted);
+  color: var(--text-soft);
+  font-weight: 800;
 }
 
 .noise {

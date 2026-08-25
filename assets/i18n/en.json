@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "K4hveci — Software Developer",
-    "description": "K4hveci — Software developer building Discord ecosystems, backend services and modern web products."
+    "description": "K4hveci — software developer building Discord bots, backend systems and web projects."
   },
   "accessibility": {
     "skip": "Skip to content",
@@ -29,32 +29,32 @@
     "active": "active"
   },
   "hero": {
-    "kicker": "K4hveci · Software Developer",
-    "titlePrimary": "I shape ideas.",
-    "titleSecondary": "I turn them into systems.",
-    "description": "I build Discord ecosystems, backend services and web products. The goal is not just software that works, but systems that stay simple, scalable and reliable over time.",
+    "kicker": "Software Developer · Türkiye",
+    "titlePrimary": "Discord bots and",
+    "titleSecondary": "backend systems.",
+    "description": "I build Discord bots, backend services and web projects with Node.js, PostgreSQL and Linux. I care about code that stays readable, organized and maintainable over time.",
     "primaryAction": "View Projects",
-    "panelTitle": "Currently",
+    "panelTitle": "Currently working on",
     "currentProject": "Building Listcord.",
     "locationLabel": "Location",
     "location": "Türkiye",
     "focusLabel": "Focus",
     "stackLabel": "Stack",
     "platformLabel": "Infrastructure",
-    "scroll": "Explore"
+    "scroll": "More"
   },
   "about": {
     "kicker": "01 / About",
-    "title": "Simple on the surface. Strong underneath.",
-    "lead": "I like keeping the product experience simple without compromising architecture, security or long-term maintainability.",
-    "body": "I work in the JavaScript and Node.js ecosystem, building Discord products, backend services and web projects. I treat a project as more than code: data, infrastructure, user experience and long-term maintenance all belong to the same system.",
+    "title": "I focus on simplicity, performance and maintainability.",
+    "lead": "I care about more than making a system work; it should stay organized, secure and easy to improve later.",
+    "body": "I mainly work with JavaScript and Node.js. Alongside Discord bots, backend services and web projects, I manage PostgreSQL and Linux infrastructure directly.",
     "status": "Listcord is being built",
-    "focus": "Architecture · Security · Performance · Product UX"
+    "focus": "Backend · Discord · Security · Performance"
   },
   "projects": {
     "kicker": "02 / Projects",
-    "title": "What I am building right now.",
-    "lead": "A focused view of active products and systems. Each project includes a short look at its architecture and development priorities.",
+    "title": "Projects I am working on.",
+    "lead": "A collection of the bots and web projects I actively develop. Open a card to see the project details.",
     "openDetails": "open project details",
     "detailsAction": "Details →",
     "detailsLabel": "Highlights",
@@ -135,8 +135,8 @@
     }
   },
   "github": {
-    "title": "GitHub shows what I build in public.",
-    "description": "Follow my public repositories, open-source experiments and recent code work directly from my profile.",
+    "title": "My code and public projects are on GitHub.",
+    "description": "You can follow my public repositories and recent work directly from my GitHub profile.",
     "repositories": "Repos",
     "followers": "Followers",
     "following": "Following",
@@ -150,8 +150,8 @@
   },
   "contact": {
     "kicker": "04 / Contact",
-    "titlePrimary": "If you want to build something,",
-    "titleSecondary": "we can talk.",
+    "titlePrimary": "If you want to talk about a project,",
+    "titleSecondary": "you can reach me.",
     "email": "Send email"
   },
   "footer": {

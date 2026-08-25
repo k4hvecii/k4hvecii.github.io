@@ -1,3 +1,11 @@
+# v2.4 — Typography & Profile Refresh
+
+- Removed thin/light typography across the interface; body text now starts at semibold.
+- Rewrote hero copy with a simpler, more personal developer-focused tone.
+- Increased readability of muted labels, project descriptions, status copy and metadata.
+- Reduced oversized hero typography and removed low-contrast secondary headline treatment.
+- Simplified About, Projects, GitHub and Contact copy in Turkish and English.
+
 # Changelog
 
 ## 2.3.0 — Profile Refresh

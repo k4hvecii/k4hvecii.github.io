@@ -11,8 +11,8 @@
 
   --text: #f7f6fb;
   --text-soft: #cbc8d9;
-  --muted: #858291;
-  --muted-2: #5d5a69;
+  --muted: #aaa6b6;
+  --muted-2: #7f7b8b;
 
   --accent: #9d8cff;
   --accent-strong: #7d69f5;
@@ -47,8 +47,8 @@ html[data-theme="light"] {
 
   --text: #17151f;
   --text-soft: #454151;
-  --muted: #777281;
-  --muted-2: #9b96a4;
+  --muted: #625d6d;
+  --muted-2: #7b7585;
 
   --accent: #6658d8;
   --accent-strong: #5546c8;
