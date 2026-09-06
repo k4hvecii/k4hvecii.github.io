@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <title>Flask Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Flask, a Discord moderation, security, and server management bot by LabCafe." />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #151b23;
+      --text: #edf2f7;
+      --muted: #a8b3c2;
+      --line: #283241;
+      --accent: #7e9fb1;
+      --accent-soft: #9db7c5;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(860px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 72px 0 96px;
+    }
+
+    header {
+      padding-bottom: 32px;
+      margin-bottom: 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      color: var(--accent-soft);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    section {
+      margin: 34px 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 21px;
+      letter-spacing: -0.015em;
+    }
+
+    p, li {
+      color: #d3dbe6;
+    }
+
+    p { margin: 0 0 14px; }
+
+    ul {
+      margin: 12px 0 16px;
+      padding-left: 22px;
+    }
+
+    li { margin: 7px 0; }
+
+    strong { color: var(--text); }
+
+    a {
+      color: var(--accent-soft);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .notice {
+      margin: 26px 0 38px;
+      padding: 18px 20px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: #d8e0ea;
+    }
+
+    footer {
+      margin-top: 54px;
+      padding-top: 26px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="brand"><span class="dot" aria-hidden="true"></span>Flask · by LabCafe</div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: September 6, 2026</p>
+    </header>
+
+    <div class="notice">
+      This Privacy Policy explains what data Flask may process when providing Discord server moderation, security, automation, and management features, and how that data is handled.
+    </div>
+
+    <section>
+      <h2>1. Overview</h2>
+      <p><strong>Flask</strong> is a Discord bot developed under the LabCafe community. Flask is designed to help Discord server administrators manage, moderate, automate, and protect their communities.</p>
+      <p>Flask only processes Discord data that is reasonably necessary to provide enabled bot features, maintain security, and operate the service.</p>
+    </section>
+
+    <section>
+      <h2>2. Data Flask May Process</h2>
+      <p>Depending on the features enabled by a server administrator, Flask may process:</p>
+      <ul>
+        <li>Discord user IDs and basic account information made available by Discord.</li>
+        <li>Discord server (guild) IDs, channel IDs, role IDs, and related server configuration.</li>
+        <li>Member join, leave, role, and verification-related events.</li>
+        <li>Presence information when a configured feature specifically requires online, offline, idle, or activity state.</li>
+        <li>Message content when required for moderation, anti-spam, anti-raid, scam or phishing detection, filters, or message-based automation.</li>
+        <li>Moderation-related information such as warnings, moderation actions, security events, and configuration history.</li>
+      </ul>
+      <p>Flask does not ask users for Discord passwords, authentication credentials, or payment information.</p>
+    </section>
+
+    <section>
+      <h2>3. How Data Is Used</h2>
+      <p>Data processed by Flask is used to provide features such as:</p>
+      <ul>
+        <li>Server moderation and administrative tools.</li>
+        <li>Anti-spam, anti-raid, and abuse prevention.</li>
+        <li>Scam, phishing, malicious-link, word, and phrase filtering.</li>
+        <li>Member verification, onboarding, and role automation.</li>
+        <li>Moderation logs, alerts, and server safety workflows.</li>
+        <li>Bot configuration, reliability, troubleshooting, and security.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Message Content</h2>
+      <p>When message-based moderation or security features are enabled, Flask may inspect message content to determine whether configured rules or safety systems should take action.</p>
+      <p>Flask is not designed to indiscriminately archive every message in a Discord server. Message content may be processed transiently, and limited message-related information may be retained when necessary for moderation evidence, security records, or administrator-enabled logging.</p>
+      <p><strong>Discord message content is not used to train machine learning or artificial intelligence models.</strong></p>
+    </section>
+
+    <section>
+      <h2>5. Presence Data</h2>
+      <p>Flask may process presence information only when a feature specifically depends on it. Presence information is used for the relevant bot functionality and is not used for advertising or unrelated user profiling.</p>
+      <p>Presence data is not intended to be persistently stored unless retention is necessary for a clearly configured, user-visible feature.</p>
+    </section>
+
+    <section>
+      <h2>6. Data Storage and Retention</h2>
+      <p>Flask may store limited information outside Discord when persistent storage is required for bot functionality. This can include server configuration, Discord IDs, role and channel settings, moderation records, and security-related records.</p>
+      <p>Data is retained only for as long as reasonably necessary to provide Flask's functionality, maintain security, investigate abuse, or satisfy applicable legal obligations. Data that is no longer required should be deleted or anonymized where reasonably possible.</p>
+    </section>
+
+    <section>
+      <h2>7. Data Sharing and Sale</h2>
+      <p><strong>Flask does not sell personal data.</strong> Data processed by Flask is not provided to advertisers.</p>
+      <p>Information may be disclosed only when reasonably necessary to operate Flask's infrastructure, protect the service or its users from abuse, or comply with applicable law and valid legal requests.</p>
+    </section>
+
+    <section>
+      <h2>8. Server Administrator Control</h2>
+      <p>Server administrators decide whether to add Flask to their Discord server and which available features to enable. Administrators may disable configured features or remove Flask from their server to stop future processing associated with those features.</p>
+      <p>Server administrators are responsible for configuring Flask in accordance with Discord's policies and any privacy obligations that apply to their community.</p>
+    </section>
+
+    <section>
+      <h2>9. Data Requests</h2>
+      <p>Users and server administrators may request information about eligible stored data, or request correction or deletion where applicable.</p>
+      <p>For privacy-related requests, contact the Flask/LabCafe team through the official support channels or the GitHub account <a href="https://github.com/k4hvecii" rel="noopener noreferrer">@k4hvecii</a>. Do not include passwords, access tokens, or other sensitive credentials in a public request.</p>
+    </section>
+
+    <section>
+      <h2>10. Children's Privacy</h2>
+      <p>Flask is intended to operate in accordance with Discord's Terms of Service and age requirements. Flask is not designed to intentionally collect personal information from children outside the normal operation of Discord's platform.</p>
+    </section>
+
+    <section>
+      <h2>11. Security</h2>
+      <p>Reasonable technical and organizational measures are used to protect stored information from unauthorized access, alteration, disclosure, or destruction. No online service can guarantee absolute security.</p>
+    </section>
+
+    <section>
+      <h2>12. Changes to This Policy</h2>
+      <p>This Privacy Policy may be updated as Flask evolves. The date at the top of this page will be changed when the policy is revised.</p>
+    </section>
+
+    <footer>
+      Flask · by LabCafe<br />
+      Privacy Policy · September 2026
+    </footer>
+  </main>
+</body>
+</html>
