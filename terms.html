@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Flask Discord botu kullanım koşulları">
+  <title>Kullanım Koşulları — Flask</title>
+  <style>
+:root{
+  --bg:#0b0d10;
+  --panel:#12151a;
+  --text:#f5f7fa;
+  --muted:#a6adb7;
+  --line:#252a32;
+  --accent:#e8ebef;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.04), transparent 34rem),
+    var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+.wrap{max-width:860px;margin:0 auto;padding:64px 22px 80px}
+.brand{
+  display:inline-flex;align-items:center;gap:10px;
+  color:var(--text);text-decoration:none;font-weight:700;letter-spacing:.02em
+}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 22px rgba(255,255,255,.35)}
+.hero{padding:54px 0 34px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.16em}
+h1{font-size:clamp(2.3rem,7vw,4.4rem);line-height:1.02;margin:12px 0 16px;letter-spacing:-.045em}
+.lead{max-width:680px;color:var(--muted);font-size:1.08rem}
+.meta{margin-top:22px;color:var(--muted);font-size:.93rem}
+.card{background:rgba(18,21,26,.78);border:1px solid var(--line);border-radius:18px;padding:28px;margin:18px 0}
+h2{font-size:1.3rem;margin:0 0 12px;letter-spacing:-.02em}
+p{margin:0 0 12px}
+p:last-child{margin-bottom:0}
+ul{margin:10px 0 0;padding-left:22px}
+li{margin:7px 0}
+a{color:#fff;text-underline-offset:3px}
+.notice{border-left:3px solid #6b7280;padding:14px 16px;background:rgba(255,255,255,.025);color:var(--muted);border-radius:8px}
+.footer{margin-top:42px;padding-top:26px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+code{background:#171b21;border:1px solid var(--line);padding:.12rem .38rem;border-radius:6px}
+@media(max-width:640px){.wrap{padding-top:36px}.hero{padding-top:38px}.card{padding:22px}}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="brand" href="#"><span class="dot"></span> Flask by LabCafe</a>
+
+    <section class="hero">
+      <div class="kicker">Yasal</div>
+      <h1>Kullanım Koşulları</h1>
+      <p class="lead">Flask'ı kullanarak aşağıdaki koşulları kabul etmiş olursunuz. Bu koşullar botun güvenli, adil ve sürdürülebilir şekilde kullanılmasını amaçlar.</p>
+      <div class="meta">Son güncelleme: 13 Eylül 2026</div>
+    </section>
+
+    <div class="notice">
+      Bu sayfadaki <strong>DESTEK_SUNUCUSU_URL</strong> ve <strong>ILETISIM_EPOSTASI</strong> alanlarını yayınlamadan önce kendi bilgilerinizle değiştirin.
+    </div>
+
+    <section class="card">
+      <h2>1. Hizmetin kullanımı</h2>
+      <p>Flask, Discord sunucularında yönetim, topluluk, araçlar, eğlence ve benzeri özellikler sunan genel amaçlı bir bottur. Botu kullanırken Discord'un şartlarına, geçerli yasalara ve bu koşullara uymanız gerekir.</p>
+    </section>
+
+    <section class="card">
+      <h2>2. Yasaklanan kullanım</h2>
+      <p>Flask aşağıdaki amaçlarla kullanılamaz:</p>
+      <ul>
+        <li>Spam, taciz, dolandırıcılık veya zararlı otomasyon.</li>
+        <li>Discord'un sistemlerini, Flask'ı veya üçüncü taraf hizmetlerini kötüye kullanma girişimleri.</li>
+        <li>Yetkisiz erişim, güvenlik açığı istismarı veya hizmetin normal çalışmasını bozma.</li>
+        <li>Yürürlükteki yasaları veya Discord politikalarını ihlal eden faaliyetler.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. Sunucu yöneticilerinin sorumluluğu</h2>
+      <p>Sunucu sahipleri ve yöneticileri, Flask'a verdikleri izinlerden, etkinleştirdikleri modüllerden ve botun sunucularında nasıl yapılandırıldığından sorumludur. Yalnızca ihtiyaç duyulan Discord izinlerinin verilmesi tavsiye edilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Kullanılabilirlik</h2>
+      <p>Flask'ın kesintisiz, hatasız veya her zaman erişilebilir olacağı garanti edilmez. Bakım, güvenlik, altyapı sorunları veya Discord API değişiklikleri nedeniyle hizmet geçici olarak sınırlandırılabilir ya da durdurulabilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>5. Özellik değişiklikleri</h2>
+      <p>Flask'ın özellikleri, komutları, sınırları ve davranışları zaman içinde değiştirilebilir. Bir özellik önceden bildirim yapılmaksızın eklenebilir, değiştirilebilir veya kaldırılabilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>6. Kötüye kullanım ve erişimin sınırlandırılması</h2>
+      <p>Güvenlik, kötüye kullanım önleme veya hizmet bütünlüğünü koruma amacıyla belirli kullanıcıların ya da sunucuların Flask erişimi geçici veya kalıcı olarak sınırlandırılabilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>7. Sorumluluk sınırlaması</h2>
+      <p>Flask makul özenle sunulur ancak botun kullanımından, yanlış yapılandırılmasından, kesintilerden veya üçüncü taraf hizmetlerinden kaynaklanan dolaylı kayıplar konusunda garanti verilmez. Kullanıcılar önemli yönetim işlemlerinde gerekli kontrolleri yapmakla sorumludur.</p>
+    </section>
+
+    <section class="card">
+      <h2>8. Gizlilik</h2>
+      <p>Flask'ın veri işleme uygulamaları ayrı Gizlilik Politikası kapsamında açıklanır. Botu kullanmadan önce bu politikayı da incelemeniz önerilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>9. Üçüncü taraf hizmetleri</h2>
+      <p>Flask Discord platformu üzerinde çalışır. Discord veya diğer üçüncü taraf hizmetler üzerinde meydana gelen değişiklikler, kesintiler veya hesap işlemleri Flask'ın kontrolü dışında olabilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>10. Koşullardaki değişiklikler</h2>
+      <p>Bu koşullar zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayımlanır ve değişiklik tarihi üst bölümde belirtilir.</p>
+    </section>
+
+    <section class="card">
+      <h2>11. İletişim</h2>
+      <p>Bu koşullarla ilgili sorularınız için destek kanalımızdan bize ulaşabilirsiniz.</p>
+      <p>Destek: <a href="DESTEK_SUNUCUSU_URL">DESTEK_SUNUCUSU_URL</a><br>
+      E-posta: <a href="mailto:ILETISIM_EPOSTASI">ILETISIM_EPOSTASI</a></p>
+    </section>
+
+    <div class="footer">
+      <span>© 2026 Flask by LabCafe</span>
+      <span>Kullanım Koşulları</span>
+    </div>
+  </main>
+</body>
+</html>
