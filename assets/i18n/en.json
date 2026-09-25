@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "K4hveci — Software Developer",
-    "description": "K4hveci — software developer building Discord bots, backend systems and web projects."
+    "title": "K4hveci — Coffee Terminal",
+    "description": "K4hveci — a personal developer space shaped around coffee, terminals and real projects."
   },
   "accessibility": {
     "skip": "Skip to content",
@@ -13,7 +13,6 @@
     "profileSummary": "Profile summary"
   },
   "controls": {
-    "theme": "Change theme",
     "menu": "Open menu",
     "languageSearch": "Search language...",
     "noLanguage": "No language found.",
@@ -25,41 +24,29 @@
     "github": "GitHub",
     "contact": "Contact"
   },
-  "common": {
-    "active": "active"
-  },
   "hero": {
-    "kicker": "Software Developer · Türkiye",
+    "kicker": "k4hveci@localhost:~$ whoami",
     "titlePrimary": "Hi, I'm",
     "titleSecondary": "K4hveci.",
-    "description": "I build Discord bots, backend services and web products. I use Node.js, PostgreSQL and Linux to create simple, fast and manageable systems.",
+    "description": "I build Discord bots, backend systems and long-running Linux services. I like things that feel clean, fast and maintainable instead of flashy.",
     "primaryAction": "View Projects",
-    "panelTitle": "Currently working on",
-    "currentProject": "Building Listcord.",
-    "locationLabel": "Location",
-    "location": "Türkiye",
-    "focusLabel": "Focus",
-    "stackLabel": "Stack",
-    "platformLabel": "Infrastructure",
-    "scroll": "More"
+    "panelTitle": "brew log"
   },
   "about": {
-    "kicker": "About",
-    "title": "I focus on simplicity, performance and maintainability.",
-    "lead": "I care about more than making a system work; it should stay organized, secure and easy to improve later.",
-    "body": "I mainly work with JavaScript and Node.js. Alongside Discord bots, backend services and web projects, I manage PostgreSQL and Linux infrastructure directly.",
-    "status": "Listcord is being built",
-    "focus": "Backend · Discord · Security · Performance"
+    "kicker": "01 / About",
+    "title": "I prefer building things that actually feel like me.",
+    "lead": "Instead of generic portfolio language, I like describing my work in a simpler way.",
+    "body": "I'm 20. I've been active around Discord since 2016, and building bots and systems since 2021. My most comfortable workspace is still coffee + terminal.",
+    "focus": "Backend · Discord · Moderation · Performance",
+    "fuel": "Coffee, obviously."
   },
   "projects": {
-    "kicker": "Projects",
-    "title": "Projects I am working on.",
-    "lead": "A collection of the bots and web projects I actively develop. Open a card to see the project details.",
+    "kicker": "02 / Projects",
+    "title": "What's currently on my desk.",
+    "lead": "No big claims here — just the things I am actually working on. Open a card for the details.",
     "openDetails": "open project details",
-    "detailsAction": "Details →",
-    "detailsLabel": "Highlights",
+    "detailsAction": "open details →",
     "sourceCode": "Source code",
-    "overviewLabel": "Project overview",
     "factsLabel": "Project facts",
     "highlightsLabel": "Highlights",
     "factType": "Type",
@@ -69,100 +56,101 @@
     "visibility": "Visibility"
   },
   "projectItems": {
-    "listcord": {
-      "status": "Active development",
-      "description": "A botlist platform designed to make discovering, verifying and listing Discord bots cleaner and more reliable.",
+    "flask": {
+      "status": "Brewing",
+      "description": "A general-purpose Discord bot under LabCafe. It brings moderation, community tools and useful features together in a cleaner structure.",
       "features": [
-        "Product experience centered on bot discovery and listing",
-        "Structured submission flow for developers and the community",
-        "Long-term data and moderation architecture",
-        "Soft, premium and minimal interface direction"
+        "Minimal but capable command and panel direction",
+        "Node.js + TypeScript + discord.js architecture",
+        "Developer-friendly and long-term maintainable structure",
+        "Community and management features under one roof"
       ],
-      "longDescription": "Listcord is the botlist platform I am building for discovering, listing and connecting Discord bots with communities. I am designing it as more than a directory, with room for submissions, verification, moderation and a durable data layer as the product grows.",
-      "type": "Botlist platform",
+      "longDescription": "Flask is intended to be a long-living general-purpose Discord bot instead of a one-off experiment. The goal is to keep it simple on the surface while giving it a solid architecture underneath.",
+      "type": "General-purpose Discord bot",
       "stage": "Active development",
-      "role": "Product, design and development",
-      "environment": "Web · Backend · Discord",
+      "role": "Architecture, design and development",
+      "environment": "Discord · Backend · Linux",
       "visibility": "Private project"
     },
-    "vanguardn": {
-      "status": "Active development",
-      "description": "The main system combining moderation, security and server-management layers in one reliable Discord bot architecture.",
+    "yhmod": {
+      "status": "Active",
+      "description": "A dedicated moderation bot for Yazılım Hub, focused on security, logs, panels and a cleaner management flow.",
       "features": [
-        "Modular Discord.js v14 architecture",
-        "Moderation, security and automation layers",
-        "Shared PostgreSQL-oriented data approach",
-        "Long-running Linux deployment and maintainability focus"
+        "Moderation-focused command and panel system",
+        "MongoDB-backed settings and records",
+        "Cleaner log flow and optimized management UIs",
+        "Stable Linux deployment for real usage"
       ],
-      "longDescription": "Vanguardn is the primary Discord bot architecture I am building around moderation, security and server management. The focus is stability, security, a shared data layer and clean integration with the rest of the Vanguardn services.",
-      "type": "Discord moderation bot",
-      "stage": "Active development",
-      "role": "Architecture and development",
-      "environment": "Node.js · PostgreSQL · Linux",
+      "longDescription": "YHMod is the custom moderation bot I am shaping for Yazılım Hub. The aim is to keep the system practical and strong without turning it into a cluttered control panel.",
+      "type": "Moderation bot",
+      "stage": "Improving / active use",
+      "role": "Refactor and development",
+      "environment": "Discord · MongoDB · Linux",
       "visibility": "Private project"
     },
-    "ai": {
-      "status": "Running",
-      "description": "A Discord AI assistant that joins conversations naturally when mentioned instead of behaving like a command-only bot.",
+    "ticket": {
+      "status": "Setting up",
+      "description": "A separate ticket system for Yazılım Hub. It uses private threads and a panel-first support flow.",
       "features": [
-        "Mention-first conversational flow",
-        "Adaptable to multiple model/API providers",
-        "Lightweight response path focused on lower latency",
-        "User-like helper experience inside Discord"
+        "Private-thread based ticket flow",
+        "Panel-focused usage with fewer slash commands",
+        "Separate review path for moderation appeals",
+        "Cleaner support, transcript and staff workflow"
       ],
-      "longDescription": "Vanguardn AI is designed to participate in Discord conversations when needed, without relying on a classic command-first interaction model. I am building it around provider flexibility, lower response latency and a natural helper experience inside the community.",
-      "type": "Discord AI assistant",
-      "stage": "Active / evolving",
+      "longDescription": "The ticket bot is being built to feel lighter than the usual crowded ticket systems. Reducing visible commands and moving actions into panels is a big part of the design.",
+      "type": "Ticket / support bot",
+      "stage": "Active setup",
       "role": "Architecture and development",
-      "environment": "Node.js · AI APIs · Discord",
+      "environment": "Discord · JSON store · MongoDB",
       "visibility": "Private project"
     },
-    "modmail": {
-      "status": "Running",
-      "description": "A structured support flow between users and staff, designed to expand into an appeal system later.",
+    "lab": {
+      "status": "Always on",
+      "description": "A workspace for small experiments, helper tools and ideas that sometimes grow into main projects.",
       "features": [
-        "User-to-staff support flow",
-        "Manageable ticket/modmail structure",
-        "Architecture ready for shared-data integration",
-        "Designed to expand into punishment appeals later"
+        "Quick prototypes and technical experiments",
+        "Bot, web and small automation work",
+        "Ideas that may evolve into larger projects",
+        "Comfortable testing area before real deployment"
       ],
-      "longDescription": "Vanguardn ModMail is the support system I am building for communication between Discord community members and staff. The architecture is planned to expand into an appeal flow connected to punishment records from the main moderation system.",
-      "type": "Support / ModMail bot",
-      "stage": "Active",
-      "role": "Architecture and development",
-      "environment": "Node.js · PostgreSQL · Linux",
-      "visibility": "Private project"
+      "longDescription": "Not everything needs to be a full product. Sometimes a small script, a tiny web tool or a rough idea deserves its own place before it turns into something bigger.",
+      "type": "Experimental space",
+      "stage": "Ongoing",
+      "role": "Experimentation and prototyping",
+      "environment": "Node.js · Web · CLI",
+      "visibility": "Mixed / private"
     }
   },
   "github": {
-    "title": "My code and public projects are on GitHub.",
-    "description": "You can follow my public repositories and recent work directly from my GitHub profile.",
+    "title": "My public work and open repos are on GitHub.",
+    "description": "You can follow recent repositories, small experiments and some live work from there.",
     "repositories": "Repos",
     "followers": "Followers",
     "following": "Following",
-    "fallbackBio": "Working on backend systems, Discord products and product-focused software.",
+    "fallbackBio": "Working on backend systems, Discord tools and simpler product experiences.",
     "unavailable": "GitHub data is currently unavailable. You can still use the profile link to view the latest work.",
-    "recentKicker": "GitHub",
-    "recentTitle": "Recent public repositories",
+    "recentKicker": "Recently updated",
+    "recentTitle": "Current public repositories",
     "noDescription": "No description provided.",
     "openSource": "Public GitHub data",
     "unavailableShort": "GitHub data unavailable"
   },
   "contact": {
-    "kicker": "Contact",
-    "titlePrimary": "If you want to talk about a project,",
-    "titleSecondary": "you can reach me.",
+    "kicker": "04 / Contact",
+    "titlePrimary": "If you want to talk about something,",
+    "titleSecondary": "I'm here.",
+    "description": "You can reach me through GitHub or email. I'm not too formal, but I reply fast.",
     "email": "Send email"
   },
   "footer": {
-    "built": "Designed and built with care.",
+    "built": "Brewed with coffee, terminal and a bit of patience.",
     "backToTop": "Back to top ↑"
   },
   "status": {
-    "updated": "Last updated",
-    "building": {
-      "label": "building",
-      "description": "Actively building Listcord, a cleaner way to discover and manage Discord bots."
+    "updated": "Last update",
+    "brewing": {
+      "label": "brewing",
+      "description": "I am actively working on Flask and the supporting systems around it."
     }
   }
 }

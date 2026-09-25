@@ -1,150 +1,150 @@
 [
   {
-    "id": "listcord",
+    "id": "flask",
     "number": "01",
-    "title": "Listcord",
+    "title": "Flask",
     "featured": true,
     "wide": false,
-    "statusKey": "projectItems.listcord.status",
-    "descriptionKey": "projectItems.listcord.description",
-    "featuresKey": "projectItems.listcord.features",
+    "statusKey": "projectItems.flask.status",
+    "descriptionKey": "projectItems.flask.description",
+    "featuresKey": "projectItems.flask.features",
     "tags": [
-      "Botlist",
-      "Web Platform",
       "Discord",
-      "Backend"
+      "Node.js",
+      "TypeScript",
+      "Bot"
     ],
     "links": [],
-    "longDescriptionKey": "projectItems.listcord.longDescription",
+    "longDescriptionKey": "projectItems.flask.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.listcord.type"
+        "valueKey": "projectItems.flask.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.listcord.stage"
+        "valueKey": "projectItems.flask.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.listcord.role"
+        "valueKey": "projectItems.flask.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.listcord.environment"
+        "valueKey": "projectItems.flask.environment"
       }
     ],
-    "visibilityKey": "projectItems.listcord.visibility"
+    "visibilityKey": "projectItems.flask.visibility"
   },
   {
-    "id": "vanguardn",
+    "id": "yhmod",
     "number": "02",
-    "title": "Vanguardn",
+    "title": "YHMod",
     "featured": false,
     "wide": false,
-    "statusKey": "projectItems.vanguardn.status",
-    "descriptionKey": "projectItems.vanguardn.description",
-    "featuresKey": "projectItems.vanguardn.features",
+    "statusKey": "projectItems.yhmod.status",
+    "descriptionKey": "projectItems.yhmod.description",
+    "featuresKey": "projectItems.yhmod.features",
     "tags": [
-      "Node.js",
-      "Discord.js v14",
-      "PostgreSQL",
+      "Moderation",
+      "MongoDB",
+      "Discord",
       "Linux"
     ],
     "links": [],
-    "longDescriptionKey": "projectItems.vanguardn.longDescription",
+    "longDescriptionKey": "projectItems.yhmod.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.vanguardn.type"
+        "valueKey": "projectItems.yhmod.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.vanguardn.stage"
+        "valueKey": "projectItems.yhmod.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.vanguardn.role"
+        "valueKey": "projectItems.yhmod.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.vanguardn.environment"
+        "valueKey": "projectItems.yhmod.environment"
       }
     ],
-    "visibilityKey": "projectItems.vanguardn.visibility"
+    "visibilityKey": "projectItems.yhmod.visibility"
   },
   {
-    "id": "ai",
+    "id": "ticket",
     "number": "03",
-    "title": "Vanguardn AI",
+    "title": "YH Ticket",
     "featured": false,
     "wide": false,
-    "statusKey": "projectItems.ai.status",
-    "descriptionKey": "projectItems.ai.description",
-    "featuresKey": "projectItems.ai.features",
+    "statusKey": "projectItems.ticket.status",
+    "descriptionKey": "projectItems.ticket.description",
+    "featuresKey": "projectItems.ticket.features",
     "tags": [
-      "Node.js",
-      "Discord.js",
-      "AI APIs",
-      "Conversation"
+      "Ticket",
+      "Support",
+      "Threads",
+      "Panels"
     ],
     "links": [],
-    "longDescriptionKey": "projectItems.ai.longDescription",
+    "longDescriptionKey": "projectItems.ticket.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.ai.type"
+        "valueKey": "projectItems.ticket.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.ai.stage"
+        "valueKey": "projectItems.ticket.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.ai.role"
+        "valueKey": "projectItems.ticket.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.ai.environment"
+        "valueKey": "projectItems.ticket.environment"
       }
     ],
-    "visibilityKey": "projectItems.ai.visibility"
+    "visibilityKey": "projectItems.ticket.visibility"
   },
   {
-    "id": "modmail",
+    "id": "lab",
     "number": "04",
-    "title": "Vanguardn ModMail",
+    "title": "Coffee Lab",
     "featured": false,
     "wide": false,
-    "statusKey": "projectItems.modmail.status",
-    "descriptionKey": "projectItems.modmail.description",
-    "featuresKey": "projectItems.modmail.features",
+    "statusKey": "projectItems.lab.status",
+    "descriptionKey": "projectItems.lab.description",
+    "featuresKey": "projectItems.lab.features",
     "tags": [
-      "Node.js",
-      "Discord.js",
-      "PostgreSQL",
-      "Support"
+      "Experiments",
+      "CLI",
+      "Tools",
+      "Web"
     ],
     "links": [],
-    "longDescriptionKey": "projectItems.modmail.longDescription",
+    "longDescriptionKey": "projectItems.lab.longDescription",
     "facts": [
       {
         "labelKey": "projects.factType",
-        "valueKey": "projectItems.modmail.type"
+        "valueKey": "projectItems.lab.type"
       },
       {
         "labelKey": "projects.factStage",
-        "valueKey": "projectItems.modmail.stage"
+        "valueKey": "projectItems.lab.stage"
       },
       {
         "labelKey": "projects.factRole",
-        "valueKey": "projectItems.modmail.role"
+        "valueKey": "projectItems.lab.role"
       },
       {
         "labelKey": "projects.factEnvironment",
-        "valueKey": "projectItems.modmail.environment"
+        "valueKey": "projectItems.lab.environment"
       }
     ],
-    "visibilityKey": "projectItems.modmail.visibility"
+    "visibilityKey": "projectItems.lab.visibility"
   }
 ]

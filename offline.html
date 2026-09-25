@@ -3,24 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#07080d" />
+  <meta name="theme-color" content="#090604" />
   <title>Offline — k4hvecii</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;min-height:100svh;padding:22px;display:grid;place-items:center;background:#07080d;color:#f7f6fb;font-family:Inter,system-ui,sans-serif}
-    main{width:min(520px,100%);padding:38px;border:1px solid rgba(181,168,255,.12);border-radius:24px;background:#0d0f17}
-    small,p{color:#858291}
-    h1{font-size:clamp(3rem,12vw,5rem);margin:16px 0;letter-spacing:-.07em}
-    p{line-height:1.65}
-    a{color:#f7f6fb}
-  </style>
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/css/404.css" />
 </head>
 <body>
-  <main>
-    <small>OFFLINE</small>
+  <main class="not-found">
+    <span class="kicker">offline / no connection</span>
     <h1>Bağlantı yok.</h1>
-    <p>İnternet bağlantını kontrol edip tekrar deneyebilirsin.<br />You're offline. Check your connection and try again.</p>
-    <a href="./">Tekrar dene / Try again →</a>
+    <code>$ ping internet
+request timed out
+coffee: still online</code>
+    <p>İnternet bağlantını kontrol edip tekrar deneyebilirsin.</p>
+    <a href="./">Tekrar dene →</a>
   </main>
 </body>
 </html>

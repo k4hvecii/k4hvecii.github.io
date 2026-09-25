@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "K4hveci — Software Developer",
-    "description": "K4hveci — Discord botları, backend sistemleri ve web projeleri geliştiren software developer."
+    "title": "K4hveci — Coffee Terminal",
+    "description": "K4hveci — kahve, terminal ve gerçek projeler etrafında şekillenen kişisel geliştirici alanı."
   },
   "accessibility": {
     "skip": "İçeriğe geç",
@@ -13,7 +13,6 @@
     "profileSummary": "Profil özeti"
   },
   "controls": {
-    "theme": "Tema değiştir",
     "menu": "Menüyü aç",
     "languageSearch": "Dil ara...",
     "noLanguage": "Dil bulunamadı.",
@@ -25,144 +24,133 @@
     "github": "GitHub",
     "contact": "İletişim"
   },
-  "common": {
-    "active": "aktif"
-  },
   "hero": {
-    "kicker": "Software Developer · Türkiye",
+    "kicker": "k4hveci@localhost:~$ whoami",
     "titlePrimary": "Merhaba, ben",
     "titleSecondary": "K4hveci.",
-    "description": "Discord botları, backend servisleri ve web ürünleri geliştiriyorum. Node.js, PostgreSQL ve Linux ile sade, hızlı ve yönetilebilir sistemler kuruyorum.",
+    "description": "Discord botları, backend sistemleri ve Linux üstünde uzun süre çalışan servisler geliştiriyorum. Gösterişli değil; temiz, hızlı ve sürdürülebilir şeyleri seviyorum.",
     "primaryAction": "Projeleri Gör",
-    "panelTitle": "Üzerinde çalışıyorum",
-    "currentProject": "Listcord üzerinde çalışıyorum.",
-    "locationLabel": "Konum",
-    "location": "Türkiye",
-    "focusLabel": "Odak",
-    "stackLabel": "Stack",
-    "platformLabel": "Altyapı",
-    "scroll": "Devamı"
+    "panelTitle": "brew log"
   },
   "about": {
-    "kicker": "Hakkımda",
-    "title": "Projelerimde sadelik, performans ve sürdürülebilirliğe odaklanıyorum.",
-    "lead": "Bir sistemi geliştirirken yalnızca çalışmasına değil; düzenli, güvenli ve sonradan geliştirilebilir olmasına da dikkat ediyorum.",
-    "body": "Ağırlıklı olarak JavaScript ve Node.js kullanıyorum. Discord botları, backend servisleri ve web tarafında çalışırken PostgreSQL ve Linux altyapısını da doğrudan yönetiyorum.",
-    "status": "Listcord geliştiriliyor",
-    "focus": "Backend · Discord · Security · Performance"
+    "kicker": "01 / Hakkımda",
+    "title": "Kendime benzeyen, daha sakin bir şeyler yapmayı seviyorum.",
+    "lead": "Hazır portfolio cümleleri yerine, yaptığım işi sade biçimde anlatmayı tercih ediyorum.",
+    "body": "20 yaşındayım. 2016'dan beri Discord tarafında aktifim, 2021'den beri bot ve sistem geliştiriyorum. En rahat çalıştığım yer ise kahve + terminal kombinasyonu.",
+    "focus": "Backend · Discord · Moderation · Performance",
+    "fuel": "Coffee, obviously."
   },
   "projects": {
-    "kicker": "Projeler",
-    "title": "Üzerinde çalıştığım projeler.",
-    "lead": "Aktif olarak geliştirdiğim botları ve web projelerini burada topluyorum. Kartlara tıklayarak proje detaylarını görebilirsin.",
+    "kicker": "02 / Projeler",
+    "title": "Şu anki çalışma masam.",
+    "lead": "Büyük laflardan çok, gerçekten uğraştığım şeyleri burada tutuyorum. Kartlara dokunup detayları açabilirsin.",
     "openDetails": "proje detaylarını aç",
-    "detailsAction": "Detaylar →",
-    "detailsLabel": "Öne çıkanlar",
+    "detailsAction": "detayları aç →",
     "sourceCode": "Kaynak kodu",
-    "overviewLabel": "Proje özeti",
     "factsLabel": "Proje bilgileri",
     "highlightsLabel": "Öne çıkanlar",
     "factType": "Tür",
     "factStage": "Durum",
     "factRole": "Rol",
-    "factEnvironment": "Çalışma ortamı",
+    "factEnvironment": "Ortam",
     "visibility": "Görünürlük"
   },
   "projectItems": {
-    "listcord": {
-      "status": "Aktif geliştirme",
-      "description": "Discord botlarını keşfetme, doğrulama ve listeleme deneyimini daha düzenli ve güvenilir hale getiren botlist platformu.",
+    "flask": {
+      "status": "Demleniyor",
+      "description": "LabCafe altında gelişen genel amaçlı Discord botu. Yönetim, topluluk, araçlar ve daha fazlasını sade bir yapı içinde topluyor.",
       "features": [
-        "Bot keşfi ve listeleme odaklı ürün deneyimi",
-        "Bot geliştiricileri ve topluluk için düzenli başvuru akışı",
-        "Uzun vadeli veri ve moderasyon mimarisi",
-        "Soft, premium ve sade arayüz yaklaşımı"
+        "Minimal ama güçlü komut ve panel yaklaşımı",
+        "Node.js + TypeScript + discord.js temelli mimari",
+        "Geliştirici dostu, uzun vadeli bakım odağı",
+        "Topluluk ve yönetim özelliklerini aynı çatıya toplama"
       ],
-      "longDescription": "Listcord; Discord botlarının keşfedilmesi, listelenmesi ve toplulukla buluşması için geliştirdiğim botlist platformu. Ürünü yalnızca bir listeleme sitesi olarak değil; başvuru, doğrulama, moderasyon ve ileride genişleyebilecek veri katmanıyla uzun ömürlü bir ekosistem olarak tasarlıyorum.",
-      "type": "Botlist platformu",
+      "longDescription": "Flask, tek seferlik değil uzun süre yaşaması planlanan genel amaçlı Discord botu. Hedefi; dağınık özellik yığını olmak yerine yönetim, topluluk ve yardımcı araçları sade ama sağlam bir mimaride birleştirmek.",
+      "type": "Genel amaçlı Discord botu",
       "stage": "Aktif geliştirme",
-      "role": "Ürün, tasarım ve geliştirme",
-      "environment": "Web · Backend · Discord",
+      "role": "Mimari, tasarım ve geliştirme",
+      "environment": "Discord · Backend · Linux",
       "visibility": "Özel proje"
     },
-    "vanguardn": {
-      "status": "Aktif geliştirme",
-      "description": "Moderasyon, güvenlik ve sunucu yönetimi katmanlarını tek bir sağlam Discord bot mimarisinde birleştiren ana sistem.",
+    "yhmod": {
+      "status": "Aktif",
+      "description": "Yazılım Hub için geliştirilen özel moderasyon botu. Güvenlik, log, panel ve yönetim akışlarını sadeleştirmeye odaklanıyor.",
       "features": [
-        "Modüler Discord.js v14 mimarisi",
-        "Moderasyon, güvenlik ve otomasyon katmanları",
-        "PostgreSQL tabanlı ortak veri yaklaşımı",
-        "Linux üzerinde uzun süreli ve sürdürülebilir çalışma odağı"
+        "Moderasyon odaklı komut ve panel sistemi",
+        "MongoDB ile kalıcı ayarlar ve kayıt yapısı",
+        "Temiz log akışı ve optimize yönetim ekranları",
+        "Canlı kullanım için stabil Linux dağıtımı"
       ],
-      "longDescription": "Vanguardn; moderasyon, güvenlik ve sunucu yönetimi ihtiyaçlarını merkezi ve sürdürülebilir bir Discord bot mimarisinde birleştiren ana bot projem. Geliştirme odağı; stabilite, güvenlik, ortak veri katmanı ve diğer Vanguardn servisleriyle temiz entegrasyon.",
-      "type": "Discord moderasyon botu",
-      "stage": "Aktif geliştirme",
-      "role": "Mimari ve geliştirme",
-      "environment": "Node.js · PostgreSQL · Linux",
+      "longDescription": "YHMod, Yazılım Hub sunucusunun moderasyon akışlarını daha düzenli ve sürdürülebilir hale getirmek için geliştirdiğim özel bot. Asıl hedef; fazla karmaşaya kaçmadan güçlü araçları tek merkezde tutmak.",
+      "type": "Moderasyon botu",
+      "stage": "İyileştirme / aktif kullanım",
+      "role": "Refactor ve geliştirme",
+      "environment": "Discord · MongoDB · Linux",
       "visibility": "Özel proje"
     },
-    "ai": {
-      "status": "Çalışıyor",
-      "description": "Komut botu gibi değil, gerektiğinde etiketlenerek sohbete doğal biçimde katılan Discord AI asistanı.",
+    "ticket": {
+      "status": "Kuruluyor",
+      "description": "Yazılım Hub için ayrı geliştirilen ticket sistemi. Private thread tabanlı ve panel merkezli destek akışına sahip.",
       "features": [
-        "Mention odaklı doğal sohbet akışı",
-        "Birden fazla model/API sağlayıcısına uyarlanabilir yapı",
-        "Yanıt gecikmesini azaltmaya odaklanan hafif akış",
-        "Discord içinde kullanıcı benzeri yardımcı deneyim"
+        "Private thread tabanlı ticket akışı",
+        "Panel ağırlıklı kullanım, az slash komut",
+        "Moderasyon itirazları için ayrı değerlendirme süreci",
+        "Destek, transcript ve personel akışını sadeleştirme"
       ],
-      "longDescription": "Vanguardn AI; Discord içinde klasik komut kullanımından uzak, gerektiğinde etiketlenerek konuşmaya katılan bir AI asistanı. Mimariyi farklı model sağlayıcılarıyla çalışabilecek, gecikmeyi düşük tutacak ve topluluk içinde doğal bir yardımcı gibi davranacak şekilde geliştiriyorum.",
-      "type": "Discord AI asistanı",
-      "stage": "Aktif / geliştiriliyor",
+      "longDescription": "Ticket botu, klasik kalabalık ticket botlarından daha temiz bir deneyim vermesi için ayrı geliştiriliyor. Komut sayısını azaltıp işlemleri panel üzerinden toplamak ana yaklaşım.",
+      "type": "Ticket / support bot",
+      "stage": "Aktif kurulum",
       "role": "Mimari ve geliştirme",
-      "environment": "Node.js · AI APIs · Discord",
+      "environment": "Discord · JSON store · MongoDB",
       "visibility": "Özel proje"
     },
-    "modmail": {
-      "status": "Çalışıyor",
-      "description": "Kullanıcı ile ekip arasındaki destek akışını düzenleyen, ileride itiraz sistemiyle genişleyebilecek ModMail altyapısı.",
+    "lab": {
+      "status": "Sürekli açık",
+      "description": "Küçük denemeler, yardımcı araçlar ve bazen ana projelere dönüşen fikirler için kullandığım çalışma alanı.",
       "features": [
-        "Kullanıcı–yetkili destek akışı",
-        "Ayrı ve yönetilebilir ticket/modmail yapısı",
-        "Ortak veri katmanıyla entegrasyona uygun mimari",
-        "İleride ceza itiraz akışına genişleyebilecek yapı"
+        "Hızlı prototipler ve teknik denemeler",
+        "Bot, web ve küçük otomasyon işleri",
+        "Uzun vadeli projelere temel oluşturan fikirler",
+        "Gerçek kullanım öncesi rahat test alanı"
       ],
-      "longDescription": "Vanguardn ModMail; Discord topluluğunda kullanıcılarla yönetim ekibi arasındaki destek iletişimini düzenlemek için geliştirdiğim ModMail sistemi. Yapı, ileride ana moderasyon botundaki ceza kayıtlarıyla ilişkilenecek bir itiraz akışına genişleyebilecek şekilde planlanıyor.",
-      "type": "Destek / ModMail botu",
-      "stage": "Aktif",
-      "role": "Mimari ve geliştirme",
-      "environment": "Node.js · PostgreSQL · Linux",
-      "visibility": "Özel proje"
+      "longDescription": "Her şey büyük bir ürün olmak zorunda değil. Bazen küçük bir script, bazen hafif bir araç, bazen de ileride ana projeye dönüşecek bir fikir için ayrı bir çalışma alanı tutuyorum.",
+      "type": "Deneysel alan",
+      "stage": "Sürekli",
+      "role": "Deneme ve prototip",
+      "environment": "Node.js · Web · CLI",
+      "visibility": "Karışık / private"
     }
   },
   "github": {
-    "title": "Kodlarım ve açık projelerim GitHub'da.",
-    "description": "Public repolarımı ve güncel çalışmalarımı GitHub profilimden takip edebilirsin.",
+    "title": "Açık işlerim ve public repolar GitHub'da.",
+    "description": "Güncel repolarımı, küçük denemeleri ve bazı canlı işleri oradan takip edebilirsin.",
     "repositories": "Repo",
     "followers": "Takipçi",
     "following": "Takip",
-    "fallbackBio": "Backend, Discord sistemleri ve ürün odaklı projeler üzerinde çalışıyorum.",
+    "fallbackBio": "Backend, Discord sistemleri ve sade ürünler üzerinde çalışıyorum.",
     "unavailable": "GitHub verileri şu anda alınamadı. Profil bağlantısı üzerinden güncel çalışmalara ulaşabilirsin.",
-    "recentKicker": "GitHub",
+    "recentKicker": "Son güncellenenler",
     "recentTitle": "Güncel public repolar",
     "noDescription": "Açıklama eklenmemiş.",
     "openSource": "Public GitHub verisi",
     "unavailableShort": "GitHub verisi alınamadı"
   },
   "contact": {
-    "kicker": "İletişim",
-    "titlePrimary": "Bir proje hakkında konuşmak istersen",
-    "titleSecondary": "ulaşabilirsin.",
+    "kicker": "04 / İletişim",
+    "titlePrimary": "Bir şeyler konuşmak istersen",
+    "titleSecondary": "buradayım.",
+    "description": "GitHub ya da e-posta üzerinden ulaşabilirsin. Fazla resmi değilim, ama hızlı dönerim.",
     "email": "E-posta gönder"
   },
   "footer": {
-    "built": "Özenle tasarlandı ve geliştirildi.",
+    "built": "Brewed with coffee, terminal and a bit of patience.",
     "backToTop": "Yukarı dön ↑"
   },
   "status": {
     "updated": "Son güncelleme",
-    "building": {
-      "label": "geliştiriliyor",
-      "description": "Discord botlarını keşfetmeyi ve yönetmeyi daha düzenli hale getiren Listcord üzerinde aktif olarak çalışıyorum."
+    "brewing": {
+      "label": "demleniyor",
+      "description": "Flask ve etrafındaki yardımcı sistemler üzerinde aktif olarak çalışıyorum."
     }
   }
 }
