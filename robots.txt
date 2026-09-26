@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://k4hvecii.github.io/sitemap.xml
