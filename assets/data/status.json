@@ -1,8 +1,0 @@
-{
-  "state": "brewing",
-  "title": "Flask",
-  "labelKey": "status.brewing.label",
-  "descriptionKey": "status.brewing.description",
-  "updatedAt": "2026-09-25",
-  "accent": "success"
-}

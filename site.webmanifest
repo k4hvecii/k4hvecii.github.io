@@ -1,10 +1,10 @@
 {
-  "name": "K4hveci — Coffee Terminal",
+  "name": "K4hveci — terminal açık",
   "short_name": "K4hveci",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#090604",
-  "theme_color": "#090604",
+  "background_color": "#0a0705",
+  "theme_color": "#0a0705",
   "icons": [
     {
       "src": "./assets/icons/icon-192.png",
@@ -25,7 +25,7 @@
       "purpose": "any"
     }
   ],
-  "description": "K4hveci personal coffee terminal — Discord bots, backend systems and Linux-powered projects.",
+  "description": "Discord botları, backend sistemleri ve Linux servisleri. Kahve sıcak, terminal açık.",
   "scope": "./",
   "categories": [
     "developer",
