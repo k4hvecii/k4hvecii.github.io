@@ -30,13 +30,24 @@ for (const match of html.matchAll(/href="#([^"]+)"/g)) {
     process.exit(1);
   }
 }
-for (const ref of ["assets/css/main.css?v=3.1.0", "assets/js/main.js?v=3.1.0", "assets/images/og-k4-terminal-31.png"]) {
-  if (!html.includes(ref)) {
-    console.error(`Expected reference missing: ${ref}`);
+const versionedAssets = [
+  /assets\/css\/main\.css\?v=\d+\.\d+\.\d+/,
+  /assets\/js\/main\.js\?v=\d+\.\d+\.\d+/
+];
+
+for (const pattern of versionedAssets) {
+  if (!pattern.test(html)) {
+    console.error(`Expected versioned asset reference missing: ${pattern}`);
     process.exit(1);
   }
 }
+
+if (!html.includes("assets/images/og-k4-terminal-31.png")) {
+  console.error("Expected reference missing: assets/images/og-k4-terminal-31.png");
+  process.exit(1);
+}
+
 console.log(`✓ ${required.length} required files`);
 console.log(`✓ ${ids.length} unique HTML ids`);
 console.log("✓ internal anchors and versioned assets");
-console.log("✓ Coffee Terminal v3.1 validation passed");
+console.log("✓ Coffee Terminal validation passed");

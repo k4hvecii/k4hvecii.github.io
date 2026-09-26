@@ -1,3 +1,7 @@
+## 3.1.1
+- Hero ASCII coffee illustration enlarged and rebalanced.
+- Validation now accepts semantic versioned CSS/JS asset references instead of a hard-coded 3.1.0 value.
+
 # Changelog
 
 ## v3.1.0 — Fix & cleanup
