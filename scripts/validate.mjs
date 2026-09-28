@@ -12,29 +12,31 @@ const required = [
 
 const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
 if (missing.length) {
-  console.error("Missing files:
-" + missing.map((file) => `- ${file}`).join("
-"));
+  console.error("Missing files:\n" + missing.map((file) => `- ${file}`).join("\n"));
   process.exit(1);
 }
 
 JSON.parse(fs.readFileSync(path.join(root, "site.webmanifest"), "utf8"));
+
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
-const ids = [...html.matchAll(/id="([^"]+)"/g)].map((match) => match[1]);
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
+
 if (duplicates.length) {
   console.error("Duplicate ids: " + [...new Set(duplicates)].join(", "));
   process.exit(1);
 }
+
 for (const match of html.matchAll(/href="#([^"]+)"/g)) {
   if (!ids.includes(match[1])) {
     console.error(`Broken anchor: #${match[1]}`);
     process.exit(1);
   }
 }
+
 const versionedAssets = [
-  /assets/css/main.css?v=d+.d+.d+/,
-  /assets/js/main.js?v=d+.d+.d+/
+  /assets\/css\/main\.css\?v=\d+\.\d+\.\d+/,
+  /assets\/js\/main\.js\?v=\d+\.\d+\.\d+/
 ];
 
 for (const pattern of versionedAssets) {
@@ -54,14 +56,17 @@ if (cname !== "k4hveci.info") {
   console.error(`Unexpected CNAME: ${cname}`);
   process.exit(1);
 }
+
 if (!html.includes("https://k4hveci.info/")) {
   console.error("Expected custom domain missing from index.html");
   process.exit(1);
 }
+
 if (!html.includes("mailto:contact@k4hveci.info")) {
   console.error("Expected contact email missing from index.html");
   process.exit(1);
 }
+
 if (html.includes("https://k4hvecii.github.io/") || html.includes("k4hveci2022@gmail.com")) {
   console.error("Legacy public domain/email reference still exists in index.html");
   process.exit(1);
