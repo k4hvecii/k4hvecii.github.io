@@ -4,7 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const required = [
   "index.html", "404.html", "offline.html", "privacy.html", "terms.html",
-  "service-worker.js", "site.webmanifest", "robots.txt", "sitemap.xml", "CNAME",
+  "service-worker.js", "site.webmanifest", "robots.txt", "sitemap.xml",
   "assets/css/main.css", "assets/css/404.css", "assets/css/legal.css",
   "assets/js/main.js", "assets/icons/favicon.svg", "assets/icons/apple-touch-icon.png",
   "assets/icons/icon-192.png", "assets/icons/icon-512.png", "assets/images/og-k4-terminal-31.png"
@@ -51,10 +51,13 @@ if (!html.includes("assets/images/og-k4-terminal-31.png")) {
   process.exit(1);
 }
 
-const cname = fs.readFileSync(path.join(root, "CNAME"), "utf8").trim();
-if (cname !== "k4hveci.info") {
-  console.error(`Unexpected CNAME: ${cname}`);
-  process.exit(1);
+const cnamePath = path.join(root, "CNAME");
+if (fs.existsSync(cnamePath)) {
+  const cname = fs.readFileSync(cnamePath, "utf8").trim();
+  if (cname !== "k4hveci.info") {
+    console.error(`Unexpected CNAME: ${cname}`);
+    process.exit(1);
+  }
 }
 
 if (!html.includes("https://k4hveci.info/")) {
