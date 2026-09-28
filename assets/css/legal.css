@@ -1,0 +1,14 @@
+:root{
+  --bg:#0a0705;--text:#ead9c7;--muted:#9f8873;--dim:#6c5949;--line:#2b1e16;--line2:#3b291d;--coffee:#c58b57;--cream:#f0dcc5;--green:#8ca978;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.72}
+::selection{background:var(--coffee);color:var(--bg)}.wrap{width:min(860px,calc(100% - 40px));margin:0 auto;padding:46px 0 70px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font-family:var(--mono);font-weight:700}.dot{display:none}.brand::before{content:">$";color:var(--green);font-weight:400}
+.hero{padding:64px 0 36px;border-bottom:1px solid var(--line);margin-bottom:0}.kicker{font-family:var(--mono);color:var(--coffee);font-size:.9rem;letter-spacing:0;text-transform:none}.kicker::before{content:"~/legal/";color:var(--dim)}
+h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;margin:14px 0 18px;letter-spacing:-.055em;color:var(--cream)}.lead{max-width:720px;color:var(--muted);font-size:1.04rem}.meta{margin-top:20px;color:var(--dim);font-family:var(--mono);font-size:.88rem}
+.card{background:transparent;border:0;border-bottom:1px dashed var(--line);border-radius:0;padding:30px 0;margin:0}.card:last-of-type{border-bottom:0}h2{font-size:1.22rem;margin:0 0 12px;color:var(--cream)}h2::before{content:"## ";font-family:var(--mono);color:var(--coffee);font-weight:400}
+p{margin:0 0 12px}p:last-child{margin-bottom:0}ul{margin:10px 0 0;padding-left:22px}li{margin:7px 0}li::marker{color:var(--coffee)}a{color:var(--coffee);text-underline-offset:3px}.notice{border-left:2px solid var(--coffee);padding:12px 16px;color:var(--muted)}
+.footer{margin-top:34px;padding-top:24px;border-top:1px solid var(--line);color:var(--dim);font: .9rem var(--mono);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}code{font-family:var(--mono);background:#120d09;padding:.12rem .38rem}
+:focus-visible{outline:2px solid var(--coffee);outline-offset:4px}@media(max-width:640px){.wrap{width:min(100% - 26px,860px);padding-top:28px}.hero{padding-top:42px}.card{padding:25px 0}}
