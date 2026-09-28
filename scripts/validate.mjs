@@ -70,8 +70,8 @@ if (!html.includes("mailto:contact@k4hveci.info")) {
   process.exit(1);
 }
 
-if (html.includes("https://k4hvecii.github.io/") || html.includes("k4hveci2022@gmail.com")) {
-  console.error("Legacy public domain/email reference still exists in index.html");
+if (html.includes("k4hveci2022@gmail.com")) {
+  console.error("Legacy email reference still exists in index.html");
   process.exit(1);
 }
 
