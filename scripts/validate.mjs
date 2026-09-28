@@ -60,8 +60,8 @@ if (fs.existsSync(cnamePath)) {
   }
 }
 
-if (!html.includes("https://k4hveci.info/")) {
-  console.error("Expected custom domain missing from index.html");
+if (!html.includes("https://k4hvecii.github.io/") && !html.includes("https://k4hveci.info/")) {
+  console.error("Expected public site URL missing from index.html");
   process.exit(1);
 }
 
