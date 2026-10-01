@@ -108,6 +108,7 @@ function renderSystems() {
   });
 
   systemGrid.replaceChildren(...cards);
+  refreshMotionTargets(cards);
 }
 
 function renderStack() {
@@ -130,6 +131,7 @@ function renderStack() {
     return row;
   });
   stackBoard.replaceChildren(...rows);
+  refreshMotionTargets(rows);
 }
 
 function renderGitHubStats() {
@@ -202,6 +204,7 @@ function renderRepos() {
   });
 
   repoList.replaceChildren(...rows);
+  refreshMotionTargets(rows);
 }
 
 function statCard(label, value, note = '') {
@@ -211,6 +214,12 @@ function statCard(label, value, note = '') {
   key.textContent = label;
   const strong = document.createElement('strong');
   strong.textContent = value;
+  const numeric = String(value).match(/^(-?\d+(?:\.\d+)?)(.*)$/);
+  if (numeric) {
+    strong.dataset.counterTarget = numeric[1];
+    strong.dataset.counterSuffix = numeric[2] || '';
+    strong.dataset.counterDecimals = numeric[1].includes('.') ? String(numeric[1].split('.')[1].length) : '0';
+  }
   card.append(key, strong);
   if (note) {
     const small = document.createElement('small');
@@ -341,6 +350,14 @@ function renderActivity() {
     });
     activityWeekdays.replaceChildren(...bars);
   }
+
+  refreshMotionTargets([
+    ...(activityStatGrid ? [...activityStatGrid.children] : []),
+    ...(activityMini ? [...activityMini.children] : []),
+    ...(document.querySelectorAll('.activity-panel') || [])
+  ]);
+  armActivityVisuals();
+  observeCounters();
 }
 
 function applyLanguage() {
@@ -508,6 +525,305 @@ if ('IntersectionObserver' in window) {
 } else {
   document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
 }
+
+
+/* ===== K4 Motion System v1 ===== */
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+let counterObserver = null;
+let visualObserver = null;
+
+function easeOutCubic(t) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function animateCounter(node) {
+  if (!node || node.dataset.counterDone === 'true') return;
+  const target = Number(node.dataset.counterTarget);
+  if (!Number.isFinite(target)) return;
+
+  const suffix = node.dataset.counterSuffix || '';
+  const decimals = Math.max(0, Number(node.dataset.counterDecimals || 0));
+  node.dataset.counterDone = 'true';
+
+  if (prefersReducedMotion.matches) {
+    node.textContent = `${target.toFixed(decimals)}${suffix}`;
+    return;
+  }
+
+  const duration = 760;
+  const start = performance.now();
+
+  const frame = (now) => {
+    const progress = Math.min(1, (now - start) / duration);
+    const value = target * easeOutCubic(progress);
+    node.textContent = `${value.toFixed(decimals)}${suffix}`;
+    if (progress < 1) requestAnimationFrame(frame);
+  };
+
+  requestAnimationFrame(frame);
+}
+
+function observeCounters() {
+  const nodes = [...document.querySelectorAll('[data-counter-target]:not([data-counter-done="true"])')];
+  if (!nodes.length) return;
+
+  if (prefersReducedMotion.matches || !('IntersectionObserver' in window)) {
+    nodes.forEach(animateCounter);
+    return;
+  }
+
+  if (!counterObserver) {
+    counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.55 });
+  }
+
+  nodes.forEach((node) => counterObserver.observe(node));
+}
+
+function armActivityVisuals() {
+  if (prefersReducedMotion.matches) {
+    document.querySelectorAll('.heatmap-cell').forEach((cell) => cell.classList.add('is-lit'));
+    return;
+  }
+
+  const heatmap = document.querySelector('#activity-heatmap');
+  if (heatmap && !heatmap.dataset.motionArmed) {
+    heatmap.dataset.motionArmed = 'true';
+    [...heatmap.querySelectorAll('.heatmap-cell')].forEach((cell, index) => {
+      cell.style.setProperty('--heat-delay', `${Math.min(index * 3, 980)}ms`);
+    });
+  }
+
+  const languages = document.querySelector('#activity-languages');
+  if (languages && !languages.dataset.motionArmed) {
+    languages.dataset.motionArmed = 'true';
+    languages.querySelectorAll('.language-track i').forEach((bar, index) => {
+      const target = bar.style.width || '0%';
+      bar.style.setProperty('--target-width', target);
+      bar.style.width = '0%';
+      bar.style.setProperty('--bar-delay', `${index * 70}ms`);
+    });
+  }
+
+  const weekdays = document.querySelector('#activity-weekdays');
+  if (weekdays && !weekdays.dataset.motionArmed) {
+    weekdays.dataset.motionArmed = 'true';
+    weekdays.querySelectorAll('.weekday-bar i').forEach((bar, index) => {
+      const target = bar.style.height || '4%';
+      bar.style.setProperty('--target-height', target);
+      bar.style.height = '4%';
+      bar.style.setProperty('--bar-delay', `${index * 55}ms`);
+    });
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    [heatmap, languages, weekdays].filter(Boolean).forEach((node) => node.classList.add('is-animated'));
+    return;
+  }
+
+  if (!visualObserver) {
+    visualObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-animated');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.24 });
+  }
+
+  [heatmap, languages, weekdays]
+    .filter((node) => node && !node.dataset.motionObserved)
+    .forEach((node) => {
+      node.dataset.motionObserved = 'true';
+      visualObserver.observe(node);
+    });
+}
+
+function attachPointerGlow(card) {
+  if (!card || card.dataset.pointerGlow === 'true') return;
+  card.dataset.pointerGlow = 'true';
+  card.classList.add('motion-card');
+
+  if (!canHover.matches || prefersReducedMotion.matches) return;
+
+  card.addEventListener('pointermove', (event) => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--pointer-x', `${event.clientX - rect.left}px`);
+    card.style.setProperty('--pointer-y', `${event.clientY - rect.top}px`);
+  }, { passive: true });
+}
+
+function refreshMotionTargets(nodes = []) {
+  const targets = nodes.length
+    ? nodes
+    : [
+        ...document.querySelectorAll(
+          '.principles article, .system-card, .repo-card, .activity-panel, .activity-stat, .stack-line, .contact__panel'
+        )
+      ];
+
+  targets.forEach((node, index) => {
+    if (!(node instanceof HTMLElement)) return;
+    node.style.setProperty('--card-delay', `${Math.min(index * 55, 220)}ms`);
+    attachPointerGlow(node);
+  });
+}
+
+function startTerminalSequence() {
+  const terminal = document.querySelector('[data-terminal-reveal]');
+  if (!terminal) return;
+
+  const items = [...terminal.querySelectorAll('.terminal__body > *')];
+  if (!items.length || prefersReducedMotion.matches) {
+    items.forEach((item) => item.classList.add('is-shown'));
+    return;
+  }
+
+  items.forEach((item) => item.classList.add('terminal-seq-item'));
+
+  const first = items[0];
+  const typedText = 'systemctl --user status k4';
+  first.innerHTML = '<span class="t-dim">$</span> <span class="terminal-typed"></span><span class="typing-caret" aria-hidden="true"></span>';
+  first.classList.add('is-shown');
+
+  const typed = first.querySelector('.terminal-typed');
+  let cursor = 0;
+
+  const revealRest = () => {
+    items.slice(1).forEach((item, index) => {
+      window.setTimeout(() => item.classList.add('is-shown'), 75 + index * 105);
+    });
+  };
+
+  const type = () => {
+    if (!typed) return revealRest();
+    typed.textContent = typedText.slice(0, cursor);
+    cursor += 1;
+    if (cursor <= typedText.length) {
+      window.setTimeout(type, 27 + (cursor % 4) * 5);
+    } else {
+      window.setTimeout(() => {
+        first.querySelector('.typing-caret')?.classList.add('is-done');
+        revealRest();
+      }, 120);
+    }
+  };
+
+  window.setTimeout(type, 520);
+}
+
+function setupHeroMotion() {
+  document.documentElement.classList.add('motion-ready');
+
+  const hero = document.querySelector('.hero');
+  const terminal = document.querySelector('[data-terminal-reveal]');
+  if (!hero || !terminal || prefersReducedMotion.matches || !canHover.matches) return;
+
+  let frame = 0;
+  hero.addEventListener('pointermove', (event) => {
+    if (frame) cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const rect = hero.getBoundingClientRect();
+      const nx = (event.clientX - rect.left) / rect.width - 0.5;
+      const ny = (event.clientY - rect.top) / rect.height - 0.5;
+      terminal.style.setProperty('--terminal-rx', `${(-ny * 2.2).toFixed(2)}deg`);
+      terminal.style.setProperty('--terminal-ry', `${(nx * 3).toFixed(2)}deg`);
+      terminal.style.setProperty('--terminal-shift-x', `${(nx * 5).toFixed(2)}px`);
+      terminal.style.setProperty('--terminal-shift-y', `${(ny * 5).toFixed(2)}px`);
+    });
+  }, { passive: true });
+
+  hero.addEventListener('pointerleave', () => {
+    terminal.style.setProperty('--terminal-rx', '0deg');
+    terminal.style.setProperty('--terminal-ry', '0deg');
+    terminal.style.setProperty('--terminal-shift-x', '0px');
+    terminal.style.setProperty('--terminal-shift-y', '0px');
+  });
+}
+
+function setupPointerAura() {
+  if (!canHover.matches || prefersReducedMotion.matches) return;
+  const aura = document.createElement('div');
+  aura.className = 'pointer-aura';
+  aura.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(aura);
+
+  let targetX = -500;
+  let targetY = -500;
+  let currentX = targetX;
+  let currentY = targetY;
+  let raf = 0;
+
+  const tick = () => {
+    currentX += (targetX - currentX) * 0.14;
+    currentY += (targetY - currentY) * 0.14;
+    aura.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+    raf = requestAnimationFrame(tick);
+  };
+
+  window.addEventListener('pointermove', (event) => {
+    targetX = event.clientX - 150;
+    targetY = event.clientY - 150;
+    aura.classList.add('is-visible');
+  }, { passive: true });
+
+  document.documentElement.addEventListener('mouseleave', () => aura.classList.remove('is-visible'));
+  raf = requestAnimationFrame(tick);
+}
+
+function setupScrollProgress() {
+  const progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  let scheduled = false;
+  const update = () => {
+    const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const ratio = Math.min(1, Math.max(0, window.scrollY / max));
+    progress.style.transform = `scaleX(${ratio})`;
+    scheduled = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(update);
+  }, { passive: true });
+
+  update();
+}
+
+function decorateRevealDelays() {
+  document.querySelectorAll('[data-reveal]').forEach((node, index) => {
+    node.style.setProperty('--reveal-delay', `${(index % 4) * 55}ms`);
+  });
+}
+
+function initK4Motion() {
+  decorateRevealDelays();
+  refreshMotionTargets();
+  setupHeroMotion();
+  setupPointerAura();
+  setupScrollProgress();
+  startTerminalSequence();
+  observeCounters();
+  armActivityVisuals();
+}
+
+initK4Motion();
+
+prefersReducedMotion.addEventListener?.('change', () => {
+  document.documentElement.classList.toggle('reduce-motion-live', prefersReducedMotion.matches);
+});
+
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

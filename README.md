@@ -41,3 +41,7 @@ Glassmorphism, neon duvarı ve klasik badge-kart portföy kalıpları özellikle
 GitHub profilindeki `data/` klasörü K4 System için tek veri kaynağıdır. Site sistem/stack verisini buradan okur; profil workflow'u aynı veriden README SVG yüzeyini ve günlük GitHub aktivite verisini üretir.
 
 Coding activity günlük olarak contributions, streak, velocity, language dağılımı ve weekday aktivitesiyle güncellenir.
+
+## Motion system
+
+K4 Motion System v1; hero girişleri, terminal typing, section reveal, pointer glow, scroll progress, sayaç animasyonları, contribution heatmap/language/weekday geçişleri ve düşük yoğunluklu ambient hareket ekler. `prefers-reduced-motion` sistem tercihi tamamen desteklenir.
