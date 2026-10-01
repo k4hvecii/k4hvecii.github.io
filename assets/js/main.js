@@ -5,6 +5,17 @@ const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
 const statRepos = document.querySelector('#stat-repos');
 const statFollowers = document.querySelector('#stat-followers');
 const statPush = document.querySelector('#stat-push');
+const systemGrid = document.querySelector('#system-grid');
+const stackBoard = document.querySelector('#stack-board');
+const activityStatGrid = document.querySelector('#activity-stat-grid');
+const activityHeatmap = document.querySelector('#activity-heatmap');
+const activityVelocity = document.querySelector('#activity-velocity');
+const activityMini = document.querySelector('#activity-mini');
+const activityLanguages = document.querySelector('#activity-languages');
+const activityWeekdays = document.querySelector('#activity-weekdays');
+const activityUpdated = document.querySelector('#activity-updated');
+
+const K4_DATA_BASE = 'https://raw.githubusercontent.com/k4hvecii/k4hvecii/main/data';
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -20,6 +31,8 @@ const storage = {
 let language = storage.get('k4.lang') || 'tr';
 if (!['tr', 'en'].includes(language)) language = 'tr';
 let githubData = null;
+let k4Data = null;
+let activityData = null;
 
 function translateStaticText() {
   document.documentElement.lang = language;
@@ -45,6 +58,78 @@ function formatDate(dateString) {
     month: 'short',
     year: 'numeric'
   }).format(date);
+}
+
+function formatNumber(value) {
+  const number = Number(value || 0);
+  if (Math.abs(number) >= 1000000) return `${(number / 1000000).toFixed(1)}M`;
+  if (Math.abs(number) >= 1000) return `${(number / 1000).toFixed(1)}k`;
+  return String(number);
+}
+
+function renderSystems() {
+  if (!systemGrid || !k4Data?.systems) return;
+
+  const cards = k4Data.systems.map((item, index) => {
+    const article = document.createElement('article');
+    article.className = 'system-card is-visible';
+    article.setAttribute('data-reveal', '');
+
+    const top = document.createElement('div');
+    top.className = 'system-card__top';
+
+    const id = document.createElement('span');
+    id.className = 'system-card__id';
+    id.textContent = `${String(item.id || 'system').toUpperCase()} / ${String(index + 1).padStart(2, '0')}`;
+
+    const status = document.createElement('span');
+    status.className = 'status-pill';
+    status.textContent = item.status || 'active';
+    top.append(id, status);
+
+    const title = document.createElement('h3');
+    title.textContent = item.name || item.title || item.id;
+
+    const desc = document.createElement('p');
+    desc.textContent = language === 'tr'
+      ? (item.description_tr || item.description)
+      : (item.description_en || item.description);
+
+    const tags = document.createElement('div');
+    tags.className = 'system-card__tags';
+    for (const value of item.stack || []) {
+      const tag = document.createElement('span');
+      tag.textContent = value;
+      tags.appendChild(tag);
+    }
+
+    article.append(top, title, desc, tags);
+    return article;
+  });
+
+  systemGrid.replaceChildren(...cards);
+}
+
+function renderStack() {
+  if (!stackBoard || !k4Data?.stack) return;
+  const rows = Object.entries(k4Data.stack).map(([key, values]) => {
+    const row = document.createElement('div');
+    row.className = 'stack-line';
+
+    const label = document.createElement('span');
+    label.textContent = key;
+
+    const list = document.createElement('div');
+    for (const value of values) {
+      const item = document.createElement('b');
+      item.textContent = value;
+      list.appendChild(item);
+    }
+
+    row.append(label, list);
+    return row;
+  });
+  stackBoard.replaceChildren(...rows);
 }
 
 function renderGitHubStats() {
@@ -109,7 +194,7 @@ function renderRepos() {
     const visibility = document.createElement('span');
     visibility.textContent = repo.archived ? 'archived' : 'public';
     const updated = document.createElement('span');
-    updated.textContent = `${language === 'tr' ? 'push' : 'push'}: ${formatDate(repo.pushed_at)}`;
+    updated.textContent = `push: ${formatDate(repo.pushed_at)}`;
     foot.append(visibility, updated);
 
     card.append(top, desc, meta, foot);
@@ -119,10 +204,152 @@ function renderRepos() {
   repoList.replaceChildren(...rows);
 }
 
+function statCard(label, value, note = '') {
+  const card = document.createElement('div');
+  card.className = 'activity-stat';
+  const key = document.createElement('span');
+  key.textContent = label;
+  const strong = document.createElement('strong');
+  strong.textContent = value;
+  card.append(key, strong);
+  if (note) {
+    const small = document.createElement('small');
+    small.textContent = note;
+    card.appendChild(small);
+  }
+  return card;
+}
+
+function renderHeatmap(days) {
+  if (!activityHeatmap) return;
+  const groups = new Map();
+
+  for (const day of days || []) {
+    const date = new Date(`${day.date}T00:00:00Z`);
+    const sunday = new Date(date);
+    sunday.setUTCDate(date.getUTCDate() - date.getUTCDay());
+    const key = sunday.toISOString().slice(0, 10);
+    if (!groups.has(key)) groups.set(key, Array(7).fill(null));
+    groups.get(key)[date.getUTCDay()] = day;
+  }
+
+  const visibleWeeks = [...groups.values()].slice(-53);
+  const max = Math.max(0, ...(days || []).map((d) => Number(d.count || 0)));
+
+  const getLevel = (count) => {
+    if (!count || max <= 0) return 0;
+    const ratio = count / max;
+    if (ratio <= .25) return 1;
+    if (ratio <= .5) return 2;
+    if (ratio <= .75) return 3;
+    return 4;
+  };
+
+  const weeks = visibleWeeks.map((week) => {
+    const column = document.createElement('div');
+    column.className = 'heatmap-week';
+    week.forEach((day, weekday) => {
+      const cell = document.createElement('i');
+      cell.className = 'heatmap-cell';
+      const count = Number(day?.count || 0);
+      cell.dataset.level = String(getLevel(count));
+      cell.title = day ? `${day.date}: ${count} contributions` : '';
+      cell.setAttribute('aria-label', cell.title || `weekday ${weekday}`);
+      column.appendChild(cell);
+    });
+    return column;
+  });
+  activityHeatmap.replaceChildren(...weeks);
+}
+
+function renderActivity() {
+  if (!activityData?.summary) return;
+  const s = activityData.summary;
+
+  if (activityUpdated) {
+    activityUpdated.textContent = `sync: ${formatDate(activityData.generated_at)}`;
+  }
+
+  if (activityStatGrid) {
+    const cards = [
+      statCard('contributions', formatNumber(s.contributions), '365d'),
+      statCard('commits', formatNumber(s.commits), '365d'),
+      statCard('current streak', `${s.current_streak || 0}d`, `best ${s.longest_streak || 0}d`),
+      statCard('public repos', formatNumber(s.public_repos), `${formatNumber(s.stars)} stars`),
+      statCard('avg / active day', String(s.avg_per_active_day ?? 0), `${s.weekend_percentage || 0}% weekend`),
+      statCard('most active', s.most_active_weekday || '—', 'weekday')
+    ];
+    activityStatGrid.replaceChildren(...cards);
+  }
+
+  renderHeatmap(activityData.contribution_days || []);
+
+  if (activityVelocity) {
+    const velocity = s.velocity || {};
+    const arrow = velocity.trend === 'up' ? '↗' : velocity.trend === 'down' ? '↘' : '→';
+    const ratio = velocity.ratio == null ? 'new activity' : `${Number(velocity.ratio).toFixed(2)}×`;
+    activityVelocity.innerHTML = `<strong>${arrow} ${ratio}</strong><span>${velocity.recent_28d || 0} / ${velocity.previous_28d || 0}</span>`;
+  }
+
+  if (activityMini) {
+    activityMini.replaceChildren(
+      statCard('pull requests', String(s.pull_requests || 0)),
+      statCard('reviews', String(s.reviews || 0)),
+      statCard('issues', String(s.issues || 0)),
+      statCard('followers', String(s.followers || 0))
+    );
+  }
+
+  if (activityLanguages) {
+    const rows = (activityData.languages || []).map((item) => {
+      const row = document.createElement('div');
+      row.className = 'language-row';
+
+      const header = document.createElement('div');
+      const label = document.createElement('span');
+      label.textContent = item.name;
+      const pct = document.createElement('span');
+      pct.textContent = `${Number(item.percentage || 0).toFixed(1)}%`;
+      header.append(label, pct);
+
+      const track = document.createElement('div');
+      track.className = 'language-track';
+      const fill = document.createElement('i');
+      fill.style.width = `${Math.max(2, Number(item.percentage || 0))}%`;
+      fill.style.setProperty('--language-color', item.color || '#b7835d');
+      track.appendChild(fill);
+
+      row.append(header, track);
+      return row;
+    });
+    activityLanguages.replaceChildren(...rows);
+  }
+
+  if (activityWeekdays) {
+    const items = activityData.weekday_counts || [];
+    const max = Math.max(1, ...items.map((item) => Number(item.count || 0)));
+    const bars = items.map((item) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'weekday-bar';
+      const value = document.createElement('i');
+      value.style.height = `${Math.max(4, (Number(item.count || 0) / max) * 100)}%`;
+      value.title = `${item.day}: ${item.count}`;
+      const label = document.createElement('span');
+      label.textContent = item.day;
+      wrap.append(value, label);
+      return wrap;
+    });
+    activityWeekdays.replaceChildren(...bars);
+  }
+}
+
 function applyLanguage() {
   translateStaticText();
+  renderSystems();
+  renderStack();
   renderGitHubStats();
   renderRepos();
+  renderActivity();
 }
 
 langButton?.addEventListener('click', () => {
@@ -133,24 +360,25 @@ langButton?.addEventListener('click', () => {
 
 applyLanguage();
 
-const GITHUB_CACHE_KEY = 'k4.github.surface.v40';
+const GITHUB_CACHE_KEY = 'k4.github.surface.v50';
 const GITHUB_CACHE_TTL = 15 * 60 * 1000;
+const K4_CACHE_KEY = 'k4.shared.data.v1';
+const K4_CACHE_TTL = 60 * 60 * 1000;
 
-function readGitHubCache() {
+function readCache(key, ttl) {
   try {
-    const raw = storage.get(GITHUB_CACHE_KEY);
+    const raw = storage.get(key);
     if (!raw) return null;
     const data = JSON.parse(raw);
-    if (!data?.user || !Array.isArray(data?.repos)) return null;
-    if (Date.now() - Number(data.savedAt || 0) > GITHUB_CACHE_TTL) return null;
-    return data;
+    if (Date.now() - Number(data.savedAt || 0) > ttl) return null;
+    return data.value;
   } catch {
     return null;
   }
 }
 
-function saveGitHubCache(data) {
-  storage.set(GITHUB_CACHE_KEY, JSON.stringify({ ...data, savedAt: Date.now() }));
+function saveCache(key, value) {
+  storage.set(key, JSON.stringify({ savedAt: Date.now(), value }));
 }
 
 function renderRepoError() {
@@ -169,8 +397,46 @@ function renderRepoError() {
   repoList.replaceChildren(line);
 }
 
+async function loadSharedData() {
+  const cached = readCache(K4_CACHE_KEY, K4_CACHE_TTL);
+  if (cached) {
+    k4Data = cached.core;
+    activityData = cached.activity;
+    renderSystems();
+    renderStack();
+    renderActivity();
+  }
+
+  try {
+    const [profileRes, systemsRes, projectsRes, stackRes, statsRes] = await Promise.all([
+      fetch(`${K4_DATA_BASE}/profile.json`, { cache: 'no-cache' }),
+      fetch(`${K4_DATA_BASE}/systems.json`, { cache: 'no-cache' }),
+      fetch(`${K4_DATA_BASE}/projects.json`, { cache: 'no-cache' }),
+      fetch(`${K4_DATA_BASE}/stack.json`, { cache: 'no-cache' }),
+      fetch(`${K4_DATA_BASE}/github-stats.json`, { cache: 'no-cache' })
+    ]);
+
+    if (![profileRes, systemsRes, projectsRes, stackRes, statsRes].every((res) => res.ok)) {
+      throw new Error('shared data unavailable');
+    }
+
+    const [profile, systems, projects, stack, activity] = await Promise.all([
+      profileRes.json(), systemsRes.json(), projectsRes.json(), stackRes.json(), statsRes.json()
+    ]);
+
+    k4Data = { profile, systems, projects, stack };
+    activityData = activity;
+    saveCache(K4_CACHE_KEY, { core: k4Data, activity: activityData });
+    renderSystems();
+    renderStack();
+    renderActivity();
+  } catch {
+    if (activityUpdated) activityUpdated.textContent = 'sync unavailable';
+  }
+}
+
 async function loadGitHub() {
-  const cached = readGitHubCache();
+  const cached = readCache(GITHUB_CACHE_KEY, GITHUB_CACHE_TTL);
   if (cached) {
     githubData = cached;
     renderGitHubStats();
@@ -195,7 +461,7 @@ async function loadGitHub() {
       .slice(0, 6);
 
     githubData = { user, repos };
-    saveGitHubCache(githubData);
+    saveCache(GITHUB_CACHE_KEY, githubData);
     renderGitHubStats();
     renderRepos();
   } catch {
@@ -203,6 +469,7 @@ async function loadGitHub() {
   }
 }
 
+loadSharedData();
 loadGitHub();
 
 if ('IntersectionObserver' in window) {

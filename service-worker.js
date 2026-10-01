@@ -1,4 +1,4 @@
-const CACHE_NAME = "k4hvecii-coffee-terminal-v4.0";
+const CACHE_NAME = "k4hvecii-coffee-terminal-v5.0";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -7,10 +7,10 @@ const APP_SHELL = [
   "./privacy.html",
   "./terms.html",
   "./site.webmanifest",
-  "./assets/css/main.css?v=4.0.0",
+  "./assets/css/main.css?v=5.0.0",
   "./assets/css/404.css",
   "./assets/css/legal.css?v=3.2.0",
-  "./assets/js/main.js?v=4.0.0",
+  "./assets/js/main.js?v=5.0.0",
   "./assets/icons/favicon.svg",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/icon-192.png",

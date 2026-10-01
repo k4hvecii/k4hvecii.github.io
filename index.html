@@ -31,7 +31,7 @@
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=4.0.0" />
+  <link rel="stylesheet" href="./assets/css/main.css?v=5.0.0" />
   <title>K4hveci — coffee terminal</title>
 
   <script type="application/ld+json">
@@ -62,6 +62,7 @@
         <a href="#about" data-tr="hakkımda" data-en="about">hakkımda</a>
         <a href="#systems" data-tr="sistemler" data-en="systems">sistemler</a>
         <a href="#github">github</a>
+        <a href="#activity" data-tr="aktivite" data-en="activity">aktivite</a>
         <a href="#stack">stack</a>
         <a href="#contact" data-tr="iletişim" data-en="contact">iletişim</a>
       </nav>
@@ -169,7 +170,7 @@
         </p>
       </div>
 
-      <div class="system-grid">
+      <div class="system-grid" id="system-grid">
         <article class="system-card" data-reveal>
           <div class="system-card__top">
             <span class="system-card__id">FLASK / 01</span>
@@ -248,9 +249,73 @@
       </div>
     </section>
 
+    <section class="section shell" id="activity">
+      <div class="section__head section__head--split" data-reveal>
+        <div>
+          <p class="section__index">04 / CODING ACTIVITY</p>
+          <h2 data-tr="GitHub tarafında ne kadar hareket var?" data-en="What is moving on GitHub?">GitHub tarafında ne kadar hareket var?</h2>
+          <p data-tr="Son 365 günün katkı, seri, dil ve aktivite dağılımı günlük olarak profil workflow'undan güncelleniyor."
+             data-en="Contribution, streak, language and activity data for the last 365 days is refreshed daily by the profile workflow.">
+             Son 365 günün katkı, seri, dil ve aktivite dağılımı günlük olarak profil workflow'undan güncelleniyor.
+          </p>
+        </div>
+        <span class="activity-updated" id="activity-updated">syncing...</span>
+      </div>
+
+      <div class="activity-stat-grid" id="activity-stat-grid" data-reveal aria-live="polite">
+        <div class="activity-loading">loading coding stats...</div>
+      </div>
+
+      <div class="activity-layout" data-reveal>
+        <div class="activity-panel activity-panel--wide">
+          <div class="activity-panel__head">
+            <div>
+              <span class="activity-kicker">CONTRIBUTION MAP</span>
+              <strong data-tr="Son 365 gün" data-en="Last 365 days">Son 365 gün</strong>
+            </div>
+            <div class="heatmap-legend" aria-hidden="true"><span>less</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>more</span></div>
+          </div>
+          <div class="heatmap-scroll"><div class="heatmap" id="activity-heatmap"></div></div>
+        </div>
+
+        <div class="activity-panel">
+          <div class="activity-panel__head">
+            <div>
+              <span class="activity-kicker">VELOCITY</span>
+              <strong data-tr="Son 28 gün" data-en="Last 28 days">Son 28 gün</strong>
+            </div>
+          </div>
+          <div class="velocity" id="activity-velocity">—</div>
+          <div class="activity-mini" id="activity-mini"></div>
+        </div>
+      </div>
+
+      <div class="activity-layout activity-layout--equal" data-reveal>
+        <div class="activity-panel">
+          <div class="activity-panel__head">
+            <div>
+              <span class="activity-kicker">LANGUAGES</span>
+              <strong data-tr="Public repolarda" data-en="Across public repos">Public repolarda</strong>
+            </div>
+          </div>
+          <div class="language-bars" id="activity-languages"></div>
+        </div>
+
+        <div class="activity-panel">
+          <div class="activity-panel__head">
+            <div>
+              <span class="activity-kicker">WEEKDAY ACTIVITY</span>
+              <strong data-tr="En aktif gün" data-en="Most active day">En aktif gün</strong>
+            </div>
+          </div>
+          <div class="weekday-chart" id="activity-weekdays"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section shell" id="stack">
       <div class="section__head" data-reveal>
-        <p class="section__index">04 / TOOLBOX</p>
+        <p class="section__index">05 / TOOLBOX</p>
         <h2 data-tr="Her gün kullandığım parçalar." data-en="The pieces I use every day.">Her gün kullandığım parçalar.</h2>
         <p data-tr="Teknoloji listesi uzatmak yerine gerçekten kullandığım çekirdek parçaları tutuyorum."
            data-en="Instead of a long technology wall, I keep the core pieces I actually use.">
@@ -258,7 +323,7 @@
         </p>
       </div>
 
-      <div class="stack-board" data-reveal>
+      <div class="stack-board" id="stack-board" data-reveal>
         <div class="stack-line"><span>runtime</span><div><b>Node.js</b><b>TypeScript</b><b>JavaScript</b></div></div>
         <div class="stack-line"><span>discord</span><div><b>discord.js</b><b>@discordjs/voice</b><b>Components</b></div></div>
         <div class="stack-line"><span>data</span><div><b>MongoDB</b><b>SQLite</b><b>JSON stores</b></div></div>
@@ -270,7 +335,7 @@
     <section class="section shell contact" id="contact">
       <div class="contact__panel" data-reveal>
         <div>
-          <p class="section__index">05 / CONTACT</p>
+          <p class="section__index">06 / CONTACT</p>
           <h2 data-tr="Bir şey inşa ediyorsan konuşabiliriz." data-en="If you're building something, we can talk.">Bir şey inşa ediyorsan konuşabiliriz.</h2>
           <p data-tr="Proje, sistem tasarımı, Discord, Linux veya sadece teknik bir fikir."
              data-en="Projects, system design, Discord, Linux or just a technical idea.">
@@ -290,6 +355,6 @@
     <span>K4 SYSTEM / coffee terminal</span>
   </footer>
 
-  <script type="module" src="./assets/js/main.js?v=4.0.0"></script>
+  <script type="module" src="./assets/js/main.js?v=5.0.0"></script>
 </body>
 </html>
