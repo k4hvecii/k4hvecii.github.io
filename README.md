@@ -1,12 +1,21 @@
 # k4hveci.info
 
-K4hveci kişisel sitesi.
+K4hveci kişisel site yüzeyi — **K4 System / Coffee Terminal**.
 
-Canlı adres: https://k4hveci.info/
+Canlı adres: https://k4hveci.info/  
+GitHub Pages: https://k4hvecii.github.io/
 
-## Tasarım
+## K4 System v4
 
-Coffee + terminal yönü. Düz, monospace ağırlıklı; glass, büyük kart ve klasik AI portfolio kalıpları yok.
+Yeni yapı daha az “terminal şakası”, daha fazla gerçek sistem yüzeyi olacak şekilde düzenlendi:
+
+- büyük ama sakin hero + gerçek durum paneli
+- üretimde kullanılan sistemler için ayrı yüzey
+- GitHub profil/repo verilerini canlı çekme
+- çekirdek stack ve çalışma prensipleri
+- TR / EN içerik
+- responsive, reduced-motion ve klavye erişilebilirliği
+- bağımlılıksız HTML/CSS/JS; GitHub Pages üzerinde direkt yayın
 
 ## Yerel çalıştırma
 
@@ -21,3 +30,8 @@ Ardından `http://localhost:8000` adresini aç.
 ```bash
 node scripts/validate.mjs
 ```
+
+## Tasarım yönü
+
+Koyu kahve / charcoal taban, düşük doygunluk, sıcak krem metin, tek kahve aksanı.  
+Glassmorphism, neon duvarı ve klasik badge-kart portföy kalıpları özellikle kullanılmıyor.

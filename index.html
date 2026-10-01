@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0a0705" />
+  <meta name="theme-color" content="#0b0806" />
   <meta name="color-scheme" content="dark" />
-  <meta name="description" content="K4hveci — Discord botları, backend sistemleri ve Linux servisleri." />
+  <meta name="description" content="K4hveci — Discord sistemleri, backend araçları ve Linux/VPS altyapısı." />
   <meta name="author" content="Kıvanç Aydoğdu" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://k4hveci.info/" />
 
-  <meta property="og:title" content="K4hveci — terminal açık" />
-  <meta property="og:description" content="Discord botları / backend / Linux. Kahve sıcak, terminal açık." />
+  <meta property="og:title" content="K4hveci — coffee terminal" />
+  <meta property="og:description" content="Discord systems / backend / Linux. Quiet interfaces, reliable systems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://k4hveci.info/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20260928d" />
-  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20260928d" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -24,15 +24,16 @@
   <meta property="og:image:alt" content="K4hveci Coffee Terminal" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="K4hveci — terminal açık" />
-  <meta name="twitter:description" content="Discord botları / backend / Linux. Kahve sıcak, terminal açık." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20260928d" />
+  <meta name="twitter:title" content="K4hveci — coffee terminal" />
+  <meta name="twitter:description" content="Discord systems / backend / Linux. Quiet interfaces, reliable systems." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
 
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=3.2.0" />
-  <title>K4hveci — terminal açık</title>
+  <link rel="stylesheet" href="./assets/css/main.css?v=4.0.0" />
+  <title>K4hveci — coffee terminal</title>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,137 +42,254 @@
     "url": "https://k4hveci.info/",
     "email": "mailto:contact@k4hveci.info",
     "sameAs": ["https://github.com/k4hvecii"],
-    "knowsAbout": ["Node.js", "TypeScript", "Discord.js", "MongoDB", "Linux"]
+    "knowsAbout": ["Node.js", "TypeScript", "Discord.js", "MongoDB", "Linux", "systemd", "Nginx"]
   }
   </script>
 </head>
+
 <body>
   <a class="skip" href="#content">İçeriğe geç</a>
+  <div class="ambient" aria-hidden="true"></div>
 
   <header class="topbar">
     <div class="shell topbar__inner">
-      <a class="wordmark" href="#top" aria-label="K4hveci ana sayfa">
-        <span class="prompt">$</span> k4hveci
+      <a class="brand" href="#top" aria-label="K4hveci ana sayfa">
+        <span class="brand__mark">K4</span>
+        <span class="brand__name">k4hveci</span>
       </a>
+
       <nav class="nav" aria-label="Ana navigasyon">
-        <a href="#about" data-tr="about" data-en="about">about</a>
-        <a href="#projects" data-tr="projects" data-en="projects">projects</a>
-        <a href="#github" data-tr="github" data-en="github">github</a>
-        <a href="#contact" data-tr="contact" data-en="contact">contact</a>
+        <a href="#about" data-tr="hakkımda" data-en="about">hakkımda</a>
+        <a href="#systems" data-tr="sistemler" data-en="systems">sistemler</a>
+        <a href="#github">github</a>
+        <a href="#stack">stack</a>
+        <a href="#contact" data-tr="iletişim" data-en="contact">iletişim</a>
       </nav>
-      <button class="lang" id="lang-toggle" type="button" aria-label="Dili değiştir">TR</button>
+
+      <div class="topbar__actions">
+        <span class="top-status"><i aria-hidden="true"></i><span data-tr="sistem açık" data-en="systems online">sistem açık</span></span>
+        <button class="lang" id="lang-toggle" type="button" aria-label="Dili değiştir">TR</button>
+      </div>
     </div>
   </header>
 
-  <main id="content" class="shell">
-    <section class="intro" id="top">
-      <div class="intro__copy">
-        <p class="cmd">k4hveci@coffee:~$ whoami</p>
-        <h1>K4hveci</h1>
-        <p class="lead" data-tr="Discord botları, backend sistemleri ve Linux üstünde yaşayan servisler geliştiriyorum." data-en="I build Discord bots, backend systems and services that live on Linux.">Discord botları, backend sistemleri ve Linux üstünde yaşayan servisler geliştiriyorum.</p>
-        <p class="sub" data-tr="Az süs, temiz kod, bol kahve." data-en="Less decoration, clean code, plenty of coffee.">Az süs, temiz kod, bol kahve.</p>
-        <div class="links">
-          <a href="#projects" data-tr="[ projeler ]" data-en="[ projects ]">[ projeler ]</a>
-          <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">[ github ↗ ]</a>
-          <a href="mailto:contact@k4hveci.info" data-tr="[ e-posta ]" data-en="[ mail ]">[ e-posta ]</a>
+  <main id="content">
+    <section class="hero shell" id="top">
+      <div class="hero__copy" data-reveal>
+        <p class="eyebrow"><span>k4hveci@coffee:~$</span> whoami</p>
+        <h1>K4HVE.CI</h1>
+        <p class="hero__lead"
+          data-tr="Discord sistemleri, backend araçları ve Linux/VPS üstünde yaşayan servisler geliştiriyorum."
+          data-en="I build Discord systems, backend tooling and services that live on Linux/VPS infrastructure.">
+          Discord sistemleri, backend araçları ve Linux/VPS üstünde yaşayan servisler geliştiriyorum.
+        </p>
+        <p class="hero__sub"
+          data-tr="Az gürültü. Net davranış. Sağlam altyapı."
+          data-en="Less noise. Clear behavior. Reliable infrastructure.">
+          Az gürültü. Net davranış. Sağlam altyapı.
+        </p>
+
+        <div class="hero__actions">
+          <a class="button button--solid" href="#systems" data-tr="Sistemleri gör" data-en="View systems">Sistemleri gör</a>
+          <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+
+        <div class="hero__meta" aria-label="K4 system status">
+          <div><span>mode</span><strong>building / shipping</strong></div>
+          <div><span>runtime</span><strong>Linux · systemd</strong></div>
+          <div><span>focus</span><strong>Discord · backend</strong></div>
         </div>
       </div>
 
-      <pre class="coffee" aria-hidden="true">
-        ( (
-         ) )
-      ........
-      |      |]
-      \      /
-       `----'
-      </pre>
-    </section>
-
-    <section class="block" id="about">
-      <p class="cmd">k4hveci@coffee:~$ less about.md</p>
-      <div class="rule"></div>
-      <div class="about-layout">
-        <div class="prose">
-          <p data-tr="20 yaşındayım. 2016'dan beri Discord tarafındayım; 2021'den beri bot, backend ve küçük web araçları geliştiriyorum." data-en="I'm 20. I've been around Discord since 2016 and building bots, backend systems and small web tools since 2021.">20 yaşındayım. 2016'dan beri Discord tarafındayım; 2021'den beri bot, backend ve küçük web araçları geliştiriyorum.</p>
-          <p data-tr="Bir şeyi yalnızca çalıştırmak değil, aylar sonra açtığımda hâlâ anlayabilmek benim için daha önemli." data-en="For me, it matters more that I can still understand a project months later than simply making it work once.">Bir şeyi yalnızca çalıştırmak değil, aylar sonra açtığımda hâlâ anlayabilmek benim için daha önemli.</p>
+      <div class="terminal" data-reveal aria-label="Terminal durum paneli">
+        <div class="terminal__bar">
+          <div class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span>k4-system/status</span>
+          <span class="terminal__live">LIVE</span>
         </div>
-        <dl class="facts">
-          <div><dt>main</dt><dd>Node.js / TypeScript</dd></div>
-          <div><dt>discord</dt><dd>discord.js</dd></div>
-          <div><dt>data</dt><dd>MongoDB</dd></div>
-          <div><dt>runtime</dt><dd>Linux / systemd</dd></div>
-          <div><dt>fuel</dt><dd>coffee</dd></div>
-        </dl>
+        <div class="terminal__body">
+          <p><span class="t-dim">$</span> systemctl --user status k4</p>
+          <p><span class="t-green">●</span> active (running)</p>
+          <div class="terminal__rule"></div>
+          <p><span class="t-key">surface</span> coffee-terminal</p>
+          <p><span class="t-key">backend</span> node / typescript</p>
+          <p><span class="t-key">data</span> mongodb</p>
+          <p><span class="t-key">ops</span> linux / systemd / nginx</p>
+          <div class="terminal__rule"></div>
+          <p class="terminal__note">quiet interfaces, reliable systems.<span class="cursor" aria-hidden="true"></span></p>
+        </div>
       </div>
     </section>
 
-    <section class="block" id="projects">
-      <p class="cmd">k4hveci@coffee:~$ tree ~/projects</p>
-      <div class="rule"></div>
+    <section class="section shell" id="about">
+      <div class="section__head" data-reveal>
+        <p class="section__index">01 / PROFILE</p>
+        <h2 data-tr="Bir kere çalışan değil, uzun süre yaşayan sistemler." data-en="Not just working once — built to keep working.">Bir kere çalışan değil, uzun süre yaşayan sistemler.</h2>
+        <p data-tr="Projelerde önce akışı sadeleştiriyorum; sonra log, hata davranışı ve üretim tarafını sağlamlaştırıyorum."
+           data-en="I simplify the flow first, then harden logs, failure behavior and the production path.">
+           Projelerde önce akışı sadeleştiriyorum; sonra log, hata davranışı ve üretim tarafını sağlamlaştırıyorum.
+        </p>
+      </div>
 
-      <div class="tree" role="list">
-        <article class="project" role="listitem">
-          <div class="project__line"><span class="tree-mark">├──</span><strong>flask/</strong><span class="state">brewing</span></div>
-          <div class="project__body">
-            <p data-tr="LabCafe altında geliştirdiğim genel amaçlı Discord botu. Yönetim, topluluk, araçlar ve müzik tarafını tek yapıda topluyorum." data-en="A general-purpose Discord bot I build under LabCafe, combining management, community tools and music in one system.">LabCafe altında geliştirdiğim genel amaçlı Discord botu. Yönetim, topluluk, araçlar ve müzik tarafını tek yapıda topluyorum.</p>
-            <span>Node.js · TypeScript · discord.js · MongoDB</span>
-          </div>
+      <div class="principles" data-reveal>
+        <article>
+          <span class="principle__no">01</span>
+          <h3 data-tr="Daha az hareketli parça" data-en="Fewer moving parts">Daha az hareketli parça</h3>
+          <p data-tr="Gereksiz servis, dosya ve ekran yerine anlaşılır bir ana akış."
+             data-en="A clear core flow instead of unnecessary services, files and screens.">
+             Gereksiz servis, dosya ve ekran yerine anlaşılır bir ana akış.
+          </p>
         </article>
-
-        <article class="project" role="listitem">
-          <div class="project__line"><span class="tree-mark">├──</span><strong>yhmod/</strong><span class="state">active</span></div>
-          <div class="project__body">
-            <p data-tr="Yazılım Hub için moderasyon sistemi. Log, güvenlik, ayarlar ve yönetim akışını daha sade tutmak için sürekli refactor ediyorum." data-en="A moderation system for Yazılım Hub. I keep refactoring its logs, security, settings and management flow to stay simple.">Yazılım Hub için moderasyon sistemi. Log, güvenlik, ayarlar ve yönetim akışını daha sade tutmak için sürekli refactor ediyorum.</p>
-            <span>TypeScript · discord.js · MongoDB · Linux</span>
-          </div>
+        <article>
+          <span class="principle__no">02</span>
+          <h3 data-tr="Sessiz ama yararlı loglar" data-en="Quiet, useful logs">Sessiz ama yararlı loglar</h3>
+          <p data-tr="Normalde sakin, hata olduğunda ne olduğunu gerçekten anlatan çıktı."
+             data-en="Calm in normal operation, genuinely useful when something fails.">
+             Normalde sakin, hata olduğunda ne olduğunu gerçekten anlatan çıktı.
+          </p>
         </article>
-
-        <article class="project" role="listitem">
-          <div class="project__line"><span class="tree-mark">├──</span><strong>yh-ticket/</strong><span class="state">building</span></div>
-          <div class="project__body">
-            <p data-tr="Private thread kullanan panel ağırlıklı ticket sistemi. Komut kalabalığı yerine işlemleri tek akışta toplamaya çalışıyorum." data-en="A panel-first ticket system using private threads, designed to avoid a wall of commands and keep actions in one flow.">Private thread kullanan panel ağırlıklı ticket sistemi. Komut kalabalığı yerine işlemleri tek akışta toplamaya çalışıyorum.</p>
-            <span>TypeScript · Threads · MongoDB</span>
-          </div>
-        </article>
-
-        <article class="project" role="listitem">
-          <div class="project__line"><span class="tree-mark">└──</span><strong>coffee-lab/</strong><span class="state">always open</span></div>
-          <div class="project__body">
-            <p data-tr="Küçük scriptler, web denemeleri ve bazen büyük projeye dönüşen fikirler için tuttuğum çalışma alanı." data-en="My workspace for small scripts, web experiments and ideas that sometimes grow into bigger projects.">Küçük scriptler, web denemeleri ve bazen büyük projeye dönüşen fikirler için tuttuğum çalışma alanı.</p>
-            <span>CLI · Web · Experiments</span>
-          </div>
+        <article>
+          <span class="principle__no">03</span>
+          <h3 data-tr="Arayüz sistemin önüne geçmez" data-en="Interface stays out of the system's way">Arayüz sistemin önüne geçmez</h3>
+          <p data-tr="Gösterişli olmaktan önce hızlı, okunur ve ilk kez kullanan biri için anlaşılır."
+             data-en="Fast, readable and understandable before it tries to be flashy.">
+             Gösterişli olmaktan önce hızlı, okunur ve ilk kez kullanan biri için anlaşılır.
+          </p>
         </article>
       </div>
     </section>
 
-    <section class="block" id="github">
-      <p class="cmd">k4hveci@coffee:~$ gh repo list --limit 4</p>
-      <div class="rule"></div>
-      <div class="github-head">
-        <p data-tr="Public repoların son güncellenenlerini buradan çekiyorum." data-en="I pull the latest updated public repositories here.">Public repoların son güncellenenlerini buradan çekiyorum.</p>
-        <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
+    <section class="section shell" id="systems">
+      <div class="section__head" data-reveal>
+        <p class="section__index">02 / SYSTEMS</p>
+        <h2 data-tr="Şu sıralar masada olanlar." data-en="What is currently on the desk.">Şu sıralar masada olanlar.</h2>
+        <p data-tr="Bazıları özel sunucularda yaşıyor; burada sistemi ve neyi çözmeye çalıştığını gösteriyorum."
+           data-en="Some live in private environments; here I show the system and the problem it is built to solve.">
+           Bazıları özel sunucularda yaşıyor; burada sistemi ve neyi çözmeye çalıştığını gösteriyorum.
+        </p>
       </div>
-      <div class="repo-list" id="repo-list" aria-live="polite">
+
+      <div class="system-grid">
+        <article class="system-card" data-reveal>
+          <div class="system-card__top">
+            <span class="system-card__id">FLASK / 01</span>
+            <span class="status-pill">development</span>
+          </div>
+          <h3>Flask</h3>
+          <p data-tr="Genel amaçlı Discord sistemi: yönetim, topluluk araçları, istatistikler ve native voice müzik altyapısı."
+             data-en="General-purpose Discord system: management, community tools, stats and native voice music infrastructure.">
+             Genel amaçlı Discord sistemi: yönetim, topluluk araçları, istatistikler ve native voice müzik altyapısı.
+          </p>
+          <div class="system-card__tags"><span>TypeScript</span><span>discord.js</span><span>MongoDB</span><span>Voice</span></div>
+        </article>
+
+        <article class="system-card" data-reveal>
+          <div class="system-card__top">
+            <span class="system-card__id">YHMOD / 02</span>
+            <span class="status-pill">active</span>
+          </div>
+          <h3>YHMod</h3>
+          <p data-tr="Yazılım Hub için moderasyon, güvenlik, loglama ve yönetim akışını tek merkezde tutan sistem."
+             data-en="A moderation system for Yazılım Hub that keeps security, logging and management in one place.">
+             Yazılım Hub için moderasyon, güvenlik, loglama ve yönetim akışını tek merkezde tutan sistem.
+          </p>
+          <div class="system-card__tags"><span>TypeScript</span><span>Moderation</span><span>MongoDB</span><span>Linux</span></div>
+        </article>
+
+        <article class="system-card" data-reveal>
+          <div class="system-card__top">
+            <span class="system-card__id">YH-TICKET / 03</span>
+            <span class="status-pill">building</span>
+          </div>
+          <h3>YH Ticket</h3>
+          <p data-tr="Kuyruk, claim, private thread, transcript ve kategori bazlı ayarlarla panel odaklı destek sistemi."
+             data-en="Panel-first support system with queueing, claim flow, private threads, transcripts and category settings.">
+             Kuyruk, claim, private thread, transcript ve kategori bazlı ayarlarla panel odaklı destek sistemi.
+          </p>
+          <div class="system-card__tags"><span>Threads</span><span>Components</span><span>MongoDB</span><span>HTML transcript</span></div>
+        </article>
+
+        <article class="system-card" data-reveal>
+          <div class="system-card__top">
+            <span class="system-card__id">CONTROL / 04</span>
+            <span class="status-pill">private</span>
+          </div>
+          <h3>VPS Control</h3>
+          <p data-tr="Servisler, sağlık, veritabanı ve operasyon akışları için kişisel Linux yönetim paneli."
+             data-en="A private Linux control panel for services, health, databases and operational workflows.">
+             Servisler, sağlık, veritabanı ve operasyon akışları için kişisel Linux yönetim paneli.
+          </p>
+          <div class="system-card__tags"><span>Node.js</span><span>Nginx</span><span>systemd</span><span>Operations</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="github">
+      <div class="section__head section__head--split" data-reveal>
+        <div>
+          <p class="section__index">03 / PUBLIC GITHUB</p>
+          <h2 data-tr="Açık olan küçük yüzey." data-en="The small public surface.">Açık olan küçük yüzey.</h2>
+          <p data-tr="Public repoları canlı olarak GitHub API'den çekiyorum."
+             data-en="Public repositories are pulled live from the GitHub API.">
+             Public repoları canlı olarak GitHub API'den çekiyorum.
+          </p>
+        </div>
+        <a class="text-link" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
+      </div>
+
+      <div class="github-stats" id="github-stats" data-reveal aria-live="polite">
+        <div><span>public repos</span><strong id="stat-repos">—</strong></div>
+        <div><span>followers</span><strong id="stat-followers">—</strong></div>
+        <div><span>last push</span><strong id="stat-push">—</strong></div>
+      </div>
+
+      <div class="repo-grid" id="repo-list" aria-live="polite">
         <div class="repo-loading">fetching github...</div>
       </div>
     </section>
 
-    <section class="block contact" id="contact">
-      <p class="cmd">k4hveci@coffee:~$ ./contact.sh</p>
-      <div class="rule"></div>
-      <p data-tr="Bir proje, fikir ya da sadece teknik bir şey konuşmak istersen ulaşabilirsin." data-en="If you want to talk about a project, an idea or just something technical, feel free to reach out.">Bir proje, fikir ya da sadece teknik bir şey konuşmak istersen ulaşabilirsin.</p>
-      <div class="links">
-        <a href="mailto:contact@k4hveci.info">[ contact@k4hveci.info ]</a>
-        <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">[ github ↗ ]</a>
+    <section class="section shell" id="stack">
+      <div class="section__head" data-reveal>
+        <p class="section__index">04 / TOOLBOX</p>
+        <h2 data-tr="Her gün kullandığım parçalar." data-en="The pieces I use every day.">Her gün kullandığım parçalar.</h2>
+        <p data-tr="Teknoloji listesi uzatmak yerine gerçekten kullandığım çekirdek parçaları tutuyorum."
+           data-en="Instead of a long technology wall, I keep the core pieces I actually use.">
+           Teknoloji listesi uzatmak yerine gerçekten kullandığım çekirdek parçaları tutuyorum.
+        </p>
+      </div>
+
+      <div class="stack-board" data-reveal>
+        <div class="stack-line"><span>runtime</span><div><b>Node.js</b><b>TypeScript</b><b>JavaScript</b></div></div>
+        <div class="stack-line"><span>discord</span><div><b>discord.js</b><b>@discordjs/voice</b><b>Components</b></div></div>
+        <div class="stack-line"><span>data</span><div><b>MongoDB</b><b>SQLite</b><b>JSON stores</b></div></div>
+        <div class="stack-line"><span>ops</span><div><b>Linux</b><b>systemd</b><b>Nginx</b><b>FFmpeg</b></div></div>
+        <div class="stack-line"><span>workflow</span><div><b>Git</b><b>GitHub Actions</b><b>Bash</b><b>VS Code</b></div></div>
+      </div>
+    </section>
+
+    <section class="section shell contact" id="contact">
+      <div class="contact__panel" data-reveal>
+        <div>
+          <p class="section__index">05 / CONTACT</p>
+          <h2 data-tr="Bir şey inşa ediyorsan konuşabiliriz." data-en="If you're building something, we can talk.">Bir şey inşa ediyorsan konuşabiliriz.</h2>
+          <p data-tr="Proje, sistem tasarımı, Discord, Linux veya sadece teknik bir fikir."
+             data-en="Projects, system design, Discord, Linux or just a technical idea.">
+             Proje, sistem tasarımı, Discord, Linux veya sadece teknik bir fikir.
+          </p>
+        </div>
+        <div class="contact__actions">
+          <a class="button button--solid" href="mailto:contact@k4hveci.info">contact@k4hveci.info</a>
+          <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer shell">
-    <span>© <span id="year"></span> k4hveci</span>
-    <span>coffee: hot / terminal: open</span>
+    <span>© <span id="year"></span> K4hveci</span>
+    <span>K4 SYSTEM / coffee terminal</span>
   </footer>
 
-  <script type="module" src="./assets/js/main.js?v=3.2.0"></script>
+  <script type="module" src="./assets/js/main.js?v=4.0.0"></script>
 </body>
 </html>
