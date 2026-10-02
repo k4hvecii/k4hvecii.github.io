@@ -120,3 +120,13 @@ button{font:inherit;color:inherit}
   .heatmap-scroll{display:flex;justify-content:center}
   .language-bars,.weekday-chart,.velocity,.activity-mini{margin-inline:auto}
 }
+
+
+/* v9.2 balance core */
+.section-head h2{font-size:clamp(2rem,3.4vw,3.25rem)}
+.inspector{position:relative;top:auto}
+.inspector-main{grid-template-columns:1fr}
+.inspector-meter{display:none}
+.observatory-view{min-height:230px}
+.observatory-view[data-activity-view="map"] .heatmap-scroll{min-height:145px;display:flex;align-items:center;justify-content:center}
+.repo-card{min-height:195px}
