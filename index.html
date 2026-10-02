@@ -2,359 +2,208 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0b0806" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0806" />
   <meta name="color-scheme" content="dark" />
   <meta name="description" content="K4hveci — Discord sistemleri, backend araçları ve Linux/VPS altyapısı." />
-  <meta name="author" content="Kıvanç Aydoğdu" />
+  <meta name="author" content="K4hveci" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://k4hveci.info/" />
 
-  <meta property="og:title" content="K4hveci — coffee terminal" />
+  <meta property="og:title" content="K4hveci — K4 System" />
   <meta property="og:description" content="Discord systems / backend / Linux. Quiet interfaces, reliable systems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://k4hveci.info/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
-  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003a" />
   <meta property="og:site_name" content="K4hveci" />
   <meta property="og:locale" content="tr_TR" />
-  <meta property="og:image:alt" content="K4hveci Coffee Terminal" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="K4hveci — coffee terminal" />
+  <meta name="twitter:title" content="K4hveci — K4 System" />
   <meta name="twitter:description" content="Discord systems / backend / Linux. Quiet interfaces, reliable systems." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261001a" />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003a" />
 
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=5.1.0" />
-  <title>K4hveci — coffee terminal</title>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "K4hveci",
-    "url": "https://k4hveci.info/",
-    "email": "mailto:contact@k4hveci.info",
-    "sameAs": ["https://github.com/k4hvecii"],
-    "knowsAbout": ["Node.js", "TypeScript", "Discord.js", "MongoDB", "Linux", "systemd", "Nginx"]
-  }
-  </script>
+  <link rel="stylesheet" href="./assets/css/main.css?v=6.0.0" />
+  <title>K4hveci — K4 System</title>
 </head>
 
 <body>
   <a class="skip" href="#content">İçeriğe geç</a>
-  <div class="ambient" aria-hidden="true"></div>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <div class="shell topbar__inner">
+  <header class="topbar" id="top">
+    <div class="frame topbar__row">
       <a class="brand" href="#top" aria-label="K4hveci ana sayfa">
         <span class="brand__mark">K4</span>
-        <span class="brand__name">k4hveci</span>
+        <span class="brand__copy"><strong>k4hveci</strong><small>system surface</small></span>
       </a>
 
       <nav class="nav" aria-label="Ana navigasyon">
-        <a href="#about" data-tr="hakkımda" data-en="about">hakkımda</a>
+        <a href="#profile" data-tr="profil" data-en="profile">profil</a>
         <a href="#systems" data-tr="sistemler" data-en="systems">sistemler</a>
         <a href="#github">github</a>
         <a href="#activity" data-tr="aktivite" data-en="activity">aktivite</a>
-        <a href="#stack">stack</a>
+        <a href="#toolbox">toolbox</a>
         <a href="#contact" data-tr="iletişim" data-en="contact">iletişim</a>
       </nav>
 
       <div class="topbar__actions">
-        <span class="top-status"><i aria-hidden="true"></i><span data-tr="sistem açık" data-en="systems online">sistem açık</span></span>
+        <span class="live-chip"><i></i><span data-tr="online" data-en="online">online</span></span>
         <button class="lang" id="lang-toggle" type="button" aria-label="Dili değiştir">TR</button>
       </div>
     </div>
   </header>
 
   <main id="content">
-    <section class="hero shell" id="top">
-      <div class="hero__copy" data-hero-reveal>
-        <p class="eyebrow"><span>k4hveci@coffee:~$</span> whoami</p>
-        <h1>K4HVE.CI</h1>
-        <p class="hero__lead"
-          data-tr="Discord sistemleri, backend araçları ve Linux/VPS üstünde yaşayan servisler geliştiriyorum."
-          data-en="I build Discord systems, backend tooling and services that live on Linux/VPS infrastructure.">
-          Discord sistemleri, backend araçları ve Linux/VPS üstünde yaşayan servisler geliştiriyorum.
-        </p>
-        <p class="hero__sub"
-          data-tr="Az gürültü. Net davranış. Sağlam altyapı."
-          data-en="Less noise. Clear behavior. Reliable infrastructure.">
-          Az gürültü. Net davranış. Sağlam altyapı.
-        </p>
-
-        <div class="hero__actions">
-          <a class="button button--solid" href="#systems" data-tr="Sistemleri gör" data-en="View systems">Sistemleri gör</a>
-          <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <section class="hero section-full" id="profile">
+      <div class="frame hero__grid">
+        <div class="hero__copy reveal">
+          <div class="hero__eyebrow"><span>01 / PROFILE</span><span class="hero__scale">UI SCALE / 125%</span></div>
+          <h1 id="hero-name">K4HVE.CI</h1>
+          <p class="hero__lead" id="hero-tagline" data-tr="Discord sistemleri, backend araçları ve Linux altyapısı." data-en="Discord systems, backend tooling and Linux infrastructure.">Discord sistemleri, backend araçları ve Linux altyapısı.</p>
+          <p class="hero__principle" id="hero-principle" data-tr="Sessiz arayüzler, net loglar ve üretim odaklı sistemler." data-en="Quiet interfaces, clear logs and production-minded systems.">Sessiz arayüzler, net loglar ve üretim odaklı sistemler.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#systems" data-tr="Sistemlere geç" data-en="Explore systems">Sistemlere geç</a>
+            <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
         </div>
 
-        <div class="hero__meta" aria-label="K4 system status">
-          <div><span>mode</span><strong>building / shipping</strong></div>
-          <div><span>runtime</span><strong>Linux · systemd</strong></div>
-          <div><span>focus</span><strong>Discord · backend</strong></div>
+        <div class="hero-console reveal" aria-label="K4 sistem durumu">
+          <div class="console__head">
+            <span class="console__dots"><i></i><i></i><i></i></span>
+            <span>k4-system / runtime</span>
+            <span class="console__state">LIVE</span>
+          </div>
+          <div class="console__body">
+            <p class="console__command"><span>$</span> systemctl status k4</p>
+            <p class="console__ok">● active (running)</p>
+            <dl class="console__grid">
+              <div><dt>mode</dt><dd id="hero-mode">building / debugging / shipping</dd></div>
+              <div><dt>focus</dt><dd id="hero-focus">Discord systems · backend</dd></div>
+              <div><dt>runtime</dt><dd id="hero-runtime">Linux · systemd · Nginx</dd></div>
+              <div><dt>surface</dt><dd>full-width / responsive</dd></div>
+            </dl>
+            <div class="console__footer"><span>quiet interfaces</span><span>clear behavior</span><span>reliable systems</span></div>
+          </div>
         </div>
       </div>
 
-      <div class="terminal" data-terminal-reveal aria-label="Terminal durum paneli">
-        <div class="terminal__bar">
-          <div class="terminal__dots" aria-hidden="true"><i></i><i></i><i></i></div>
-          <span>k4-system/status</span>
-          <span class="terminal__live">LIVE</span>
-        </div>
-        <div class="terminal__body">
-          <p><span class="t-dim">$</span> systemctl --user status k4</p>
-          <p><span class="t-green">●</span> active (running)</p>
-          <div class="terminal__rule"></div>
-          <p><span class="t-key">surface</span> coffee-terminal</p>
-          <p><span class="t-key">backend</span> node / typescript</p>
-          <p><span class="t-key">data</span> mongodb</p>
-          <p><span class="t-key">ops</span> linux / systemd / nginx</p>
-          <div class="terminal__rule"></div>
-          <p class="terminal__note">quiet interfaces, reliable systems.<span class="cursor" aria-hidden="true"></span></p>
+      <div class="frame hero__rail reveal" aria-label="Hızlı durum">
+        <div><span>architecture</span><strong>data-driven</strong></div>
+        <div><span>delivery</span><strong>GitHub Actions</strong></div>
+        <div><span>deployment</span><strong>Linux / Pages</strong></div>
+        <div><span>interface</span><strong>adaptive / 3 breakpoints</strong></div>
+      </div>
+    </section>
+
+    <section class="section-full section-tone" id="systems">
+      <div class="frame section-layout">
+        <header class="section-intro reveal">
+          <span class="section-kicker">02 / SYSTEMS</span>
+          <h2 data-tr="Masadaki sistemler." data-en="Systems on the desk.">Masadaki sistemler.</h2>
+          <p data-tr="Her kart bir proje vitrini değil; gerçek bir sistemin ne çözdüğünü, hangi durumda olduğunu ve hangi çekirdekle çalıştığını gösterir." data-en="Each surface describes a real system: what it solves, its current state and the core it runs on.">Her kart bir proje vitrini değil; gerçek bir sistemin ne çözdüğünü, hangi durumda olduğunu ve hangi çekirdekle çalıştığını gösterir.</p>
+        </header>
+        <div class="system-grid" id="system-grid" aria-live="polite"><article class="system-card skeleton"><span>syncing systems...</span></article></div>
+      </div>
+    </section>
+
+    <section class="section-full" id="github">
+      <div class="frame section-layout">
+        <header class="section-intro reveal">
+          <span class="section-kicker">03 / PUBLIC GITHUB</span>
+          <h2 data-tr="Açık yüzey." data-en="Public surface.">Açık yüzey.</h2>
+          <p data-tr="Public repolar doğrudan GitHub API'den geliyor; kartlar veri değiştikçe kendini güncelliyor." data-en="Public repositories come directly from the GitHub API and update as the data changes.">Public repolar doğrudan GitHub API'den geliyor; kartlar veri değiştikçe kendini güncelliyor.</p>
+        </header>
+
+        <div class="github-surface reveal">
+          <div class="github-summary" id="github-stats" aria-live="polite">
+            <div><span>public repos</span><strong id="stat-repos">—</strong></div>
+            <div><span>followers</span><strong id="stat-followers">—</strong></div>
+            <div><span>last push</span><strong id="stat-push">—</strong></div>
+            <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
+          </div>
+          <div class="repo-list" id="repo-list" aria-live="polite"><div class="repo-loading">fetching github...</div></div>
         </div>
       </div>
     </section>
 
-    <section class="section shell" id="about">
-      <div class="section__head" data-reveal>
-        <p class="section__index">01 / PROFILE</p>
-        <h2 data-tr="Bir kere çalışan değil, uzun süre yaşayan sistemler." data-en="Not just working once — built to keep working.">Bir kere çalışan değil, uzun süre yaşayan sistemler.</h2>
-        <p data-tr="Projelerde önce akışı sadeleştiriyorum; sonra log, hata davranışı ve üretim tarafını sağlamlaştırıyorum."
-           data-en="I simplify the flow first, then harden logs, failure behavior and the production path.">
-           Projelerde önce akışı sadeleştiriyorum; sonra log, hata davranışı ve üretim tarafını sağlamlaştırıyorum.
-        </p>
-      </div>
+    <section class="section-full section-tone" id="activity">
+      <div class="frame section-layout">
+        <header class="section-intro reveal">
+          <span class="section-kicker">04 / CODING ACTIVITY</span>
+          <h2 data-tr="Son 365 gün." data-en="Last 365 days.">Son 365 gün.</h2>
+          <p data-tr="Katkı, seri, hız, dil ve hafta içi dağılımı profil workflow'undan günlük güncellenir." data-en="Contributions, streaks, velocity, languages and weekday activity refresh daily from the profile workflow.">Katkı, seri, hız, dil ve hafta içi dağılımı profil workflow'undan günlük güncellenir.</p>
+          <span class="sync-state" id="activity-updated">syncing...</span>
+        </header>
 
-      <div class="principles" data-reveal>
-        <article>
-          <span class="principle__no">01</span>
-          <h3 data-tr="Daha az hareketli parça" data-en="Fewer moving parts">Daha az hareketli parça</h3>
-          <p data-tr="Gereksiz servis, dosya ve ekran yerine anlaşılır bir ana akış."
-             data-en="A clear core flow instead of unnecessary services, files and screens.">
-             Gereksiz servis, dosya ve ekran yerine anlaşılır bir ana akış.
-          </p>
-        </article>
-        <article>
-          <span class="principle__no">02</span>
-          <h3 data-tr="Sessiz ama yararlı loglar" data-en="Quiet, useful logs">Sessiz ama yararlı loglar</h3>
-          <p data-tr="Normalde sakin, hata olduğunda ne olduğunu gerçekten anlatan çıktı."
-             data-en="Calm in normal operation, genuinely useful when something fails.">
-             Normalde sakin, hata olduğunda ne olduğunu gerçekten anlatan çıktı.
-          </p>
-        </article>
-        <article>
-          <span class="principle__no">03</span>
-          <h3 data-tr="Arayüz sistemin önüne geçmez" data-en="Interface stays out of the system's way">Arayüz sistemin önüne geçmez</h3>
-          <p data-tr="Gösterişli olmaktan önce hızlı, okunur ve ilk kez kullanan biri için anlaşılır."
-             data-en="Fast, readable and understandable before it tries to be flashy.">
-             Gösterişli olmaktan önce hızlı, okunur ve ilk kez kullanan biri için anlaşılır.
-          </p>
-        </article>
-      </div>
-    </section>
+        <div class="activity-surface">
+          <div class="activity-stats reveal" id="activity-stat-grid" aria-live="polite"><div class="activity-loading">loading coding stats...</div></div>
 
-    <section class="section shell" id="systems">
-      <div class="section__head" data-reveal>
-        <p class="section__index">02 / SYSTEMS</p>
-        <h2 data-tr="Şu sıralar masada olanlar." data-en="What is currently on the desk.">Şu sıralar masada olanlar.</h2>
-        <p data-tr="Bazıları özel sunucularda yaşıyor; burada sistemi ve neyi çözmeye çalıştığını gösteriyorum."
-           data-en="Some live in private environments; here I show the system and the problem it is built to solve.">
-           Bazıları özel sunucularda yaşıyor; burada sistemi ve neyi çözmeye çalıştığını gösteriyorum.
-        </p>
-      </div>
+          <div class="activity-grid">
+            <article class="panel panel--heatmap reveal">
+              <div class="panel__head">
+                <div><span>CONTRIBUTION MAP</span><strong data-tr="Günlük yoğunluk" data-en="Daily intensity">Günlük yoğunluk</strong></div>
+                <div class="heatmap-legend" aria-hidden="true"><span>less</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>more</span></div>
+              </div>
+              <div class="heatmap-scroll"><div class="heatmap" id="activity-heatmap"></div></div>
+            </article>
 
-      <div class="system-grid" id="system-grid">
-        <article class="system-card" data-reveal>
-          <div class="system-card__top">
-            <span class="system-card__id">FLASK / 01</span>
-            <span class="status-pill">development</span>
+            <article class="panel reveal">
+              <div class="panel__head"><div><span>VELOCITY</span><strong data-tr="28 gün / önceki 28 gün" data-en="28 days / previous 28 days">28 gün / önceki 28 gün</strong></div></div>
+              <div class="velocity" id="activity-velocity">—</div>
+              <div class="activity-mini" id="activity-mini"></div>
+            </article>
+
+            <article class="panel reveal">
+              <div class="panel__head"><div><span>LANGUAGES</span><strong data-tr="Public repolar" data-en="Public repositories">Public repolar</strong></div></div>
+              <div class="language-bars" id="activity-languages"></div>
+            </article>
+
+            <article class="panel reveal">
+              <div class="panel__head"><div><span>WEEKDAY ACTIVITY</span><strong data-tr="Haftalık dağılım" data-en="Weekly distribution">Haftalık dağılım</strong></div></div>
+              <div class="weekday-chart" id="activity-weekdays"></div>
+            </article>
           </div>
-          <h3>Flask</h3>
-          <p data-tr="Genel amaçlı Discord sistemi: yönetim, topluluk araçları, istatistikler ve native voice müzik altyapısı."
-             data-en="General-purpose Discord system: management, community tools, stats and native voice music infrastructure.">
-             Genel amaçlı Discord sistemi: yönetim, topluluk araçları, istatistikler ve native voice müzik altyapısı.
-          </p>
-          <div class="system-card__tags"><span>TypeScript</span><span>discord.js</span><span>MongoDB</span><span>Voice</span></div>
-        </article>
-
-        <article class="system-card" data-reveal>
-          <div class="system-card__top">
-            <span class="system-card__id">YHMOD / 02</span>
-            <span class="status-pill">active</span>
-          </div>
-          <h3>YHMod</h3>
-          <p data-tr="Yazılım Hub için moderasyon, güvenlik, loglama ve yönetim akışını tek merkezde tutan sistem."
-             data-en="A moderation system for Yazılım Hub that keeps security, logging and management in one place.">
-             Yazılım Hub için moderasyon, güvenlik, loglama ve yönetim akışını tek merkezde tutan sistem.
-          </p>
-          <div class="system-card__tags"><span>TypeScript</span><span>Moderation</span><span>MongoDB</span><span>Linux</span></div>
-        </article>
-
-        <article class="system-card" data-reveal>
-          <div class="system-card__top">
-            <span class="system-card__id">YH-TICKET / 03</span>
-            <span class="status-pill">building</span>
-          </div>
-          <h3>YH Ticket</h3>
-          <p data-tr="Kuyruk, claim, private thread, transcript ve kategori bazlı ayarlarla panel odaklı destek sistemi."
-             data-en="Panel-first support system with queueing, claim flow, private threads, transcripts and category settings.">
-             Kuyruk, claim, private thread, transcript ve kategori bazlı ayarlarla panel odaklı destek sistemi.
-          </p>
-          <div class="system-card__tags"><span>Threads</span><span>Components</span><span>MongoDB</span><span>HTML transcript</span></div>
-        </article>
-
-        <article class="system-card" data-reveal>
-          <div class="system-card__top">
-            <span class="system-card__id">CONTROL / 04</span>
-            <span class="status-pill">private</span>
-          </div>
-          <h3>VPS Control</h3>
-          <p data-tr="Servisler, sağlık, veritabanı ve operasyon akışları için kişisel Linux yönetim paneli."
-             data-en="A private Linux control panel for services, health, databases and operational workflows.">
-             Servisler, sağlık, veritabanı ve operasyon akışları için kişisel Linux yönetim paneli.
-          </p>
-          <div class="system-card__tags"><span>Node.js</span><span>Nginx</span><span>systemd</span><span>Operations</span></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="github">
-      <div class="section__head section__head--split" data-reveal>
-        <div>
-          <p class="section__index">03 / PUBLIC GITHUB</p>
-          <h2 data-tr="Açık olan küçük yüzey." data-en="The small public surface.">Açık olan küçük yüzey.</h2>
-          <p data-tr="Public repoları canlı olarak GitHub API'den çekiyorum."
-             data-en="Public repositories are pulled live from the GitHub API.">
-             Public repoları canlı olarak GitHub API'den çekiyorum.
-          </p>
-        </div>
-        <a class="text-link" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
-      </div>
-
-      <div class="github-stats" id="github-stats" data-reveal aria-live="polite">
-        <div><span>public repos</span><strong id="stat-repos">—</strong></div>
-        <div><span>followers</span><strong id="stat-followers">—</strong></div>
-        <div><span>last push</span><strong id="stat-push">—</strong></div>
-      </div>
-
-      <div class="repo-grid" id="repo-list" aria-live="polite">
-        <div class="repo-loading">fetching github...</div>
-      </div>
-    </section>
-
-    <section class="section shell" id="activity">
-      <div class="section__head section__head--split" data-reveal>
-        <div>
-          <p class="section__index">04 / CODING ACTIVITY</p>
-          <h2 data-tr="GitHub tarafında ne kadar hareket var?" data-en="What is moving on GitHub?">GitHub tarafında ne kadar hareket var?</h2>
-          <p data-tr="Son 365 günün katkı, seri, dil ve aktivite dağılımı günlük olarak profil workflow'undan güncelleniyor."
-             data-en="Contribution, streak, language and activity data for the last 365 days is refreshed daily by the profile workflow.">
-             Son 365 günün katkı, seri, dil ve aktivite dağılımı günlük olarak profil workflow'undan güncelleniyor.
-          </p>
-        </div>
-        <span class="activity-updated" id="activity-updated">syncing...</span>
-      </div>
-
-      <div class="activity-stat-grid" id="activity-stat-grid" data-reveal aria-live="polite">
-        <div class="activity-loading">loading coding stats...</div>
-      </div>
-
-      <div class="activity-layout" data-reveal>
-        <div class="activity-panel activity-panel--wide">
-          <div class="activity-panel__head">
-            <div>
-              <span class="activity-kicker">CONTRIBUTION MAP</span>
-              <strong data-tr="Son 365 gün" data-en="Last 365 days">Son 365 gün</strong>
-            </div>
-            <div class="heatmap-legend" aria-hidden="true"><span>less</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>more</span></div>
-          </div>
-          <div class="heatmap-scroll"><div class="heatmap" id="activity-heatmap"></div></div>
-        </div>
-
-        <div class="activity-panel">
-          <div class="activity-panel__head">
-            <div>
-              <span class="activity-kicker">VELOCITY</span>
-              <strong data-tr="Son 28 gün" data-en="Last 28 days">Son 28 gün</strong>
-            </div>
-          </div>
-          <div class="velocity" id="activity-velocity">—</div>
-          <div class="activity-mini" id="activity-mini"></div>
-        </div>
-      </div>
-
-      <div class="activity-layout activity-layout--equal" data-reveal>
-        <div class="activity-panel">
-          <div class="activity-panel__head">
-            <div>
-              <span class="activity-kicker">LANGUAGES</span>
-              <strong data-tr="Public repolarda" data-en="Across public repos">Public repolarda</strong>
-            </div>
-          </div>
-          <div class="language-bars" id="activity-languages"></div>
-        </div>
-
-        <div class="activity-panel">
-          <div class="activity-panel__head">
-            <div>
-              <span class="activity-kicker">WEEKDAY ACTIVITY</span>
-              <strong data-tr="En aktif gün" data-en="Most active day">En aktif gün</strong>
-            </div>
-          </div>
-          <div class="weekday-chart" id="activity-weekdays"></div>
         </div>
       </div>
     </section>
 
-    <section class="section shell" id="stack">
-      <div class="section__head" data-reveal>
-        <p class="section__index">05 / TOOLBOX</p>
-        <h2 data-tr="Her gün kullandığım parçalar." data-en="The pieces I use every day.">Her gün kullandığım parçalar.</h2>
-        <p data-tr="Teknoloji listesi uzatmak yerine gerçekten kullandığım çekirdek parçaları tutuyorum."
-           data-en="Instead of a long technology wall, I keep the core pieces I actually use.">
-           Teknoloji listesi uzatmak yerine gerçekten kullandığım çekirdek parçaları tutuyorum.
-        </p>
-      </div>
-
-      <div class="stack-board" id="stack-board" data-reveal>
-        <div class="stack-line"><span>runtime</span><div><b>Node.js</b><b>TypeScript</b><b>JavaScript</b></div></div>
-        <div class="stack-line"><span>discord</span><div><b>discord.js</b><b>@discordjs/voice</b><b>Components</b></div></div>
-        <div class="stack-line"><span>data</span><div><b>MongoDB</b><b>SQLite</b><b>JSON stores</b></div></div>
-        <div class="stack-line"><span>ops</span><div><b>Linux</b><b>systemd</b><b>Nginx</b><b>FFmpeg</b></div></div>
-        <div class="stack-line"><span>workflow</span><div><b>Git</b><b>GitHub Actions</b><b>Bash</b><b>VS Code</b></div></div>
+    <section class="section-full" id="toolbox">
+      <div class="frame section-layout">
+        <header class="section-intro reveal">
+          <span class="section-kicker">05 / TOOLBOX</span>
+          <h2 data-tr="Çekirdek parçalar." data-en="Core pieces.">Çekirdek parçalar.</h2>
+          <p data-tr="Uzun teknoloji duvarı yerine her gün gerçekten kullandığım parçalar." data-en="The tools I actually use every day instead of a long technology wall.">Uzun teknoloji duvarı yerine her gün gerçekten kullandığım parçalar.</p>
+        </header>
+        <div class="stack-board reveal" id="stack-board"><div class="stack-line"><span>syncing</span><div><b>toolbox...</b></div></div></div>
       </div>
     </section>
 
-    <section class="section shell contact" id="contact">
-      <div class="contact__panel" data-reveal>
-        <div>
-          <p class="section__index">06 / CONTACT</p>
-          <h2 data-tr="Bir şey inşa ediyorsan konuşabiliriz." data-en="If you're building something, we can talk.">Bir şey inşa ediyorsan konuşabiliriz.</h2>
-          <p data-tr="Proje, sistem tasarımı, Discord, Linux veya sadece teknik bir fikir."
-             data-en="Projects, system design, Discord, Linux or just a technical idea.">
-             Proje, sistem tasarımı, Discord, Linux veya sadece teknik bir fikir.
-          </p>
-        </div>
-        <div class="contact__actions">
-          <a class="button button--solid" href="mailto:contact@k4hveci.info">contact@k4hveci.info</a>
-          <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    <section class="section-full contact-section" id="contact">
+      <div class="frame">
+        <div class="contact-panel reveal">
+          <div class="contact-panel__copy">
+            <span class="section-kicker">06 / CONTACT</span>
+            <h2 data-tr="Bir şey inşa ediyorsan konuşabiliriz." data-en="If you're building something, we can talk.">Bir şey inşa ediyorsan konuşabiliriz.</h2>
+            <p data-tr="Discord, backend, Linux, sistem tasarımı veya teknik bir fikir." data-en="Discord, backend, Linux, system design or a technical idea.">Discord, backend, Linux, sistem tasarımı veya teknik bir fikir.</p>
+          </div>
+          <div class="contact-panel__actions">
+            <a class="button button--primary" id="contact-mail" href="mailto:contact@k4hveci.info">contact@k4hveci.info</a>
+            <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer shell">
-    <span>© <span id="year"></span> K4hveci</span>
-    <span>K4 SYSTEM / coffee terminal</span>
+  <footer class="footer section-full">
+    <div class="frame footer__row"><span>© <span id="year"></span> K4hveci</span><span>K4 System / responsive surface v6</span></div>
   </footer>
 
-  <script type="module" src="./assets/js/main.js?v=5.1.0"></script>
+  <script src="./assets/js/main.js?v=6.0.0" defer></script>
 </body>
 </html>

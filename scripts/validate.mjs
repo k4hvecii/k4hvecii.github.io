@@ -79,4 +79,4 @@ console.log(`✓ ${required.length} required files`);
 console.log(`✓ ${ids.length} unique HTML ids`);
 console.log("✓ internal anchors and versioned assets");
 console.log("✓ custom domain and contact email");
-console.log("✓ K4 System v5.1 validation passed");
+console.log("✓ K4 System v6 validation passed");

@@ -1,47 +1,45 @@
 # k4hveci.info
 
-K4hveci kişisel site yüzeyi — **K4 System / Coffee Terminal**.
+K4hveci kişisel site yüzeyi — **K4 System**.
 
 Canlı adres: https://k4hveci.info/  
 GitHub Pages: https://k4hvecii.github.io/
 
-## K4 System v5
+## K4 System v6
 
-Yeni yapı daha az “terminal şakası”, daha fazla gerçek sistem yüzeyi olacak şekilde düzenlendi:
+v6 arayüzü sıfırdan yeniden tasarlandı. Masaüstünde klasik 16px tabanın yaklaşık **%125 görsel ölçeğini** hedefliyor; tablet ve mobilde aynı masaüstü düzenini küçültmek yerine kırılımlara göre yeniden akıyor.
 
-- büyük ama sakin hero + gerçek durum paneli
-- üretimde kullanılan sistemler için ayrı yüzey
-- GitHub profil/repo verilerini canlı çekme
-- çekirdek stack ve çalışma prensipleri
+- tüm section ve ana component yüzeyleri full-width
+- masaüstü: geniş iki bölgeli kompozisyon
+- tablet: intro/content ayrımı tek akışa dönüşür
+- mobil: navigasyon, repo satırları, activity panelleri ve CTA'lar dokunmatik kullanıma göre yeniden yerleşir
+- sistemler ve toolbox ortak profil data kaynağından gelir
+- public GitHub yüzeyi canlı GitHub REST verisini kullanır
+- coding activity günlük profil workflow verisini kullanır
 - TR / EN içerik
-- responsive, reduced-motion ve klavye erişilebilirliği
+- reduced-motion desteği
 - bağımlılıksız HTML/CSS/JS; GitHub Pages üzerinde direkt yayın
+
+## Responsive taban
+
+Desktop >= 1200px: 20px base / yaklaşık %125 ölçek.  
+Tablet 768–1199px: 18px base ve tek akış section yerleşimi.  
+Mobile < 768px: 16.5px base, dokunmatik ve tek kolon adaptive yerleşim.
 
 ## Yerel çalıştırma
 
-```bash
+~~~bash
 python -m http.server 8000
-```
+~~~
 
-Ardından `http://localhost:8000` adresini aç.
+Ardından http://localhost:8000 adresini aç.
 
 ## Doğrulama
 
-```bash
+~~~bash
 node scripts/validate.mjs
-```
-
-## Tasarım yönü
-
-Koyu kahve / charcoal taban, düşük doygunluk, sıcak krem metin, tek kahve aksanı.  
-Glassmorphism, neon duvarı ve klasik badge-kart portföy kalıpları özellikle kullanılmıyor.
+~~~
 
 ## Veri mimarisi
 
-GitHub profilindeki `data/` klasörü K4 System için tek veri kaynağıdır. Site sistem/stack verisini buradan okur; profil workflow'u aynı veriden README SVG yüzeyini ve günlük GitHub aktivite verisini üretir.
-
-Coding activity günlük olarak contributions, streak, velocity, language dağılımı ve weekday aktivitesiyle güncellenir.
-
-## Motion system
-
-K4 Motion System v1; hero girişleri, terminal typing, section reveal, pointer glow, scroll progress, sayaç animasyonları, contribution heatmap/language/weekday geçişleri ve düşük yoğunluklu ambient hareket ekler. `prefers-reduced-motion` sistem tercihi tamamen desteklenir.
+GitHub profilindeki data klasörü K4 System için ortak veri kaynağıdır. Site profile/system/stack ve günlük GitHub activity verisini bu kaynaktan okur; public repo kartları ise GitHub REST API ile canlı güncellenir.
