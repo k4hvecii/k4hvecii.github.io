@@ -5,9 +5,9 @@ K4hveci kişisel site yüzeyi — K4 / Coffee Lab.
 Canlı adres: https://k4hveci.info/  
 GitHub Pages: https://k4hvecii.github.io/
 
-## Coffee Lab v7
+## Coffee Lab v7.1
 
-v7, önceki dashboard hissini bırakarak daha editoryal ve merak uyandıran bir kişisel yüzeye geçti.
+v7.1, Coffee Lab yönünü korurken ölçeği normale çekti: daha dengeli tipografi, daha sıkı dikey ritim ve daha kullanılabilir masaüstü yoğunluğu.
 
 - büyük tipografiyle K4 / HVE.CI hero
 - Coffee Lab kimliği
