@@ -1,11 +1,11 @@
 # k4hveci.info
 
-K4hveci kişisel site yüzeyi — **System Atlas v9**.
+K4hveci kişisel site yüzeyi — **System Atlas v9.1**.
 
 Canlı adres: https://k4hveci.info/  
 GitHub Pages: https://k4hvecii.github.io/
 
-## v9 yapısal yön
+## v9.1 yapısal yön
 
 v9 sadece renk/tipografi değişikliği değil; sitenin bilgi mimarisi yeniden kuruldu.
 
