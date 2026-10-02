@@ -79,4 +79,4 @@ console.log(`✓ ${required.length} required files`);
 console.log(`✓ ${ids.length} unique HTML ids`);
 console.log("✓ internal anchors and versioned assets");
 console.log("✓ custom domain and contact email");
-console.log("✓ System Atlas v9 validation passed");
+console.log("✓ System Atlas v9.2 validation passed");
