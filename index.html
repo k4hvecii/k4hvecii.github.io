@@ -10,27 +10,27 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://k4hveci.info/" />
 
-  <meta property="og:title" content="K4hveci — Systems & Software" />
-  <meta property="og:description" content="Discord systems, backend tooling and Linux infrastructure." />
+  <meta property="og:title" content="K4hveci — System Atlas" />
+  <meta property="og:description" content="Explore the systems, public work and activity behind K4hveci." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://k4hveci.info/" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003c" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003d" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="K4hveci — Systems & Software" />
-  <meta name="twitter:description" content="Discord systems, backend tooling and Linux infrastructure." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003c" />
+  <meta name="twitter:title" content="K4hveci — System Atlas" />
+  <meta name="twitter:description" content="Explore the systems, public work and activity behind K4hveci." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/k4hvecii/k4hvecii.github.io/main/assets/images/og-k4-terminal-31.png?rev=20261003d" />
 
   <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <link rel="stylesheet" href="./assets/css/main.css?v=8.0.0" />
-  <title>K4hveci — Systems & Software</title>
+  <link rel="stylesheet" href="./assets/css/main.css?v=9.0.0" />
+  <title>K4hveci — System Atlas</title>
 </head>
 <body>
   <a class="skip" href="#main">İçeriğe geç</a>
-  <div class="ambient ambient--one" aria-hidden="true"></div>
-  <div class="ambient ambient--two" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+  <div class="cursor-aura" id="cursor-aura" aria-hidden="true"></div>
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <header class="site-header">
@@ -41,25 +41,34 @@
       </a>
 
       <nav class="nav" aria-label="Ana navigasyon">
-        <a href="#systems" data-tr="sistemler" data-en="systems">sistemler</a>
-        <a href="#github">github</a>
+        <a href="#atlas" data-tr="atlas" data-en="atlas">atlas</a>
+        <a href="#process" data-tr="yaklaşım" data-en="process">yaklaşım</a>
+        <a href="#public">github</a>
         <a href="#activity" data-tr="aktivite" data-en="activity">aktivite</a>
-        <a href="#stack">stack</a>
         <a href="#contact" data-tr="iletişim" data-en="contact">iletişim</a>
       </nav>
 
       <div class="header-actions">
-        <span class="status"><i></i><span data-tr="aktif" data-en="online">aktif</span></span>
+        <span class="status-chip"><i></i><span data-tr="online" data-en="online">online</span></span>
         <button class="lang" id="lang-toggle" type="button" aria-label="Dili değiştir">TR</button>
       </div>
     </div>
   </header>
 
+  <aside class="chapter-rail" aria-label="Bölümler">
+    <a href="#top"><span>00</span><i></i></a>
+    <a href="#atlas"><span>01</span><i></i></a>
+    <a href="#process"><span>02</span><i></i></a>
+    <a href="#public"><span>03</span><i></i></a>
+    <a href="#activity"><span>04</span><i></i></a>
+    <a href="#contact"><span>05</span><i></i></a>
+  </aside>
+
   <main id="main">
     <section class="hero" id="top">
       <div class="shell hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">K4 SYSTEMS / 2026</span>
+          <span class="eyebrow">K4 / SYSTEM ATLAS</span>
           <h1 id="hero-name">K4HVE.CI</h1>
           <p class="hero-lead" id="hero-tagline"
              data-tr="Discord sistemleri, backend araçları ve Linux altyapısı geliştiriyorum."
@@ -67,189 +76,278 @@
             Discord sistemleri, backend araçları ve Linux altyapısı geliştiriyorum.
           </p>
           <p class="hero-sub" id="hero-principle"
-             data-tr="Sade görünür, sağlam çalışır."
-             data-en="Simple on the surface, solid underneath.">
-            Sade görünür, sağlam çalışır.
+             data-tr="Bu site bir vitrin değil; içeride ne olduğunu kurcalayabileceğin bir harita."
+             data-en="This is not a showcase page; it is a map you can explore.">
+            Bu site bir vitrin değil; içeride ne olduğunu kurcalayabileceğin bir harita.
           </p>
+
           <div class="hero-actions">
-            <a class="button button--primary" href="#systems" data-tr="Projeleri gör" data-en="View systems">Projeleri gör</a>
+            <a class="button button--primary" href="#atlas" data-tr="Atlası aç" data-en="Open atlas">Atlası aç</a>
             <a class="button" href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
+
+          <div class="hero-facts">
+            <div><span>focus</span><strong id="hero-focus">Discord systems · backend</strong></div>
+            <div><span>runtime</span><strong id="hero-runtime">Linux · systemd · Nginx</strong></div>
+            <div><span>mode</span><strong id="hero-mode">building / debugging / shipping</strong></div>
+          </div>
         </div>
 
-        <div class="hero-board reveal">
-          <div class="board-head">
-            <span>LIVE WORKSPACE</span>
-            <span class="board-live"><i></i> ONLINE</span>
+        <div class="atlas-map reveal" aria-label="Sistem haritası">
+          <div class="atlas-map__top">
+            <span>SYSTEM MAP</span>
+            <span class="atlas-map__hint" data-tr="bir node seç" data-en="pick a node">bir node seç</span>
           </div>
 
-          <div class="board-feature">
-            <span class="board-label">CURRENT FOCUS</span>
-            <strong id="hero-focus">Discord systems · backend</strong>
-            <p data-tr="Gerçek kullanım için tasarlanan botlar, araçlar ve operasyon yüzeyleri."
-               data-en="Bots, tooling and operational surfaces designed for real use.">
-              Gerçek kullanım için tasarlanan botlar, araçlar ve operasyon yüzeyleri.
-            </p>
+          <div class="map-canvas" id="map-canvas">
+            <div class="map-core">
+              <span>K4</span>
+              <small>core</small>
+            </div>
+
+            <span class="map-line map-line--1" aria-hidden="true"></span>
+            <span class="map-line map-line--2" aria-hidden="true"></span>
+            <span class="map-line map-line--3" aria-hidden="true"></span>
+            <span class="map-line map-line--4" aria-hidden="true"></span>
+
+            <button class="map-node map-node--1" type="button" data-system-target="flask">
+              <span>01</span><strong>Flask</strong><small>general system</small>
+            </button>
+            <button class="map-node map-node--2" type="button" data-system-target="yhmod">
+              <span>02</span><strong>YHMod</strong><small>moderation</small>
+            </button>
+            <button class="map-node map-node--3" type="button" data-system-target="yh-ticket">
+              <span>03</span><strong>YH Ticket</strong><small>support flow</small>
+            </button>
+            <button class="map-node map-node--4" type="button" data-system-target="vps-control">
+              <span>04</span><strong>VPS Control</strong><small>operations</small>
+            </button>
           </div>
 
-          <div class="board-grid">
-            <div>
-              <span>mode</span>
-              <strong id="hero-mode">building / debugging / shipping</strong>
-            </div>
-            <div>
-              <span>runtime</span>
-              <strong id="hero-runtime">Linux · systemd · Nginx</strong>
-            </div>
-            <div>
-              <span>delivery</span>
-              <strong>GitHub Actions</strong>
-            </div>
-            <div>
-              <span>surface</span>
-              <strong>responsive / full-width</strong>
-            </div>
+          <div class="atlas-map__bottom">
+            <span data-tr="Tıklayınca ilgili sistem dosyasına iner." data-en="Click a node to open its system file.">Tıklayınca ilgili sistem dosyasına iner.</span>
+            <span>4 systems / 1 stack</span>
           </div>
         </div>
       </div>
 
-      <div class="shell hero-strip reveal">
-        <span>Discord</span>
-        <span>Backend</span>
-        <span>Linux</span>
-        <span>Automation</span>
-        <span>Operations</span>
-      </div>
-    </section>
-
-    <section class="section section--soft" id="systems">
-      <div class="shell section-grid">
-        <aside class="section-side reveal">
-          <span class="section-no">01</span>
-          <p class="section-kicker" data-tr="SİSTEMLER" data-en="SYSTEMS">SİSTEMLER</p>
-          <h2 data-tr="Üzerinde çalıştığım şeyler." data-en="What I’m working on.">Üzerinde çalıştığım şeyler.</h2>
-          <p data-tr="Her proje bir vitrin kartı değil; gerçekten kullanılan veya geliştirilmekte olan bir sistem."
-             data-en="Each project is a real system in use or active development, not just a showcase card.">
-            Her proje bir vitrin kartı değil; gerçekten kullanılan veya geliştirilmekte olan bir sistem.
-          </p>
-        </aside>
-
-        <div class="system-grid" id="system-grid" aria-live="polite">
-          <article class="system-card skeleton">syncing systems...</article>
-        </div>
+      <div class="shell hero-marquee reveal" aria-hidden="true">
+        <span>DISCORD SYSTEMS</span><i>•</i><span>BACKEND</span><i>•</i><span>LINUX</span><i>•</i><span>AUTOMATION</span><i>•</i><span>OPERATIONS</span>
       </div>
     </section>
 
-    <section class="section" id="github">
-      <div class="shell section-grid">
-        <aside class="section-side reveal">
-          <span class="section-no">02</span>
-          <p class="section-kicker">PUBLIC GITHUB</p>
-          <h2 data-tr="Açık tarafta neler var?" data-en="What’s public?">Açık tarafta neler var?</h2>
-          <p data-tr="Repo listesi ve temel bilgiler GitHub API üzerinden canlı geliyor."
-             data-en="Repository list and basic metadata are loaded live from GitHub.">
-            Repo listesi ve temel bilgiler GitHub API üzerinden canlı geliyor.
+    <section class="section section--soft" id="atlas">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">01 / SYSTEM ATLAS</span>
+            <h2 data-tr="Bir sistemi seç, içine bak." data-en="Pick a system. Open it up.">Bir sistemi seç, içine bak.</h2>
+          </div>
+          <p data-tr="Burada aşağı kaydırıp kart okumak yerine bir sistem seçiyorsun; detay paneli o sisteme göre değişiyor."
+             data-en="Instead of scrolling through generic cards, choose a system and inspect its live detail panel.">
+            Burada aşağı kaydırıp kart okumak yerine bir sistem seçiyorsun; detay paneli o sisteme göre değişiyor.
           </p>
+        </div>
 
-          <div class="github-mini" id="github-stats">
+        <div class="explorer reveal">
+          <div class="explorer-list" id="system-list" role="tablist" aria-label="Sistem seç">
+            <button type="button" class="system-tab is-active" data-system-id="flask" role="tab" aria-selected="true">
+              <span>01</span><div><strong>Flask</strong><small>general-purpose</small></div><i>↗</i>
+            </button>
+            <button type="button" class="system-tab" data-system-id="yhmod" role="tab" aria-selected="false">
+              <span>02</span><div><strong>YHMod</strong><small>moderation / security</small></div><i>↗</i>
+            </button>
+            <button type="button" class="system-tab" data-system-id="yh-ticket" role="tab" aria-selected="false">
+              <span>03</span><div><strong>YH Ticket</strong><small>support workflow</small></div><i>↗</i>
+            </button>
+            <button type="button" class="system-tab" data-system-id="vps-control" role="tab" aria-selected="false">
+              <span>04</span><div><strong>VPS Control</strong><small>linux operations</small></div><i>↗</i>
+            </button>
+          </div>
+
+          <article class="inspector" id="system-inspector" role="tabpanel">
+            <div class="inspector-head">
+              <span id="inspector-index">01 / FLASK</span>
+              <span class="inspector-status" id="inspector-status">development</span>
+            </div>
+
+            <div class="inspector-main">
+              <div>
+                <p class="inspector-label">SYSTEM FILE</p>
+                <h3 id="inspector-title">Flask</h3>
+                <p id="inspector-description">Genel amaçlı Discord sistemi.</p>
+              </div>
+
+              <div class="inspector-meter" aria-hidden="true">
+                <div><span>scope</span><i style="--meter:88%"></i></div>
+                <div><span>ops</span><i style="--meter:72%"></i></div>
+                <div><span>ui</span><i style="--meter:64%"></i></div>
+              </div>
+            </div>
+
+            <div class="inspector-grid">
+              <div>
+                <span>purpose</span>
+                <strong id="inspector-purpose">management / community / music</strong>
+              </div>
+              <div>
+                <span>visibility</span>
+                <strong id="inspector-visibility">private</strong>
+              </div>
+              <div>
+                <span>status</span>
+                <strong id="inspector-status-text">development</strong>
+              </div>
+              <div>
+                <span>stack</span>
+                <div class="inspector-tags" id="inspector-tags"></div>
+              </div>
+            </div>
+
+            <div class="inspector-foot">
+              <span data-tr="Bu panel seçtiğin sisteme göre canlı değişir." data-en="This panel updates live for the selected system.">Bu panel seçtiğin sisteme göre canlı değişir.</span>
+              <span id="inspector-count">01 / 04</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">02 / BUILD PATH</span>
+            <h2 data-tr="Nasıl ilerliyorum?" data-en="How I build.">Nasıl ilerliyorum?</h2>
+          </div>
+          <p data-tr="Sistemi ekrandan değil, akıştan kuruyorum. Önce davranış; sonra arayüz ve operasyon."
+             data-en="I build from the flow outward. Behavior first, then interface and operations.">
+            Sistemi ekrandan değil, akıştan kuruyorum. Önce davranış; sonra arayüz ve operasyon.
+          </p>
+        </div>
+
+        <div class="process-track reveal">
+          <article class="process-step">
+            <span>01</span>
+            <div><strong data-tr="Akışı sadeleştir" data-en="Simplify the flow">Akışı sadeleştir</strong><p data-tr="Kullanıcının ne yapacağını tek bakışta anlaması." data-en="Make the next action obvious to the user.">Kullanıcının ne yapacağını tek bakışta anlaması.</p></div>
+          </article>
+          <article class="process-step">
+            <span>02</span>
+            <div><strong data-tr="Davranışı sabitle" data-en="Stabilize behavior">Davranışı sabitle</strong><p data-tr="Hata, izin, timeout ve sınır durumları netleşir." data-en="Errors, permissions, timeouts and edge cases become explicit.">Hata, izin, timeout ve sınır durumları netleşir.</p></div>
+          </article>
+          <article class="process-step">
+            <span>03</span>
+            <div><strong data-tr="Operasyonu görünür yap" data-en="Expose operations">Operasyonu görünür yap</strong><p data-tr="Loglar, sağlık ve bakım yolları üretim için hazırlanır." data-en="Logs, health and maintenance paths are prepared for production.">Loglar, sağlık ve bakım yolları üretim için hazırlanır.</p></div>
+          </article>
+          <article class="process-step">
+            <span>04</span>
+            <div><strong data-tr="Gönder, izle, düzelt" data-en="Ship, watch, refine">Gönder, izle, düzelt</strong><p data-tr="Sistem gerçek kullanımda sadeleşmeye devam eder." data-en="The system keeps getting simpler under real use.">Sistem gerçek kullanımda sadeleşmeye devam eder.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="public">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">03 / PUBLIC TRACE</span>
+            <h2 data-tr="Açık tarafta bıraktığım izler." data-en="What I leave in public.">Açık tarafta bıraktığım izler.</h2>
+          </div>
+          <div class="github-summary" id="github-stats">
             <div><span>repos</span><strong id="stat-repos">—</strong></div>
             <div><span>followers</span><strong id="stat-followers">—</strong></div>
             <div><span>last push</span><strong id="stat-push">—</strong></div>
           </div>
-        </aside>
+        </div>
 
-        <div class="repo-panel reveal">
-          <div class="repo-panel-head">
-            <span>repositories</span>
-            <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
-          </div>
-          <div class="repo-list" id="repo-list" aria-live="polite">
-            <div class="repo-loading">fetching github...</div>
-          </div>
+        <div class="repo-mosaic" id="repo-list" aria-live="polite">
+          <div class="repo-loading">fetching github...</div>
+        </div>
+
+        <div class="public-foot reveal">
+          <p data-tr="Daha fazlası GitHub profilinde." data-en="More lives on the GitHub profile.">Daha fazlası GitHub profilinde.</p>
+          <a href="https://github.com/k4hvecii" target="_blank" rel="noopener noreferrer">github.com/k4hvecii ↗</a>
         </div>
       </div>
     </section>
 
-    <section class="section section--soft" id="activity">
+    <section class="section" id="activity">
       <div class="shell">
-        <div class="activity-head reveal">
+        <div class="section-head reveal">
           <div>
-            <span class="section-no">03</span>
-            <p class="section-kicker" data-tr="CODING ACTIVITY" data-en="CODING ACTIVITY">CODING ACTIVITY</p>
-            <h2 data-tr="Son 365 günün hareketi." data-en="The last 365 days.">Son 365 günün hareketi.</h2>
+            <span class="section-index">04 / OBSERVATORY</span>
+            <h2 data-tr="Kod hareketini farklı açılardan incele." data-en="Inspect activity from different angles.">Kod hareketini farklı açılardan incele.</h2>
           </div>
           <span class="sync" id="activity-updated">syncing...</span>
         </div>
 
-        <div class="activity-stats reveal" id="activity-stat-grid">
-          <div class="activity-loading">loading coding stats...</div>
+        <div class="activity-overview reveal" id="activity-stat-grid">
+          <div class="activity-loading">loading activity...</div>
         </div>
 
-        <div class="activity-layout">
-          <article class="activity-card activity-card--wide reveal">
-            <div class="card-head">
-              <div>
-                <span>CONTRIBUTION MAP</span>
-                <strong data-tr="Günlük yoğunluk" data-en="Daily intensity">Günlük yoğunluk</strong>
-              </div>
+        <div class="observatory reveal">
+          <div class="observatory-tabs" role="tablist" aria-label="Aktivite görünümü">
+            <button type="button" class="activity-tab is-active" data-view="map" role="tab" aria-selected="true">365 map</button>
+            <button type="button" class="activity-tab" data-view="languages" role="tab" aria-selected="false">languages</button>
+            <button type="button" class="activity-tab" data-view="rhythm" role="tab" aria-selected="false">week rhythm</button>
+            <button type="button" class="activity-tab" data-view="velocity" role="tab" aria-selected="false">velocity</button>
+          </div>
+
+          <div class="observatory-view is-active" data-activity-view="map">
+            <div class="view-head">
+              <div><span>CONTRIBUTION MAP</span><strong data-tr="Son 365 gün" data-en="Last 365 days">Son 365 gün</strong></div>
               <div class="legend" aria-hidden="true"><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i></div>
             </div>
             <div class="heatmap-scroll"><div class="heatmap" id="activity-heatmap"></div></div>
-          </article>
+          </div>
 
-          <article class="activity-card reveal">
-            <div class="card-head">
-              <div><span>VELOCITY</span><strong>28 days</strong></div>
-            </div>
+          <div class="observatory-view" data-activity-view="languages">
+            <div class="view-head"><div><span>LANGUAGE MIX</span><strong data-tr="Public repolar" data-en="Public repositories">Public repolar</strong></div></div>
+            <div class="language-bars" id="activity-languages"></div>
+          </div>
+
+          <div class="observatory-view" data-activity-view="rhythm">
+            <div class="view-head"><div><span>WEEK RHYTHM</span><strong data-tr="Haftalık dağılım" data-en="Weekly distribution">Haftalık dağılım</strong></div></div>
+            <div class="weekday-chart" id="activity-weekdays"></div>
+          </div>
+
+          <div class="observatory-view" data-activity-view="velocity">
+            <div class="view-head"><div><span>VELOCITY</span><strong>28 days / previous 28</strong></div></div>
             <div class="velocity" id="activity-velocity">—</div>
             <div class="activity-mini" id="activity-mini"></div>
-          </article>
-
-          <article class="activity-card reveal">
-            <div class="card-head">
-              <div><span>LANGUAGES</span><strong data-tr="Public repolar" data-en="Public repos">Public repolar</strong></div>
-            </div>
-            <div class="language-bars" id="activity-languages"></div>
-          </article>
-
-          <article class="activity-card reveal">
-            <div class="card-head">
-              <div><span>WEEKDAY</span><strong data-tr="Haftalık ritim" data-en="Weekly rhythm">Haftalık ritim</strong></div>
-            </div>
-            <div class="weekday-chart" id="activity-weekdays"></div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="stack">
-      <div class="shell section-grid">
-        <aside class="section-side reveal">
-          <span class="section-no">04</span>
-          <p class="section-kicker">TOOLBOX</p>
-          <h2 data-tr="Gerçekten kullandığım araçlar." data-en="Tools I actually use.">Gerçekten kullandığım araçlar.</h2>
-          <p data-tr="Uzun logo duvarı yerine günlük iş akışında olan parçalar."
-             data-en="The pieces that actually exist in my daily workflow, not a wall of logos.">
-            Uzun logo duvarı yerine günlük iş akışında olan parçalar.
+    <section class="section section--soft" id="stack">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">05 / TOOLBOX</span>
+            <h2 data-tr="Arka tarafta çalışan parçalar." data-en="What runs underneath.">Arka tarafta çalışan parçalar.</h2>
+          </div>
+          <p data-tr="Her gün gerçekten kullanılan stack; süs olsun diye eklenmiş logo yok."
+             data-en="The stack I actually use every day. No decorative logo wall.">
+            Her gün gerçekten kullanılan stack; süs olsun diye eklenmiş logo yok.
           </p>
-        </aside>
-
-        <div class="stack-panel reveal" id="stack-board">
+        </div>
+        <div class="stack-matrix reveal" id="stack-board">
           <div class="stack-row"><span>syncing</span><div><b>toolbox...</b></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="section contact" id="contact">
       <div class="shell">
-        <div class="contact-card reveal">
+        <div class="contact-stage reveal">
           <div>
-            <span class="section-no">05</span>
-            <p class="section-kicker" data-tr="İLETİŞİM" data-en="CONTACT">İLETİŞİM</p>
-            <h2 data-tr="Bir şey inşa ediyorsan konuşabiliriz." data-en="If you’re building something, we can talk.">Bir şey inşa ediyorsan konuşabiliriz.</h2>
-            <p data-tr="Discord, backend, Linux veya sistem tasarımı."
-               data-en="Discord, backend, Linux or system design.">
-              Discord, backend, Linux veya sistem tasarımı.
+            <span class="section-index">06 / CONTACT</span>
+            <h2 data-tr="Bir şey inşa ediyorsan, konuşabiliriz." data-en="If you’re building something, we can talk.">Bir şey inşa ediyorsan, konuşabiliriz.</h2>
+            <p data-tr="Discord, backend, Linux, sistem tasarımı veya teknik bir fikir."
+               data-en="Discord, backend, Linux, system design or a technical idea.">
+              Discord, backend, Linux, sistem tasarımı veya teknik bir fikir.
             </p>
           </div>
           <div class="contact-actions">
@@ -264,11 +362,11 @@
   <footer class="footer">
     <div class="shell footer-inner">
       <span>© <span id="year"></span> K4hveci</span>
-      <span>K4 Studio / v8</span>
+      <span>System Atlas / v9</span>
       <a href="#top">↑ top</a>
     </div>
   </footer>
 
-  <script src="./assets/js/main.js?v=8.0.0" defer></script>
+  <script src="./assets/js/main.js?v=9.0.0" defer></script>
 </body>
 </html>
