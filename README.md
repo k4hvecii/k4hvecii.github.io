@@ -1,24 +1,24 @@
 # k4hveci.info
 
-K4hveci kişisel site yüzeyi — K4 / Coffee Lab.
+K4hveci kişisel site yüzeyi — **K4 Studio v8**.
 
 Canlı adres: https://k4hveci.info/  
 GitHub Pages: https://k4hvecii.github.io/
 
-## Coffee Lab v7.1
+## v8 yönü
 
-v7.1, Coffee Lab yönünü korurken ölçeği normale çekti: daha dengeli tipografi, daha sıkı dikey ritim ve daha kullanılabilir masaüstü yoğunluğu.
+v8, Coffee Lab'in büyük ve deneysel tipografi yönünü bırakarak daha dengeli bir ürün/portfolio yüzeyine geçti.
 
-- büyük tipografiyle K4 / HVE.CI hero
-- Coffee Lab kimliği
-- sistemler klasik kart yerine case file satırları
-- public GitHub reposu artifact listesi olarak sunulur
-- coding activity bir dashboard yerine signal room mantığında gösterilir
-- ortak profile/system/stack/activity verisi korunur
-- canlı GitHub REST verisi korunur
-- desktop, tablet ve mobil için farklı kompozisyon
-- motion ve pointer glow detayları ölçülü kullanılır
-- prefers-reduced-motion desteği vardır
+- tarayıcı %125 zoom kullanımında da rahat kalacak normal tipografi ölçeği
+- full-width section arka planları, kontrollü içerik genişliği
+- sade iki kolon hero + canlı workspace paneli
+- sistemler 2x2 proje yüzeyinde
+- GitHub repoları kompakt canlı listede
+- coding activity ayrı dashboard yerine site tasarımına entegre
+- tablet ve mobilde adaptive akış
+- TR / EN
+- reduced-motion desteği
+- ortak profile/system/stack/activity data mimarisi korunur
 - bağımlılıksız HTML/CSS/JS ve GitHub Pages
 
 ## Yerel çalıştırma
@@ -28,7 +28,3 @@ python -m http.server 8000
 ## Doğrulama
 
 node scripts/validate.mjs
-
-## Veri
-
-GitHub profil reposundaki data klasörü ortak veri kaynağıdır. Site bu kaynaktan profil, sistem, stack ve coding activity verisini okur. Public repository listesi GitHub REST API üzerinden canlı gelir.
