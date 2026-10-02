@@ -1,11 +1,11 @@
 # k4hveci.info
 
-K4hveci kişisel site yüzeyi — **System Atlas v9.1**.
+K4hveci kişisel site yüzeyi — **System Atlas v9.2**.
 
 Canlı adres: https://k4hveci.info/  
 GitHub Pages: https://k4hvecii.github.io/
 
-## v9.1 yapısal yön
+## v9.2 otomatik veri + denge
 
 v9 sadece renk/tipografi değişikliği değil; sitenin bilgi mimarisi yeniden kuruldu.
 
@@ -28,3 +28,13 @@ python -m http.server 8000
 ## Doğrulama
 
 node scripts/validate.mjs
+
+
+### Otomatik veri davranışı
+
+- System Map ve Atlas listesi `data/systems.json` içeriğinden otomatik oluşturulur.
+- Inspector bilgi alanları tek sistem kaynağından gelir; site kodunda sistem adı kopyalanmaz.
+- Public repo kartları GitHub API ile canlı oluşur.
+- GitHub description boşsa README içeriğinden otomatik kısa özet çıkarılır.
+- Repo sayısına göre mosaic yerleşimi otomatik dengelenir.
+- Activity verisi profil workflow tarafından 6 saatte bir yenilenir.
